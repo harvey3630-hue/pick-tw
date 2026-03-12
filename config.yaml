@@ -1,0 +1,54 @@
+baseURL: "https://pick-tw.com"
+languageCode: "zh-TW"
+title: "Pick-TW"
+theme: "PaperMod"
+defaultContentLanguage: "zh-tw"
+hasCJKLanguage: true
+paginate: 10
+
+params:
+  env: production
+  title: Pick-TW
+  description: "台灣最佳商品推薦平台，精選科技工具、居家家電、金融理財好物"
+  keywords: [推薦, 評測, 科技, 家電, 理財, 台灣]
+  author: Pick-TW
+  DateFormat: "2006-01-02"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  homeInfoParams:
+    Title: "歡迎來到 Pick-TW"
+    Content: "精選台灣最值得入手的好物推薦，涵蓋科技工具、居家家電、金融理財等多元分類。"
+  socialIcons:
+    - name: github
+      url: "https://github.com"
+
+taxonomies:
+  category: categories
+  tag: tags
+
+menu:
+  main:
+    - identifier: categories
+      name: 分類
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: 標籤
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: 關於
+      url: /about/
+      weight: 30
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
