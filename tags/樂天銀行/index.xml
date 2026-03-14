@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>樂天銀行 on Pick-TW</title>
+    <link>http://localhost:1313/tags/%E6%A8%82%E5%A4%A9%E9%8A%80%E8%A1%8C/</link>
+    <description>Recent content in 樂天銀行 on Pick-TW</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%A8%82%E5%A4%A9%E9%8A%80%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LINE Bank vs 其他純網銀比較 2026｜將來銀行、樂天銀行、連線銀行完整評比</title>
+      <link>http://localhost:1313/posts/2026-03-15-line-bank-vs-other-neobanks/</link>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-15-line-bank-vs-other-neobanks/</guid>
+      <description>完整比較台灣四大純網銀：LINE Bank、將來銀行、樂天銀行、連線銀行，從利率、手續費、功能到優缺點全面分析。</description>
+    </item>
+  </channel>
+</rss>

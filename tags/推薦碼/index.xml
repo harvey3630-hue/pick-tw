@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>推薦碼 on Pick-TW</title>
+    <link>http://localhost:1313/tags/%E6%8E%A8%E8%96%A6%E7%A2%BC/</link>
+    <description>Recent content in 推薦碼 on Pick-TW</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%8E%A8%E8%96%A6%E7%A2%BC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LINE Bank 推薦碼 2026｜開戶優惠、紅利點數完整教學</title>
+      <link>http://localhost:1313/posts/2026-03-15-line-bank-referral-code/</link>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-15-line-bank-referral-code/</guid>
+      <description>LINE Bank 推薦碼使用教學，開戶最高可獲得現金回饋與紅利點數，附上最新優惠活動整理。</description>
+    </item>
+  </channel>
+</rss>
