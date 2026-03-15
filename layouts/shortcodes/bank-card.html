@@ -1,0 +1,57 @@
+{{/*
+  bank-card shortcode — 銀行/金融產品推廣卡片（大型美觀按鈕）
+  用法：
+  {{< bank-card
+    bank="LINE Bank"
+    emoji="💚"
+    code="bfSAZz"
+    bonus="透過連結開戶，享活存最高 2.6% 年利率"
+    link="https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz"
+    color="green"
+    tag="限時活動"
+  >}}
+
+  color: blue（預設）| green | red | orange | purple
+*/}}
+{{ $bank  := .Get "bank"  | default "銀行" }}
+{{ $emoji := .Get "emoji" | default "🏦" }}
+{{ $code  := .Get "code"  | default "" }}
+{{ $bonus := .Get "bonus" | default "" }}
+{{ $link  := .Get "link"  | default "#" }}
+{{ $color := .Get "color" | default "blue" }}
+{{ $tag   := .Get "tag"   | default "" }}
+{{ $btn   := .Get "btn"   | default "立即申辦 →" }}
+{{ $uid   := printf "%s%s" $bank $code | md5 | truncate 8 "" }}
+
+{{ $grad := "linear-gradient(135deg,#014876 0%,#0275b5 100%)" }}
+{{ if eq $color "green"  }}{{ $grad = "linear-gradient(135deg,#0a7a3d 0%,#1db954 100%)" }}{{ end }}
+{{ if eq $color "red"    }}{{ $grad = "linear-gradient(135deg,#b71c1c 0%,#e53935 100%)" }}{{ end }}
+{{ if eq $color "orange" }}{{ $grad = "linear-gradient(135deg,#e65100 0%,#f57c00 100%)" }}{{ end }}
+{{ if eq $color "purple" }}{{ $grad = "linear-gradient(135deg,#4527a0 0%,#7b1fa2 100%)" }}{{ end }}
+{{ if eq $color "pink"   }}{{ $grad = "linear-gradient(135deg,#880e4f 0%,#e91e63 100%)" }}{{ end }}
+
+<div class="pt-bank-card" style="background:{{ $grad | safeCSS }}">
+  {{ if $tag }}<span class="pt-bank-card-tag">{{ $tag }}</span>{{ end }}
+  <div class="pt-bank-card-header">
+    <span class="pt-bank-card-emoji">{{ $emoji }}</span>
+    <span class="pt-bank-card-name">{{ $bank }}</span>
+  </div>
+  {{ if $bonus }}
+  <p class="pt-bank-card-bonus">{{ $bonus }}</p>
+  {{ end }}
+  <div class="pt-bank-card-footer">
+    {{ if $code }}
+    <div class="pt-bank-card-code-wrap">
+      <span class="pt-bank-card-code-label">推薦碼</span>
+      <span class="pt-bank-card-code" id="bcc-{{ $uid }}" onclick="ptCopyCode('{{ $code }}','bcb-{{ $uid }}')">{{ $code }}</span>
+      <button class="pt-bank-card-copy" onclick="ptCopyCode('{{ $code }}','bcb-{{ $uid }}')" id="bcb-{{ $uid }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
+        複製
+      </button>
+    </div>
+    {{ end }}
+    <a class="pt-bank-card-btn" href="{{ $link }}" target="_blank" rel="noopener sponsored">
+      {{ $btn }}
+    </a>
+  </div>
+</div>

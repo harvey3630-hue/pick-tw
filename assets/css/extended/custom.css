@@ -1073,6 +1073,24 @@ blockquote {
   background: var(--entry);
 }
 
+/* 大型官方申辦按鈕（金融產品用） */
+.pt-buy-official-lg {
+  background: var(--pt-blue-grad) !important;
+  color: #fff !important;
+  padding: 14px 32px !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  border-radius: var(--pt-radius-lg) !important;
+  box-shadow: 0 4px 20px rgba(1,72,118,0.4) !important;
+  width: 100%;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+.pt-buy-official-lg:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 28px rgba(1,72,118,0.55) !important;
+}
+
 .pt-buy-label {
   display: block;
   font-weight: 700;
@@ -1167,4 +1185,162 @@ blockquote {
 @media (prefers-color-scheme: dark) {
   .cat-btn { border-color: var(--pt-accent); color: var(--pt-accent); }
   .cat-btn:hover, .cat-btn.active { background: var(--pt-accent); color: #000; }
+}
+
+/* ================================================
+   23. 銀行卡片推廣按鈕（bank-card shortcode）
+   ================================================ */
+.pt-bank-card {
+  border-radius: var(--pt-radius-md);
+  padding: 24px 24px 20px;
+  margin: 24px 0;
+  position: relative;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.18);
+  overflow: hidden;
+  color: #fff;
+}
+
+.pt-bank-card::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 140px; height: 140px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+
+.pt-bank-card::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; left: -30px;
+  width: 180px; height: 180px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+
+.pt-bank-card-tag {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+}
+
+.pt-bank-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pt-bank-card-emoji {
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+}
+
+.pt-bank-card-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.pt-bank-card-bonus {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 18px;
+  line-height: 1.65;
+}
+
+.pt-bank-card-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.pt-bank-card-code-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 10px;
+  padding: 8px 14px;
+  backdrop-filter: blur(4px);
+}
+
+.pt-bank-card-code-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pt-bank-card-code {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  user-select: all;
+}
+
+.pt-bank-card-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pt-bank-card-copy:hover,
+.pt-bank-card-copy.copied {
+  background: rgba(255,255,255,0.35);
+}
+
+.pt-bank-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.95);
+  color: #014876 !important;
+  border-radius: var(--pt-radius-lg);
+  padding: 12px 26px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none !important;
+  transition: all 0.25s;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.pt-bank-card-btn:hover {
+  background: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  color: #014876 !important;
+}
+
+@media (max-width: 600px) {
+  .pt-bank-card-footer { flex-direction: column; align-items: stretch; }
+  .pt-bank-card-btn { margin-left: 0; justify-content: center; }
+  .pt-bank-card-code-wrap { justify-content: space-between; }
 }

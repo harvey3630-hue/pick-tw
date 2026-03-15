@@ -1,30 +1,36 @@
-{{/* 購買按鈕 Shortcode
+{{/* 購買/申辦按鈕 Shortcode
    用法：
-   {{< buy-button momo="https://..." shopee="https://..." pchome="https://..." name="商品名稱" >}}
+   實體商品：{{< buy-button momo="https://..." shopee="https://..." label="商品名稱" >}}
+   金融產品：{{< buy-button official="https://..." label="銀行名稱" >}}
 */}}
+{{ $label    := .Get "label"    | default "" }}
+{{ $momo     := .Get "momo"     | default "" }}
+{{ $shopee   := .Get "shopee"   | default "" }}
+{{ $pchome   := .Get "pchome"   | default "" }}
+{{ $official := .Get "official" | default "" }}
+
 <div class="pt-buy-btns">
-  {{- with .Get "name" }}<span class="pt-buy-label">{{ . }}</span>{{- end }}
+  {{- if $label }}<span class="pt-buy-label">{{ $label }}</span>{{- end }}
   <div class="pt-buy-btn-row">
-    {{- with .Get "momo" }}
-    <a href="{{ . }}" target="_blank" rel="nofollow noopener" class="pt-buy-btn pt-buy-momo">
+    {{- if $momo }}
+    <a href="{{ $momo }}" target="_blank" rel="nofollow noopener" class="pt-buy-btn pt-buy-momo">
       🛒 momo 查看價格
     </a>
     {{- end }}
-    {{- with .Get "shopee" }}
-    <a href="{{ . }}" target="_blank" rel="nofollow noopener" class="pt-buy-btn pt-buy-shopee">
+    {{- if $shopee }}
+    <a href="{{ $shopee }}" target="_blank" rel="nofollow noopener" class="pt-buy-btn pt-buy-shopee">
       🛒 蝦皮 查看價格
     </a>
     {{- end }}
-    {{- with .Get "pchome" }}
-    <a href="{{ . }}" target="_blank" rel="nofollow noopener" class="pt-buy-btn pt-buy-pchome">
+    {{- if $pchome }}
+    <a href="{{ $pchome }}" target="_blank" rel="nofollow noopener" class="pt-buy-btn pt-buy-pchome">
       🛒 PChome 查看價格
     </a>
     {{- end }}
-    {{- with .Get "official" }}
-    <a href="{{ . }}" target="_blank" rel="nofollow noopener" class="pt-buy-btn pt-buy-official">
-      🏪 官網申辦
+    {{- if $official }}
+    <a href="{{ $official }}" target="_blank" rel="nofollow noopener" class="pt-buy-btn pt-buy-official pt-buy-official-lg">
+      {{- if $label }}🏦 立即申辦 {{ $label }}{{- else }}🏦 前往官網申辦{{- end }} →
     </a>
     {{- end }}
   </div>
-  <p class="pt-buy-note">⚠️ 本文含聯盟連結，透過連結購買時 Pick-TW 可能獲得佣金，不影響您的費用。</p>
 </div>
