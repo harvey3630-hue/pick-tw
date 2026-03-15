@@ -1,0 +1,24 @@
+{{/*
+  pt-ad shortcode — 廣告位置佔位符（上線時替換為 AdSense 代碼）
+  用法：
+  {{< pt-ad slot="inline" >}}        → 文章內方形廣告
+  {{< pt-ad slot="top" >}}           → 頂部橫幅
+  {{< pt-ad slot="footer" >}}        → 文末廣告
+
+  上線後將 Inner 換成 AdSense <ins> 標籤即可。
+*/}}
+{{ $slot := .Get "slot" | default "inline" }}
+{{ $class := "pt-ad-inline" }}
+{{ if eq $slot "top"    }}{{ $class = "pt-ad-top"    }}{{ end }}
+{{ if eq $slot "footer" }}{{ $class = "pt-ad-footer" }}{{ end }}
+{{ if eq $slot "float"  }}{{ $class = "pt-ad-float"  }}{{ end }}
+
+<div class="pt-ad-label">廣告</div>
+<div class="{{ $class }}">
+  {{ if .Inner }}
+    {{ .Inner | safeHTML }}
+  {{ else }}
+    <!-- AdSense placeholder — replace with <ins> tag -->
+    <div style="color:#aaa;font-size:0.8rem;padding:20px;">Ad {{ $slot }}</div>
+  {{ end }}
+</div>

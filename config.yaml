@@ -1,17 +1,22 @@
 baseURL: "https://pick-tw.com"
 languageCode: "zh-TW"
-title: "Pick-TW"
+title: "Pick-TW｜台灣精選好物推薦"
 theme: "PaperMod"
 defaultContentLanguage: "zh-tw"
 hasCJKLanguage: true
 paginate: 10
+enableRobotsTXT: true
+canonifyURLs: false
+summaryLength: 60
 
 params:
   env: production
-  title: Pick-TW
-  description: "台灣最佳商品推薦平台，精選科技工具、居家家電、金融理財好物"
-  keywords: [推薦, 評測, 科技, 家電, 理財, 台灣]
-  author: Pick-TW
+  assets:
+    disableFingerprinting: true
+  title: "Pick-TW｜台灣精選好物推薦"
+  description: "Pick-TW 幫你省去比較時間，精選台灣最值得入手的科技工具、居家家電、金融理財好物，每篇都是實測推薦。"
+  keywords: [推薦, 評測, 科技, 家電, 理財, 台灣, 好物, 開箱]
+  author: Pick-TW 編輯團隊
   DateFormat: "2006-01-02"
   defaultTheme: auto
   disableThemeToggle: false
@@ -21,19 +26,60 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowToc: true
-  homeInfoParams:
-    Title: "歡迎來到 Pick-TW"
-    Content: "精選台灣最值得入手的好物推薦，涵蓋科技工具、居家家電、金融理財等多元分類。"
+  ShowFullTextinRSS: true
+  TocOpen: false
+  comments: false
+  ShowLastMod: true
+
+  profileMode:
+    enabled: false
+
   socialIcons:
-    - name: github
-      url: "https://github.com"
+    - name: rss
+      url: /index.xml
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+    linkFullImages: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 2
+    keys: ["title", "permalink", "summary", "content"]
+
+  label:
+    text: "Pick-TW"
+
+  announceBar:
+    enabled: true
+    version: "2026-03"
+    urgent: false
+    badge: "限時優惠"
+    text: "💳 LINE Bank 開戶推薦碼活動，新戶最高回饋 500 元！"
+    linkText: "查看詳情"
+    linkUrl: "/posts/2026-03-15-line-bank-referral-code/"
 
 taxonomies:
   category: categories
   tag: tags
+  series: series
+
+sitemap:
+  changefreq: weekly
+  priority: 0.8
 
 menu:
   main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 5
     - identifier: categories
       name: 分類
       url: /categories/
@@ -42,10 +88,23 @@ menu:
       name: 標籤
       url: /tags/
       weight: 20
+    - identifier: search
+      name: 搜尋
+      url: /search/
+      weight: 25
     - identifier: about
       name: 關於
       url: /about/
       weight: 30
+    - identifier: disclaimer
+      name: 免責聲明
+      url: /disclaimer/
+      weight: 35
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 outputs:
   home:

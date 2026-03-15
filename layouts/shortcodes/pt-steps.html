@@ -1,0 +1,24 @@
+{{/*
+  pt-steps shortcode — 開戶步驟清單
+  用法（Inner 為 JSON 陣列）：
+
+  {{< pt-steps >}}
+  [
+    {"title":"下載 App","desc":"至 App Store 或 Google Play 搜尋「LINE Bank」並安裝。"},
+    {"title":"點選開戶","desc":"開啟 App 後選擇「立即開戶」，依指示完成身分驗證。"},
+    {"title":"輸入推薦碼","desc":"在推薦碼欄位輸入 **ABCD1234** 以獲得開戶獎勵。"},
+    {"title":"完成驗證","desc":"上傳身分證正反面，通常 5 分鐘內完成開戶。"}
+  ]
+  {{< /pt-steps >}}
+*/}}
+{{ $steps := .Inner | transform.Unmarshal }}
+<ol class="pt-steps">
+  {{ range $steps }}
+  <li>
+    <div class="pt-step-content">
+      {{ if .title }}<div class="pt-step-title">{{ .title }}</div>{{ end }}
+      <div>{{ .desc | markdownify }}</div>
+    </div>
+  </li>
+  {{ end }}
+</ol>

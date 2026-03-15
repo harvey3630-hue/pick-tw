@@ -1,0 +1,14 @@
+{{/*
+  pt-summary shortcode — 文章頂部 TL;DR 摘要盒
+  用法：
+  {{< pt-summary title="📋 本文重點" >}}
+  - **LINE Bank 推薦碼**：ABCD1234，開戶送 100 點
+  - 開戶流程約 **5 分鐘**完成
+  - 優惠期限至 2026/06/30
+  {{< /pt-summary >}}
+*/}}
+{{ $title := .Get "title" | default "📋 本文重點" }}
+<div class="pt-summary-box">
+  <div class="pt-summary-title">{{ $title }}</div>
+  {{ .Inner | markdownify }}
+</div>

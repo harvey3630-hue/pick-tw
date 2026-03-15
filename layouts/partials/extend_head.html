@@ -1,0 +1,117 @@
+{{- /* extend_head.html — Pick-TW 自訂 head 注入 */ -}}
+
+{{- /* ===== Google AdSense（上線時取消註解並填入 Publisher ID）===== */ -}}
+{{- /*
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+*/ -}}
+
+{{- /* ===== Google Analytics GA4（上線時取消註解）===== */ -}}
+{{- /*
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+{{ end }}
+*/ -}}
+
+{{- /* ===== Open Graph 額外標籤 ===== */ -}}
+<meta property="og:locale" content="zh_TW" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@picktw_com" />
+
+{{- /* ===== JSON-LD 結構化資料 ===== */ -}}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pick-TW｜台灣精選好物推薦",
+  "url": "https://pick-tw.com",
+  "description": "Pick-TW 幫你省去比較時間，精選台灣最值得入手的科技工具、居家家電、金融理財好物，每篇都是實測推薦。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://pick-tw.com/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pick-TW",
+    "url": "https://pick-tw.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pick-tw.com/images/avatar.jpg"
+    }
+  }
+}
+</script>
+{{- end }}
+
+{{- if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end }},
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05+08:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05+08:00" | jsonify }},
+  "author": {
+    "@type": "Organization",
+    "name": "Pick-TW 編輯團隊",
+    "url": "https://pick-tw.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pick-TW",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pick-tw.com/images/avatar.jpg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  }
+  {{- with .Params.cover.image }},
+  "image": {
+    "@type": "ImageObject",
+    "url": {{ printf "https://pick-tw.com/%s" . | jsonify }}
+  }
+  {{- end }}
+}
+</script>
+
+{{- /* BreadcrumbList */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://pick-tw.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "所有文章",
+      "item": "https://pick-tw.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+  ]
+}
+</script>
+{{- end }}

@@ -1,0 +1,29 @@
+{{- /*
+  announce-bar.html — 全站公告列 partial
+  在 baseof.html 中使用：{{ partial "announce-bar.html" . }}
+
+  設定方式：在 config.yaml params 區塊加入：
+    announceBar:
+      enabled: true
+      version: "2026-03"
+      urgent: false
+      badge: "限時優惠"
+      text: "LINE Bank 開戶推薦碼活動，首刷回饋加碼！"
+      linkText: "查看詳情"
+      linkUrl: "/posts/line-bank-referral-code/"
+*/ -}}
+{{- $bar := site.Params.announceBar -}}
+{{- if and $bar $bar.enabled -}}
+<div id="pt-announce-bar"
+     class="pt-announce-bar{{- if $bar.urgent }} urgent{{- end }}"
+     data-version="{{ $bar.version | default "1" }}">
+  {{- with $bar.badge }}<span class="pt-announce-badge">{{ . }}</span>{{- end }}
+  <span>
+    {{ $bar.text | safeHTML }}
+    {{- with $bar.linkUrl }}
+    <a href="{{ . }}">{{ $bar.linkText | default "了解更多" }} →</a>
+    {{- end }}
+  </span>
+  <button class="pt-announce-close" aria-label="關閉公告">✕</button>
+</div>
+{{- end -}}

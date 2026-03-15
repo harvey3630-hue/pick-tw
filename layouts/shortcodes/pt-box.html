@@ -1,0 +1,15 @@
+{{/*
+  pt-box shortcode — 資訊框
+  用法：
+  {{< pt-box type="tip" title="📌 小提醒" >}}
+  這裡放說明文字，支援 **Markdown**。
+  {{< /pt-box >}}
+
+  type 可選：info（預設）、tip、warn、success、danger
+*/}}
+{{ $type  := .Get "type"  | default "info" }}
+{{ $title := .Get "title" | default "" }}
+<div class="pt-box pt-box-{{ $type }}">
+  {{ if $title }}<div class="pt-box-title">{{ $title }}</div>{{ end }}
+  {{ .Inner | markdownify }}
+</div>

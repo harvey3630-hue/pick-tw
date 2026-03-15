@@ -1,0 +1,27 @@
+{{/*
+  pt-cta shortcode — 大型 CTA 區塊
+  用法：
+  {{< pt-cta title="立即開戶享好康" desc="透過推薦碼開戶，新戶限定優惠！" btn="馬上申請" link="https://..." >}}
+
+  參數：
+    title : 標題
+    desc  : 說明文字
+    btn   : 按鈕文字（預設「立即申請」）
+    link  : 連結 URL
+    style : "blue"（預設）或 "green" 或 "red"
+*/}}
+{{ $title := .Get "title" | default "限時優惠" }}
+{{ $desc  := .Get "desc"  | default "" }}
+{{ $btn   := .Get "btn"   | default "立即申請" }}
+{{ $link  := .Get "link"  | default "#" }}
+{{ $style := .Get "style" | default "blue" }}
+
+{{ $bg := "var(--pt-blue-grad)" }}
+{{ if eq $style "green" }}{{ $bg = "linear-gradient(135deg,#28a745 0%,#20c997 100%)" }}{{ end }}
+{{ if eq $style "red"   }}{{ $bg = "linear-gradient(135deg,#dc3545 0%,#e63946 100%)" }}{{ end }}
+
+<div class="pt-cta-block" style="background:{{ $bg | safeCSS }};">
+  <h3>{{ $title }}</h3>
+  {{ if $desc }}<p>{{ $desc }}</p>{{ end }}
+  <a class="pt-btn" href="{{ $link }}" target="_blank" rel="noopener sponsored">{{ $btn }} →</a>
+</div>
