@@ -21,15 +21,8 @@ cover:
 
 機械鍵盤近年來在台灣越來越受歡迎，無論是程式開發者、文字工作者還是遊戲玩家，都開始追求更好的打字體驗。本文精選五款 2026 年最值得入手的機械鍵盤，從千元入門到萬元旗艦，讓你一次看個夠。
 
-## 立即行動
 
-> 找到心儀的產品了嗎？點擊下方按鈕立即購買，享受最優惠價格！
 
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=Keychron K2 Pro" pchome="https://24h.pchome.com.tw/search/?q=Keychron K2 Pro" label="Keychron K2 Pro" >}}
-
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=HHKB Professional Hybrid" pchome="https://24h.pchome.com.tw/search/?q=HHKB Professional Hybrid" label="HHKB Professional Hybrid" >}}
-
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=Logitech MX Mechanical" pchome="https://24h.pchome.com.tw/search/?q=Logitech MX Mechanical" label="Logitech MX Mechanical" >}}
 
 ## 選購重點
 
@@ -51,7 +44,6 @@ cover:
 - 75% 配列，兼顧功能鍵與緊湊尺寸
 - 相容 Mac / Windows 雙系統
 
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=Keychron K2 Pro" pchome="https://24h.pchome.com.tw/search/?q=Keychron K2 Pro" label="Keychron K2 Pro" >}}
 
 ### 2. HHKB Professional Hybrid Type-S（約 NT$9,800）
 
@@ -61,7 +53,6 @@ cover:
 - 極靜音設計，辦公室使用零壓力
 - 60 鍵緊湊配列，適合鍵盤進階玩家
 
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=HHKB Professional Hybrid Type-S" pchome="https://24h.pchome.com.tw/search/?q=HHKB Professional Hybrid Type-S" label="HHKB Professional Hybrid Type-S" >}}
 
 ### 3. Logitech MX Mechanical（約 NT$4,500）
 
@@ -71,7 +62,6 @@ cover:
 - 支援 Easy-Switch 多設備切換
 - 提供 Clicky / Tactile / Linear 三種軸體選擇
 
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=Logitech MX Mechanical" pchome="https://24h.pchome.com.tw/search/?q=Logitech MX Mechanical" label="Logitech MX Mechanical" >}}
 
 ## 總結比較
 

@@ -23,10 +23,6 @@ cover:
 
 2026 年筆電最重要的改變是 **AI 功能全面整合**。從微軟的 Copilot+ PC 到 Apple 的 Apple Intelligence，筆電已不只是拿來打字看影片的工具，而是真正能幫你提升工作效率的 AI 助理。
 
-## 立即行動
-
-> 找到心儀的產品了嗎？點擊下方按鈕立即購買，享受最優惠價格！
-
 除此之外，今年筆電有幾個明顯趨勢：
 
 1. **ARM 架構大幅普及**：Apple M4、高通 Snapdragon X 等 ARM 晶片效能大躍進，同時電池壽命遠超 x86 架構
@@ -103,7 +99,6 @@ cover:
 
 **推薦對象：** 學生（設計/程式）、文字工作者、外出工作族
 
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=MacBook+Air+15+M4" pchome="https://24h.pchome.com.tw/search/?q=MacBook+Air+15+M4" label="Apple MacBook Air 15 吋 M4" >}}
 
 ---
 
@@ -132,7 +127,6 @@ cover:
 - 效能略遜 MacBook M4
 - OLED 螢幕需加錢選配
 
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=Lenovo+ThinkPad+X1+Carbon+Gen+12" pchome="https://24h.pchome.com.tw/search/?q=Lenovo+ThinkPad+X1+Carbon+Gen+12" label="Lenovo ThinkPad X1 Carbon Gen 12" >}}
 
 ---
 
@@ -160,7 +154,6 @@ cover:
 - 遊戲模式下發熱（底部約 45°C）
 - 比純商務機重
 
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=ASUS+ROG+Zephyrus+G14+2026" pchome="https://24h.pchome.com.tw/search/?q=ASUS+ROG+Zephyrus+G14+2026" label="ASUS ROG Zephyrus G14 2026" >}}
 
 ---
 
@@ -187,7 +180,6 @@ cover:
 - 效能中規中矩（不適合重度影片剪輯）
 - 連接埠略少（僅 2x USB-C + 1x USB-A）
 
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=ASUS+Zenbook+14+OLED+UX3405" pchome="https://24h.pchome.com.tw/search/?q=ASUS+Zenbook+14+OLED+UX3405" label="ASUS Zenbook 14 OLED（UX3405）" >}}
 
 ---
 
@@ -210,7 +202,6 @@ cover:
 - Stable Diffusion 圖片生成：M4 Pro GPU 比 M3 Pro 快 35%
 - 同時跑 Logic Pro + 60 個音軌：毫無壓力，無延遲
 
-{{< buy-button momo="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=MacBook+Pro+14+M4+Pro" pchome="https://24h.pchome.com.tw/search/?q=MacBook+Pro+14+M4+Pro" label="MacBook Pro 14 吋 M4 Pro" >}}
 
 ---
 

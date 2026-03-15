@@ -21,15 +21,8 @@ cover:
 
 各家銀行定位與優勢不同，本文從多個面向幫你比較，找出最適合自己的選擇。
 
-## 立即行動
 
-> 找到心儀的銀行了嗎？點擊下方按鈕立即開戶，享受最優惠利率！
 
-{{< buy-button official="https://linebank.com.tw" label="LINE Bank 開戶" >}}
-
-{{< buy-button official="https://www.nextbank.com.tw/" label="將來銀行 開戶" >}}
-
-{{< buy-button official="https://www.rakutenbank.com.tw/" label="樂天銀行 開戶" >}}
 
 ---
 
@@ -83,7 +76,6 @@ cover:
 - 客服高峰期等待時間較長
 - 部分功能仍在陸續推出中
 
-{{< buy-button official="https://linebank.com.tw" label="LINE Bank 開戶" >}}
 
 ---
 
@@ -97,7 +89,6 @@ cover:
 - 生態系整合不如 LINE Bank 完整
 - 知名度相對較低
 
-{{< buy-button official="https://www.nextbank.com.tw/" label="將來銀行 開戶" >}}
 
 ---
 
@@ -111,7 +102,6 @@ cover:
 - 在台灣的推廣力度較弱
 - 本地生活整合功能有限
 
-{{< buy-button official="https://www.rakutenbank.com.tw/" label="樂天銀行 開戶" >}}
 
 ---
 
@@ -142,3 +132,27 @@ A：不行，純網銀完全線上化，所有業務均透過 App 辦理。
 ## 總結
 
 LINE Bank 憑藉 LINE 生態系的優勢，在台灣純網銀市場佔有最大份額。但建議根據自身需求選擇，甚至同時開設多家帳戶，最大化各項優惠回饋。
+---
+
+## 透過推薦連結開戶享優惠
+
+{{< bank-card
+  bank="LINE Bank"
+  emoji="💚"
+  bonus="透過推薦連結開戶，享活存最高 2.6%% 年利率，跨轉免費 50 次/月。"
+  link="https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz"
+  color="green"
+  btn="LINE Bank 推薦連結開戶 →"
+  tag="持續活動"
+>}}
+
+{{< bank-card
+  bank="樂天銀行"
+  emoji="❤️"
+  code="M2PVML"
+  bonus="輸入推薦碼開戶，推薦人與被推薦人各獲 NT$300 現金回饋。優惠至 2026/3/31。"
+  link="https://www.rakuten-bank.com.tw/s/T68U"
+  color="red"
+  btn="樂天銀行推薦碼開戶 →"
+  tag="雙方各 NT$300"
+>}}

@@ -16,11 +16,6 @@ cover:
 
 ![存款利率比較](/images/posts/line-bank-interest.jpg)
 
-## 立即行動
-
-> 找到心儀的產品了嗎？點擊下方按鈕立即購買/申辦，享受最優惠價格！
-
-{{< buy-button official="https://linebank.com.tw" label="LINE Bank 開戶" >}}
 
 ---
 
@@ -36,7 +31,6 @@ cover:
 
 > 利率依 LINE Bank 官方每月公告為準，數字僅供參考。
 
-{{< buy-button official="https://linebank.com.tw" label="LINE Bank 優惠活存方案" >}}
 
 ---
 
@@ -51,7 +45,6 @@ LINE Bank 的優惠利率通常有以下條件：
 
 符合越多條件，可享有越高的活存利率。
 
-{{< buy-button official="https://linebank.com.tw" label="LINE Bank 帳戶綁定設定" >}}
 
 ---
 
@@ -68,7 +61,6 @@ LINE Bank 的優惠利率通常有以下條件：
 
 純網銀的活存利率優勢相當明顯。
 
-{{< buy-button official="https://linebank.com.tw" label="LINE Bank 定存方案" >}}
 
 ---
 
@@ -97,3 +89,14 @@ A：可以，但提前解約會損失部分利息，建議評估後再決定。
 ## 總結
 
 LINE Bank 的利率在純網銀中具有相當競爭力，善用活動條件可以進一步提升存款收益。建議定期關注官網公告，把握最新優惠活動。
+---
+
+{{< bank-card
+  bank="LINE Bank"
+  emoji="💚"
+  bonus="透過專屬推薦連結開戶，享活存最高 2.6%% 年利率，跨行轉帳免手續費最高 50 次/月（持續活動）。"
+  link="https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz"
+  color="green"
+  btn="透過推薦連結立即開戶 →"
+  tag="持續活動"
+>}}

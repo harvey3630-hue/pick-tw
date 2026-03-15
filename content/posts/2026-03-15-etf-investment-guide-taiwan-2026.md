@@ -32,17 +32,9 @@ cover:
 
 但 ETF 不是買了就好，選錯 ETF 或策略錯誤，一樣可能讓你虧損或錯失機會。
 
-## 立即行動
 
-> 找到心儀的 ETF 了嗎？點擊下方按鈕立即開戶購買，開始你的投資之旅！
 
-{{< buy-button official="https://www.yuanta.com.tw/" label="元大證券開戶" >}}
 
-{{< buy-button official="https://www.fbs.com.tw/" label="富邦證券開戶" >}}
-
-{{< buy-button official="https://www.cathayholdings.com/securities/" label="國泰證券開戶" >}}
-
-{{< buy-button official="https://www.sinotrade.com.tw/" label="永豐金證券開戶" >}}
 
 ---
 
@@ -92,7 +84,6 @@ ETF 追蹤一個特定的**指數**，例如：
 
 **適合：** 長期投資（10 年以上）、希望參與台灣科技業成長的投資人
 
-{{< buy-button official="https://www.yuanta.com.tw/" label="元大台灣 50（0050）" >}}
 
 ---
 
@@ -119,7 +110,6 @@ ETF 追蹤一個特定的**指數**，例如：
 
 **適合：** 需要每年現金流入、已退休或準備退休的投資人
 
-{{< buy-button official="https://www.yuanta.com.tw/" label="元大高股息（0056）" >}}
 
 ---
 
@@ -146,7 +136,6 @@ ETF 追蹤一個特定的**指數**，例如：
 
 **適合：** 剛入門、預算有限、想每季領股息的投資人
 
-{{< buy-button official="https://www.cathayholdings.com/securities/" label="國泰永豐高股息（00878）" >}}
 
 ---
 
@@ -169,7 +158,6 @@ ETF 追蹤一個特定的**指數**，例如：
 
 **注意：** 美股 ETF 有 30% 股息預扣稅（美國來源稅），如果透過台灣掛牌的替代品，可以避開這個問題。
 
-{{< buy-button official="https://www.sinotrade.com.tw/" label="S&P 500 ETF 投資" >}}
 
 ---
 
