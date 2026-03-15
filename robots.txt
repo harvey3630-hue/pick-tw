@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://pick-tw.com/sitemap.xml
