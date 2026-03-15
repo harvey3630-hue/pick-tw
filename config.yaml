@@ -56,8 +56,8 @@ params:
   label:
     text: "Pick-TW"
 
-  # Google AdSense — 申請核准後填入 Publisher ID（格式：ca-pub-XXXXXXXXXXXXXXXXX）
-  adsense_publisher_id: ""
+  # Google AdSense
+  adsense_publisher_id: "ca-pub-5747723475518686"
 
   announceBar:
     enabled: true
