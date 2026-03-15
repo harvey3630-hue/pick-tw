@@ -56,14 +56,17 @@ params:
   label:
     text: "Pick-TW"
 
+  # Google AdSense — 申請核准後填入 Publisher ID（格式：ca-pub-XXXXXXXXXXXXXXXXX）
+  adsense_publisher_id: ""
+
   announceBar:
     enabled: true
     version: "2026-03"
-    urgent: false
+    urgent: true
     badge: "限時優惠"
-    text: "💳 LINE Bank 開戶推薦碼活動，新戶最高回饋 500 元！"
-    linkText: "查看詳情"
-    linkUrl: "/posts/2026-03-15-line-bank-referral-code/"
+    text: "🔥 樂天銀行推薦碼 M2PVML 雙方各NT$300、台新Richart推薦碼 ELB6T 新戶NT$100，活動至 3/31！"
+    linkText: "立即申辦"
+    linkUrl: "/posts/2026-03-15-referral-codes-all/"
 
 taxonomies:
   category: categories

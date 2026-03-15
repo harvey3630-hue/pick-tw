@@ -1,10 +1,10 @@
 {{- /* extend_head.html — Pick-TW 自訂 head 注入 */ -}}
 
-{{- /* ===== Google AdSense（上線時取消註解並填入 Publisher ID）===== */ -}}
-{{- /*
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX"
+{{- /* ===== Google AdSense（在 config.yaml 填入 adsense_publisher_id 後自動啟用）===== */ -}}
+{{- with site.Params.adsense_publisher_id }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}"
      crossorigin="anonymous"></script>
-*/ -}}
+{{- end }}
 
 {{- /* ===== Google Analytics GA4（上線時取消註解）===== */ -}}
 {{- /*

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#004D7A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006494;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="120" rx="12" ry="12" fill="url(#grad)"/>
+  <text x="30" y="50" font-family="Arial,sans-serif" font-size="28" fill="white">🏦 永豐大戶卡</text>
+  <text x="30" y="80" font-family="Arial,sans-serif" font-size="16" fill="rgba(255,255,255,0.9)">推薦碼：待取得</text>
+  <text x="30" y="105" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.7)">點擊查看最新優惠 →</text>
+</svg>

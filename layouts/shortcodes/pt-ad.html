@@ -13,12 +13,17 @@
 {{ if eq $slot "footer" }}{{ $class = "pt-ad-footer" }}{{ end }}
 {{ if eq $slot "float"  }}{{ $class = "pt-ad-float"  }}{{ end }}
 
-<div class="pt-ad-label">廣告</div>
+{{ $pubId := site.Params.adsense_publisher_id }}
+{{ if $pubId }}
 <div class="{{ $class }}">
-  {{ if .Inner }}
-    {{ .Inner | safeHTML }}
-  {{ else }}
-    <!-- AdSense placeholder — replace with <ins> tag -->
-    <div style="color:#aaa;font-size:0.8rem;padding:20px;">Ad {{ $slot }}</div>
-  {{ end }}
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ $pubId }}"
+       data-ad-slot="{{ .Get "adslot" | default "auto" }}"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+{{ else }}
+{{- /* AdSense 尚未設定 — 不顯示任何廣告佔位符（避免影響用戶體驗）*/ -}}
+{{ end }}
