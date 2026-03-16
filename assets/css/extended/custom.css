@@ -94,8 +94,25 @@
 }
 
 /* ================================================
-   3. 導航列
+   3. 導航列（永遠置頂）
    ================================================ */
+
+/* 導航列 sticky，公告列已佔 top:0，nav 接在正下方 */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9998;
+  background: var(--theme);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  backdrop-filter: blur(8px);
+}
+
+/* dark mode */
+.dark .header {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
 .logo a {
   font-weight: 800;
   font-size: 1.25rem;
