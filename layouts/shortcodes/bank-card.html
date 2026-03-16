@@ -4,6 +4,7 @@
   {{< bank-card
     bank="LINE Bank"
     emoji="💚"
+    img="/images/referral/linebank.jpg"
     code="bfSAZz"
     bonus="透過連結開戶，享活存最高 2.6% 年利率"
     link="https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz"
@@ -12,9 +13,11 @@
   >}}
 
   color: blue（預設）| green | red | orange | purple
+  img: 可選，填入圖片路徑（/images/referral/xxx.jpg 或 .svg），有圖優先顯示圖，無圖顯示 emoji
 */}}
 {{ $bank  := .Get "bank"  | default "銀行" }}
 {{ $emoji := .Get "emoji" | default "🏦" }}
+{{ $img   := .Get "img"   | default "" }}
 {{ $code  := .Get "code"  | default "" }}
 {{ $bonus := .Get "bonus" | default "" }}
 {{ $link  := .Get "link"  | default "#" }}
@@ -33,7 +36,11 @@
 <div class="pt-bank-card" style="background:{{ $grad | safeCSS }}">
   {{ if $tag }}<span class="pt-bank-card-tag">{{ $tag }}</span>{{ end }}
   <div class="pt-bank-card-header">
+    {{ if $img }}
+    <img src="{{ $img }}" alt="{{ $bank }} logo" class="pt-bank-card-img" loading="lazy" style="height:40px;max-width:120px;object-fit:contain;border-radius:6px;background:rgba(255,255,255,0.15);padding:4px 8px;">
+    {{ else }}
     <span class="pt-bank-card-emoji">{{ $emoji }}</span>
+    {{ end }}
     <span class="pt-bank-card-name">{{ $bank }}</span>
   </div>
   {{ if $bonus }}
