@@ -16,53 +16,26 @@ weight: 1
 - 本頁整理 **3 家數位銀行**推薦碼，可直接點擊申辦
 - **樂天銀行** 推薦碼 `M2PVML`：雙方各拿 **NT$300**（至 2026/3/31）
 - **台新 Richart** 推薦碼 `ELB6T`：新戶送 **NT$100**（至 2026/3/31）
-- **LINE Bank** 透過專屬連結開戶享活存最高 2.6%
+- **LINE Bank** 透過專屬連結開戶享新戶活存利率優惠（依官方活動調整）
 - 推薦碼輸入時機：**開戶填資料步驟**，事後無法補填
 {{< /pt-summary >}}
 
-## 🏆 精選推薦碼一次申辦
+## 三家比較表
 
-{{< bank-card
-  bank="樂天銀行"
-  emoji="❤️"
-  code="M2PVML"
-  bonus="輸入推薦碼開戶，推薦人與被推薦人各獲 NT$300 現金回饋。優惠至 2026/3/31，名額有限！"
-  link="https://www.rakuten-bank.com.tw/s/T68U"
-  color="red"
-  tag="雙方各 NT$300"
->}}
+| 服務 | 推薦碼 | 新戶獎勵 | 活存利率 | 優惠期限 |
+|------|--------|----------|----------|----------|
+| ❤️ 樂天銀行 | `M2PVML` | **雙方各 NT$300** | 最高 2.5% | 2026/3/31 |
+| 🟢 台新 Richart | `ELB6T` | **新戶 NT$100** | 最高 2.0% | 2026/3/31 |
+| 💚 LINE Bank | 專屬連結 | **新戶活存優惠** | 最高 2.6% | 持續活動 |
 
-{{< bank-card
-  bank="台新 Richart"
-  emoji="🟢"
-  code="ELB6T"
-  bonus="新戶透過推薦碼完成開戶，即享 NT$100 現金回饋。開戶流程全線上，5 分鐘完成。優惠至 2026/3/31。"
-  link="https://richart.tw/TSDIB_RichartWeb/RC07/RC070100?sn=ELB6T&utm_source=richart&utm_medium=app&utm_campaign=richart_mgm_20230701"
-  color="green"
-  tag="新戶送 NT$100"
->}}
+{{< pt-box type="warn" title="⏰ 優惠即將到期！" >}}
+樂天銀行 `M2PVML` 與台新 Richart `ELB6T` 推薦碼優惠活動將於 **2026/3/31** 截止，請把握機會儘快完成開戶！LINE Bank 為持續性活動，不受此限。
+{{< /pt-box >}}
 
-{{< bank-card
-  bank="LINE Bank"
-  emoji="💚"
-  bonus="透過專屬連結開戶，享活存最高 2.6% 年利率。搭配 LINE Points 回饋，日常消費更划算。"
-  link="https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz"
-  color="green"
-  btn="透過專屬連結開戶 →"
-  tag="持續活動"
->}}
-
----
-
-## 一次看完所有推薦碼
-
-{{< referral-grid >}}
-[
-  {"bank":"樂天銀行","emoji":"❤️","code":"M2PVML","bonus":"雙方各 NT$300，優惠至 2026/3/31","link":"https://www.rakuten-bank.com.tw/s/T68U"},
-  {"bank":"台新 Richart","emoji":"🟢","code":"ELB6T","bonus":"新戶 NT$100，優惠至 2026/3/31","link":"https://richart.tw/TSDIB_RichartWeb/RC07/RC070100?sn=ELB6T"},
-  {"bank":"LINE Bank","emoji":"💚","code":"（專屬連結）","bonus":"活存最高 2.6%，持續活動","link":"https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz"}
-]
-{{< /referral-grid >}}
+{{< pt-box type="info" title="ℹ️ 利率說明" >}}
+表格利率為本文撰寫時（2026-03-16）之公告數字，銀行利率隨時調整，
+建議開戶前至**各銀行官網**確認最新活動條款。
+{{< /pt-box >}}
 
 ---
 
@@ -129,25 +102,6 @@ LINE Bank 目前透過**專屬推廣連結**享優惠，開戶時不需輸入推
 
 ---
 
-## 三家比較表
-
-| 服務 | 推薦碼 | 新戶獎勵 | 活存利率 | 優惠期限 |
-|------|--------|----------|----------|----------|
-| ❤️ 樂天銀行 | `M2PVML` | **雙方各 NT$300** | 最高 2.5% | 2026/3/31 |
-| 🟢 台新 Richart | `ELB6T` | **新戶 NT$100** | 最高 2.0% | 2026/3/31 |
-| 💚 LINE Bank | 專屬連結 | **新戶活存優惠** | 最高 2.6% | 持續活動 |
-
-{{< pt-box type="warn" title="⏰ 優惠即將到期！" >}}
-樂天銀行 `M2PVML` 與台新 Richart `ELB6T` 推薦碼優惠活動將於 **2026/3/31** 截止，距今剩餘不到 15 天，請把握機會儘快完成開戶！LINE Bank 為持續性活動，不受此限。
-{{< /pt-box >}}
-
-{{< pt-box type="info" title="ℹ️ 利率說明" >}}
-表格利率為本文撰寫時（2026-03-16）之公告數字，銀行利率隨時調整，
-建議開戶前至**各銀行官網**確認最新活動條款。
-{{< /pt-box >}}
-
----
-
 ## 常見問題
 
 **Q：推薦碼是否有使用期限？**
@@ -169,3 +123,7 @@ LINE Bank 目前透過**專屬推廣連結**享優惠，開戶時不需輸入推
 ---
 
 {{< pt-cta title="🎁 立即開戶，領取最高 NT$300 回饋" desc="使用推薦碼 M2PVML 開立樂天銀行，推薦人與被推薦人各獲 NT$300，名額有限！" btn="樂天銀行立即申辦" link="https://www.rakuten-bank.com.tw/s/T68U" style="red" >}}
+
+---
+
+*本文含聯盟行銷連結，透過連結申辦我們可能獲得回饋，不影響你的費用或我們的評測立場。*

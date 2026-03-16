@@ -10,34 +10,30 @@ cover:
   caption: "透過推薦連結開戶，享受跨轉免費最高50次/月"
 ---
 
-<div class="pt-summary-box">
-<div class="pt-summary-title">📋 本文重點摘要</div>
-<ul>
-<li>LINE Bank 透過<strong>推薦連結</strong>開戶，享跨行轉帳免手續費最高 <strong>50次/月</strong></li>
-<li>此為<strong>持續型活動</strong>，不限期限，隨時可辦</li>
-<li>開戶只需手機 + 身分證，全程線上 10 分鐘完成</li>
-<li>活存利率高於多數傳統銀行，適合日常理財</li>
-</ul>
-</div>
+LINE Bank 採用推薦連結制，不需輸入推薦碼，直接透過以下連結開戶即可享有跨行轉帳免手續費最高 50 次/月的優惠，全程線上 10 分鐘完成。
+
+{{< pt-summary title="📋 本文重點速覽" >}}
+- LINE Bank 透過**推薦連結**開戶，享跨行轉帳免手續費最高 **50次/月**
+- 此為**持續型活動**，不限期限，隨時可辦
+- 開戶只需手機 + 身分證，全程線上 10 分鐘完成
+- 活存利率高於多數傳統銀行，適合日常理財
+{{< /pt-summary >}}
 
 ## LINE Bank 推薦連結（直接點擊開戶）
 
 不需推薦碼，直接點擊下方連結，系統自動帶入推薦資格：
 
-<div class="pt-cta-block" style="background:linear-gradient(135deg,#28a745 0%,#20c997 100%);">
-<h3>👆 點這裡透過推薦連結開戶</h3>
-<p>跨行轉帳免手續費，最高 50 次/月（持續活動，不限期限）</p>
-<a class="pt-btn" href="https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz" target="_blank" rel="noopener sponsored">立即開戶享優惠 →</a>
-</div>
+{{< bank-card
+  bank="LINE Bank"
+  emoji="💚"
+  bonus="透過推薦連結開戶，享跨行轉帳免手續費最高 50 次/月（持續活動，不限期限）。"
+  link="https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz"
+  color="green"
+  btn="立即開戶享優惠 →"
+  tag="持續活動"
+>}}
 
 > ⚠️ **注意**：LINE Bank 採用推薦連結制，**不需輸入推薦碼**。請直接點擊上方連結開戶，確保推薦資格生效。
-
----
-
-## 立即行動
-
-> 找到心儀的產品了嗎？點擊下方按鈕立即開戶，享受最優惠價格！
-
 
 ---
 
@@ -50,20 +46,22 @@ cover:
 | 一般帳戶轉帳費 | 每次 NT$15（未使用優惠時） |
 | 每月可省 | 最高 NT$750 元手續費 |
 
-
-<div class="pt-box pt-box-tip"><div class="pt-box-title">💡 為什麼推薦 LINE Bank？</div>對於習慣手機轉帳的人來說，每次轉帳 NT$15 的手續費日積月累相當可觀。LINE Bank 提供最多 50 次免費跨轉，一個月省下最高 NT$750，是目前純網銀中最實用的方案之一。</div>
+{{< pt-box type="tip" title="💡 為什麼推薦 LINE Bank？" >}}
+對於習慣手機轉帳的人來說，每次轉帳 NT$15 的手續費日積月累相當可觀。LINE Bank 提供最多 50 次免費跨轉，一個月省下最高 NT$750，是目前純網銀中最實用的方案之一。
+{{< /pt-box >}}
 
 ---
 
-## 開戶步驟圖解
+## 開戶步驟
 
-<ol class="pt-steps">
-<li><div class="pt-step-title">下載 LINE Bank App</div><div class="pt-step-content">前往 App Store 或 Google Play 搜尋「LINE Bank」，下載並安裝</div></li>
-<li><div class="pt-step-title">點擊推薦連結</div><div class="pt-step-content"><a href="https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz" target="_blank" rel="noopener">點擊此連結</a>，系統會自動帶入推薦人資格，確保享有 50 次免費跨轉優惠</div></li>
-<li><div class="pt-step-title">完成身分驗證</div><div class="pt-step-content">準備身分證正反面，使用 App 拍攝上傳，全程線上辦理，約 5 分鐘</div></li>
-<li><div class="pt-step-title">開戶成功！</div><div class="pt-step-content">審核通常 1-3 個工作天完成，完成後即可享有所有優惠</div></li>
-</ol>
-
+{{< pt-steps >}}
+[
+  {"title":"下載 LINE Bank App","desc":"前往 App Store 或 Google Play 搜尋「LINE Bank」，下載並安裝。"},
+  {"title":"點擊推薦連結","desc":"點擊上方連結，系統會自動帶入推薦人資格，確保享有 50 次免費跨轉優惠。"},
+  {"title":"完成身分驗證","desc":"準備身分證正反面，使用 App 拍攝上傳，全程線上辦理，約 5 分鐘。"},
+  {"title":"開戶成功！","desc":"審核通常 1-3 個工作天完成，完成後即可享有所有優惠。"}
+]
+{{< /pt-steps >}}
 
 ---
 
@@ -77,7 +75,6 @@ cover:
 | LINE Pay 整合 | ✅ 無縫整合 | ❌ 不支援 |
 | 24小時客服 | ✅ App 即可聯繫 | 營業時間限制 |
 | 存款保障 | ✅ 300萬元保障 | ✅ 300萬元保障 |
-
 
 ---
 
@@ -103,23 +100,12 @@ A：任何台灣手機門號均可，不限電信業者。
 
 ## 其他推薦碼優惠
 
-<div class="pt-referral-grid">
-
-<div class="pt-referral-card">
-<div class="pt-rc-bank"><span class="pt-bank-emoji">🏦</span> 樂天銀行</div>
-<div class="pt-rc-code">M2PVML</div>
-<div class="pt-rc-bonus">雙方各 <span class="highlight">NT$300</span>｜期限 2026/3/31</div>
-<a class="pt-btn pt-btn-primary" href="https://www.rakuten-bank.com.tw/s/T68U" target="_blank" rel="noopener sponsored" style="margin-top:8px;padding:8px 16px;font-size:0.85rem;">立即申請 →</a>
-</div>
-
-<div class="pt-referral-card">
-<div class="pt-rc-bank"><span class="pt-bank-emoji">💳</span> 台新 Richart</div>
-<div class="pt-rc-code">ELB6T</div>
-<div class="pt-rc-bonus">新戶 <span class="highlight">NT$100</span>｜期限 2026/3/31</div>
-<a class="pt-btn pt-btn-primary" href="https://richart.tw/" target="_blank" rel="noopener sponsored" style="margin-top:8px;padding:8px 16px;font-size:0.85rem;">立即申請 →</a>
-</div>
-
-</div>
+{{< referral-grid >}}
+[
+  {"bank":"樂天銀行","emoji":"🏦","code":"M2PVML","bonus":"雙方各 NT$300｜期限 2026/3/31","link":"https://www.rakuten-bank.com.tw/s/T68U"},
+  {"bank":"台新 Richart","emoji":"💳","code":"ELB6T","bonus":"新戶 NT$100｜期限 2026/3/31","link":"https://richart.tw/TSDIB_RichartWeb/RC07/RC070100?sn=ELB6T"}
+]
+{{< /referral-grid >}}
 
 ---
 
@@ -127,9 +113,6 @@ A：任何台灣手機門號均可，不限電信業者。
 
 LINE Bank 透過推薦連結開戶是目前最不需成本的純網銀優惠之一——**不需要輸入序號、不需要達成消費門檻**，只要透過推薦連結開戶，就能享受每月最多 50 次免費跨轉。
 
-<div class="pt-cta-block">
-<h3>現在就開戶</h3>
-<p>透過推薦連結，享跨轉免費最高 50 次/月（持續活動）</p>
-<a class="pt-btn" href="https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz" target="_blank" rel="noopener sponsored">立即開戶 →</a>
-</div>
+---
 
+*本文含聯盟行銷連結，透過連結申辦我們可能獲得回饋，不影響你的費用或我們的評測立場。*
