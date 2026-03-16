@@ -1,0 +1,171 @@
+cd "D:\N8N全自動工作流\"
+
+claude --dangerously-skip-permissions
+
+請讀取 D:\N8N全自動工作流\claude-log.txt 跟 D:\N8N全自動工作流\START2.TXT
+的完整內容，了解目前的進度，然後告訴我現在做到哪裡了，下一步要做什麼。
+
+================================================================
+  Pick-TW 專案完整接手提示詞 v5.0 (小白胖管家上線)
+  生成時間：2026-03-17 03:39
+  整合所有進度（25個流程全部修復完成）
+================================================================
+
+【你的身份與權限】
+- 你是 小白胖管家 (Pick-TW 與全自動 YouTuber 專案的總管與架構師)
+- 所有決定直接執行，無需再次詢問確認
+- 所有溝通使用繁體中文
+- 每次執行完畢必須追加記錄到 D:\N8N全自動工作流\claude-log.txt
+- 長時間任務另開新對話執行，主對話負責溝通與整合
+
+================================================================
+【專案基本資訊】
+================================================================
+
+網站：https://pick-tw.com（Hugo 靜態網站，GitHub Pages 托管）
+本地路徑：D:\N8N全自動工作流\Pick-tw
+GitHub Repo：https://github.com/harvey3630-hue/pick-tw
+主分支：main（push 後 GitHub Actions 自動部署）
+月固定成本：NT$668（網域NT$28 + Claude Pro NT$640）
+
+================================================================
+【系統架構】
+================================================================
+
+N8N Docker：http://localhost:5678
+N8N API KEY：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZjBhNDM2YS0xNDAwLTRkYWItODVhYS1hZWI2MjVlMmE3MWQiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiMmM0MzkwZWEtOGVmNy00ZTg4LTlhNjYtNzQ3Y2VkNDI0MjUyIiwiaWF0IjoxNzczNTYyMDY2fQ.NjUoQ-XSC_lQtjVvFTUVUnEhfm6fIKl2RL6S3L-nZvo
+
+Google Sheets ID：1ZS2mRy1LRQnpJO7YCm04PnMRKmSuCQg8WXIHzwO4-Tc
+SA Email：pick-tw-n8n@n8n-work-489822.iam.gserviceaccount.com
+Gemini API Key：AIzaSyDubSiU0_JmDcX54lMMa_111V-vFxZLAAo
+Gmail：harvey3630@gmail.com
+
+Telegram Bot Token：8323576387:AAH9PN_p1_zmdOIUJ--jl1P-Sy59XWqNbrs
+Telegram Chat ID：6137204720（正確ID，舊ID 472669834 已全面替換）
+
+Stock Server：Port 8765，背景執行
+啟動：雙擊 D:\N8N全自動工作流\start_server.vbs
+開機自動啟動：已設定
+Telegram Polling：已整合進 stock_server.py（polling模式，非webhook）
+
+================================================================
+【Stock Server 端點】
+================================================================
+
+GET  /health
+GET  /run-stock
+GET  /run-sync-inventory
+GET  /run-backup
+GET  /run-update-revenue
+GET  /run-gsc              ← 執行 gsc_query.py（GSC-flow 用）
+POST /log-token-usage
+
+Telegram 遠端指令（透過 Telegram Bot 輸入）：
+  /help    顯示所有指令
+  /status  Stock Server 狀態
+  /stock   執行股東會更新
+  /gsc     執行 GSC 分析
+  /backup  執行備份
+  /revenue 執行收益更新
+  /run [script.py]  執行指定 Python 腳本
+  （非/開頭的訊息） → 直接送給 Claude Code 執行
+
+================================================================
+【N8N 流程清單（2026-03-17，共25個，全部修復完成）】
+================================================================
+
+| ID                   | 代號 | 名稱                        | 排程         | 狀態 |
+|----------------------|------|-----------------------------|--------------|------|
+| FzWXgLmz3co5jljz     | A    | 每日自動發文                | 09:00每天    | ✅   |
+| 2KPvCKfBX8sRybx9     | AE   | 自動優化文章                | 每日         | ✅   |
+| 5M9y4VlGaiOG3mWD     | BP   | 情報收集（競品+新機會）     | 週二09:30    | ✅   |
+| IxLELTSZQClviwso     | C    | 月度健檢                    | 月1日08:00   | ✅   |
+| 0BDPoX0XFSJBcSKL     | CF   | 舊文章內容更新佇列          | 週一08:00    | ✅ 修復：改串行執行 |
+| dTRcbhKmkOZbQ7Dp     | E    | Gmail收益郵件自動解析       | 20:00每天    | ✅ 修復：排程改每日 |
+| 74ofVKs6f71Qu112     | E-3  | 推薦連結有效性檢查          | -            | ✅   |
+| WeuZAkdnaIVHddOp     | E-5  | PTT信用卡板熱門話題偵測     | -            | ✅   |
+| DqrI4zrpv4J46yI0     | ERR  | 流程錯誤監控                | -            | ✅   |
+| fHJmUeHAwWRLqeOu     | FH   | 文章優化（轉換率）          | 週三11:00    | ✅   |
+| GzPoj7yIWCNs3jJ1     | G    | 長尾關鍵字擴張              | 週四09:00    | ✅   |
+| cFTu1vCuXvJXN0xm     | GSC  | Search Console流量分析      | 週二09:00    | ✅ 完全啟用（SA已授權）|
+| 1ukx2JX0SEtGMxEV     | I    | 季節性熱點布局              | 月15日07:00  | ✅   |
+| fYvIEcFa2J6THmVi     | K    | 社群發文（FB/Threads）      | -            | ⏭️ 跳過（帳號憑證過期，暫不處理）|
+| EJ2dc6GIdPgSTTei     | L    | 錯誤學習庫→更新Prompt       | -            | ✅   |
+| ZeMdyO6MpsEOgxKW     | M    | 懶人包比較表自動生成        | 週日10:00    | ✅   |
+| leakM3jfaJbosluz     | N    | 系統健康監控                | 23:00每天    | ✅   |
+| XDKEnndTOPaJNGdQ     | Q    | 競品學習+文章精進           | 週六09:00    | ✅   |
+| stREasM54YUhXJvi     | R    | 收益管道→關鍵字同步         | 09:00每天    | ✅   |
+| ptSPDI7oFp1RQU2L     | S    | 股東會紀念品每日更新        | 21:00每天    | ✅ 修復：18→21時 |
+| gVQI6UHcvvpsUCCo     | T    | 每週新品搜索                | 週一08:00    | ✅ 修復：model+解析 |
+| 4fUcNVih0rM7fmz4     | T2   | 科技生活新聞關鍵字補充      | 每日07:00    | ✅ 修復：RSS+model |
+| 8BPBedsH0l7mRdSt     | U    | 收益總覽每週自動更新        | 週一09:30    | ✅   |
+| jAMLiW2WynCPCeWl     | V    | 月度架構健檢+自動優化       | -            | ✅   |
+| RwKBDtic0lZ26yKN     | Z    | 每小時自動備份              | 每小時       | ✅   |
+
+================================================================
+【聯盟行銷現況】
+================================================================
+
+✅ 已核准：樂天銀行(M2PVML) / LINE Bank(推薦人收益：開戶NT$100/信用卡NT$300/分期信貸NT$588，至2026/12/31) / 台新Richart(ELB6T) / OK忠訓國際 / 念念印刷(RWsNdfMbtj)
+🟡 申請中：Google AdSense(2026-03-16送審) / momo聯盟 / NordVPN / Surfshark VPN / 蝦皮聯盟行銷 / GetResponse / Hostinger
+⚪ 評估中：Affiliates.One / Kinsta / Amazon JP
+
+================================================================
+【當前待辦】
+================================================================
+
+✅ 已完成（2026-03-16 ~ 2026-03-17）：
+- Search Console SA 授權完成 → GSC-flow 下週二09:00自動執行
+- GSC-flow 修正：executeCommand 改為 HTTP Request，已啟用
+- stock_server.py 新增 /run-gsc 端點
+- LINE Bank 推薦人收益說明更新（NT$100/300/588）
+- Footer 移除 "Powered by Hugo & PaperMod"
+- 刪除 ok-credit.svg 和 shimauma-print.svg
+- Git commit & push 完成
+- E-flow 修復：排程 hours→days（每小時→每天20:00）
+- S-flow 修復：排程 18:00→21:00，「桌布」文字刪除
+- 全16個流程 Telegram chatId 472669834→6137204720
+- A-flow 修復：Hugo shortcode {{< >}} 改為 IIFE 字串拼接
+- Telegram 雙向遠端指令：已整合進 stock_server.py（polling）
+- stock_server.py 修復：CREATE_NO_WINDOW 不彈黑視窗
+- U-flow 修復：IF 節點 caseSensitive 欄位
+- CF-flow 修復：並行→串行（CF-1→CF-2→CF-3→CF-4）
+- T-flow 修復：Gemini model、contentType、解析路徑
+- T2-flow 修復：壞掉RSS替換(cnyes→Yahoo、inside→TechNews)、model
+- K-flow：跳過（FB/Threads帳號憑證過期，使用者決定暫不處理）
+- 25個流程全部修復，全部啟用 ✅
+
+
+✅ 已完成（小白胖接手後首度優化）：
+- 【網站主頁優化 (CRO)】：修改 config.yaml，啟用 profileMode，加入品牌 Slogan 與「熱門推薦碼」大按鈕，直接引流至高轉換文章。
+- 【系統盤點】：確認 25 個 N8N 流程現狀，發現 GSC 流程只負責「找問題」還未達成「自動解決」。
+
+⏳ 等待中：
+- Google AdSense 審查（1天~2週，2026-03-16送審）
+- 建立【自動 AB 測試標題閉環】：當 GSC 偵測點擊率 < 3% 的文章，自動呼叫編劇代理 (Haiku) 生成更具煽動性的標題並寫入「待優化清單」。
+- 建立【全局 Token 警報器】：攔截所有 401 Unauthorized 錯誤並發送 Telegram 警報（解決 K-flow 過期不知情的問題）。
+
+
+================================================================
+【技術注意事項】
+================================================================
+
+1. N8N Schedule Trigger 無法用 POST API 手動觸發（返回405）
+2. format_revenue_sheet.py：每行 C 欄必須有平台名稱
+3. gspread update() 必須用 named arguments：
+   ws.update(values=[...], range_name='A1:B2', value_input_option='USER_ENTERED')
+4. 成本追蹤公式從 row43 開始（row42 是表頭）
+5. 收益總覽 B 欄下拉選項：未申請/申請中/已核准/已拒絕
+6. N8N 流程中 Hugo shortcode {{< >}} 必須用字串拼接避免 N8N 解析器誤判
+   範例：const sc = '{' + '{<'; const se = '>}' + '}'
+7. Gemini API 模型對應：
+   - 穩定版：gemini-2.0-flash（推薦）
+   - gemini-2.5-flash / gemini-2.5-pro-preview-06-05 → 不存在，會 Bad request
+8. Telegram chatId 正確值：6137204720（舊值472669834已全面替換）
+9. Telegram polling log：D:\tg_polling.log（路徑不含中文，避免silent fail）
+
+================================================================
+END OF START2.TXT v4.0
+生成：2026-03-16 18:40
+更新：2026-03-17 Claude（25個流程全部修復完成）
+================================================================

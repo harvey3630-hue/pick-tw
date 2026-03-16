@@ -1,116 +1,124 @@
-baseURL: "https://pick-tw.com"
-languageCode: "zh-TW"
-title: "Pick-TW｜台灣精選好物推薦"
-theme: "PaperMod"
-defaultContentLanguage: "zh-tw"
-hasCJKLanguage: true
-paginate: 10
-enableRobotsTXT: true
+baseURL: https://pick-tw.com
 canonifyURLs: false
-summaryLength: 60
-
+defaultContentLanguage: zh-tw
+enableRobotsTXT: true
+hasCJKLanguage: true
+languageCode: zh-TW
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+menu:
+  main:
+  - identifier: posts
+    name: 文章
+    url: /posts/
+    weight: 5
+  - identifier: categories
+    name: 分類
+    url: /categories/
+    weight: 10
+  - identifier: tags
+    name: 標籤
+    url: /tags/
+    weight: 20
+  - identifier: search
+    name: 搜尋
+    url: /search/
+    weight: 25
+  - identifier: about
+    name: 關於
+    url: /about/
+    weight: 30
+  - identifier: disclaimer
+    name: 免責聲明
+    url: /disclaimer/
+    weight: 35
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+paginate: 10
 params:
-  env: production
-  assets:
-    disableFingerprinting: true
-  title: "Pick-TW｜台灣精選好物推薦"
-  description: "Pick-TW 幫你省去比較時間，精選台灣最值得入手的科技工具、居家家電、金融理財好物，每篇都是實測推薦。"
-  keywords: [推薦, 評測, 科技, 家電, 理財, 台灣, 好物, 開箱]
-  author: Pick-TW 編輯團隊
-  DateFormat: "2006-01-02"
-  defaultTheme: auto
-  disableThemeToggle: false
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
+  DateFormat: '2006-01-02'
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
-  ShowToc: true
   ShowFullTextinRSS: true
-  TocOpen: false
-  comments: false
   ShowLastMod: true
-
-  profileMode:
-    enabled: false
-
-  socialIcons:
-    - name: rss
-      url: /index.xml
-
+  ShowPostNavLinks: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowToc: true
+  TocOpen: false
+  adsense_publisher_id: ca-pub-5747723475518686
+  announceBar:
+    badge: 限時優惠
+    enabled: true
+    linkText: 立即申辦
+    linkUrl: /posts/2026-03-15-referral-codes-all/
+    text: 🔥 樂天銀行推薦碼 M2PVML 雙方各NT$300、台新Richart推薦碼 ELB6T 新戶NT$100，活動至 3/31！
+    urgent: true
+    version: 2026-03
+  assets:
+    disableFingerprinting: true
+  author: Pick-TW 編輯團隊
+  comments: false
   cover:
     hidden: false
     hiddenInList: false
     hiddenInSingle: false
     linkFullImages: true
-
+  defaultTheme: auto
+  description: Pick-TW 幫你省去比較時間，精選台灣最值得入手的科技工具、居家家電、金融理財好物，每篇都是實測推薦。
+  disableThemeToggle: false
+  env: production
   fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
     distance: 1000
-    threshold: 0.4
+    isCaseSensitive: false
+    keys:
+    - title
+    - permalink
+    - summary
+    - content
+    location: 0
     minMatchCharLength: 2
-    keys: ["title", "permalink", "summary", "content"]
-
+    shouldSort: true
+    threshold: 0.4
+  keywords:
+  - 推薦
+  - 評測
+  - 科技
+  - 家電
+  - 理財
+  - 台灣
+  - 好物
+  - 開箱
   label:
-    text: "Pick-TW"
-
-  # Google AdSense
-  adsense_publisher_id: "ca-pub-5747723475518686"
-
-  announceBar:
+    text: Pick-TW
+  profileMode:
+    buttons:
+    - name: 🔥 熱門推薦碼
+      url: /posts/2026-03-15-referral-codes-all/
+    - name: 🛒 最新開箱
+      url: /posts/
     enabled: true
-    version: "2026-03"
-    urgent: true
-    badge: "限時優惠"
-    text: "🔥 樂天銀行推薦碼 M2PVML 雙方各NT$300、台新Richart推薦碼 ELB6T 新戶NT$100，活動至 3/31！"
-    linkText: "立即申辦"
-    linkUrl: "/posts/2026-03-15-referral-codes-all/"
-
-taxonomies:
-  category: categories
-  tag: tags
-  series: series
-
+    imageHeight: 120
+    imageUrl: /images/hero.png
+    imageWidth: 120
+    subtitle: 幫你省去比較時間，精選台灣最值得入手的科技工具、居家家電、金融理財好物，每篇都是實測推薦。
+    title: Pick-TW 🇹🇼 精選好物推薦
+  socialIcons:
+  - name: rss
+    url: /index.xml
+  title: Pick-TW｜台灣精選好物推薦
 sitemap:
   changefreq: weekly
   priority: 0.8
-
-menu:
-  main:
-    - identifier: posts
-      name: 文章
-      url: /posts/
-      weight: 5
-    - identifier: categories
-      name: 分類
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: 標籤
-      url: /tags/
-      weight: 20
-    - identifier: search
-      name: 搜尋
-      url: /search/
-      weight: 25
-    - identifier: about
-      name: 關於
-      url: /about/
-      weight: 30
-    - identifier: disclaimer
-      name: 免責聲明
-      url: /disclaimer/
-      weight: 35
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
+summaryLength: 60
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+theme: PaperMod
+title: Pick-TW｜台灣精選好物推薦
