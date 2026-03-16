@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>鍵盤 on Pick-TW｜台灣精選好物推薦</title><link>https://pick-tw.com/tags/%E9%8D%B5%E7%9B%A4/</link><description>Recent content in 鍵盤 on Pick-TW｜台灣精選好物推薦</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 13 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://pick-tw.com/tags/%E9%8D%B5%E7%9B%A4/index.xml" rel="self" type="application/rss+xml"/><item><title>2026 年最值得入手的機械鍵盤推薦：五款精選評測</title><link>https://pick-tw.com/posts/2026-03-13-best-mechanical-keyboard-2026/</link><pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate><guid>https://pick-tw.com/posts/2026-03-13-best-mechanical-keyboard-2026/</guid><description>精選 2026 年五款熱門機械鍵盤，從預算入門到旗艦高端全面比較，幫你找到最適合的打字神器。</description><content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>鍵盤 on Pick-TW｜台灣精選好物推薦</title>
+    <link>http://localhost:1313/tags/%E9%8D%B5%E7%9B%A4/</link>
+    <description>Recent content in 鍵盤 on Pick-TW｜台灣精選好物推薦</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 13 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%8D%B5%E7%9B%A4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2026 年最值得入手的機械鍵盤推薦：五款精選評測</title>
+      <link>http://localhost:1313/posts/2026-03-13-best-mechanical-keyboard-2026/</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-13-best-mechanical-keyboard-2026/</guid>
+      <description>精選 2026 年五款熱門機械鍵盤，從預算入門到旗艦高端全面比較，幫你找到最適合的打字神器。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>機械鍵盤近年來在台灣越來越受歡迎，無論是程式開發者、文字工作者還是遊戲玩家，都開始追求更好的打字體驗。本文精選五款 2026 年最值得入手的機械鍵盤，從千元入門到萬元旗艦，讓你一次看個夠。</p>
 <h2 id="立即行動">立即行動</h2>
 <blockquote>
@@ -153,4 +169,7 @@
 <blockquote>
 <p><strong>Pick-TW 編輯推薦</strong>：Keychron K2 Pro 是目前 CP 值最高的機械鍵盤，強烈推薦！</p>
 </blockquote>
-]]></content:encoded></item></channel></rss>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

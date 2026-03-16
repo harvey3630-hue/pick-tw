@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>比較 on Pick-TW｜台灣精選好物推薦</title><link>https://pick-tw.com/tags/%E6%AF%94%E8%BC%83/</link><description>Recent content in 比較 on Pick-TW｜台灣精選好物推薦</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://pick-tw.com/tags/%E6%AF%94%E8%BC%83/index.xml" rel="self" type="application/rss+xml"/><item><title>LINE Bank vs 其他純網銀比較 2026｜將來銀行、樂天銀行、連線銀行完整評比</title><link>https://pick-tw.com/posts/2026-03-15-line-bank-vs-other-neobanks/</link><pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate><guid>https://pick-tw.com/posts/2026-03-15-line-bank-vs-other-neobanks/</guid><description>完整比較台灣四大純網銀：LINE Bank、將來銀行、樂天銀行、連線銀行，從利率、手續費、功能到優缺點全面分析。</description><content:encoded><![CDATA[<h2 id="台灣純網銀現況">台灣純網銀現況</h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>比較 on Pick-TW｜台灣精選好物推薦</title>
+    <link>http://localhost:1313/tags/%E6%AF%94%E8%BC%83/</link>
+    <description>Recent content in 比較 on Pick-TW｜台灣精選好物推薦</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%AF%94%E8%BC%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LINE Bank vs 其他純網銀比較 2026｜將來銀行、樂天銀行、連線銀行完整評比</title>
+      <link>http://localhost:1313/posts/2026-03-15-line-bank-vs-other-neobanks/</link>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-15-line-bank-vs-other-neobanks/</guid>
+      <description>完整比較台灣四大純網銀：LINE Bank、將來銀行、樂天銀行、連線銀行，從利率、手續費、功能到優缺點全面分析。</description>
+      <content:encoded><![CDATA[<h2 id="台灣純網銀現況">台灣純網銀現況</h2>
 <p>台灣目前共有三家純網路銀行正式營運：</p>
 <ul>
 <li><strong>LINE Bank</strong>（LINE Financial Plus）</li>
@@ -255,4 +271,7 @@ A：不行，純網銀完全線上化，所有業務均透過 App 辦理。</p>
 <hr>
 <h2 id="總結">總結</h2>
 <p>LINE Bank 憑藉 LINE 生態系的優勢，在台灣純網銀市場佔有最大份額。但建議根據自身需求選擇，甚至同時開設多家帳戶，最大化各項優惠回饋。</p>
-]]></content:encoded></item></channel></rss>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
