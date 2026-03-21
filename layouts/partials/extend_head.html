@@ -114,4 +114,28 @@
   ]
 }
 </script>
+
+{{- /* FAQ JSON-LD（在文章 frontmatter 定義 faq 列表後自動輸出）*/ -}}
+{{- with .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $i, $faq := . }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $faq.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $faq.answer | jsonify }}
+      }
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
+
 {{- end }}

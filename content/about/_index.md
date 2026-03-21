@@ -49,7 +49,7 @@ Pick-TW 是一個專注於台灣市場的商品推薦平台。我們的目標很
 ## 聯絡我們
 
 如有任何建議、勘誤或合作洽詢，歡迎來信：
-[contact@pick-tw.com](mailto:contact@pick-tw.com)
+[harvey3630@gmail.com](mailto:harvey3630@gmail.com)
 
 ---
 

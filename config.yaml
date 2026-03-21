@@ -34,6 +34,10 @@ menu:
     name: 免責聲明
     url: /disclaimer/
     weight: 35
+  - identifier: contact
+    name: 聯絡我們
+    url: /contact/
+    weight: 40
 outputs:
   home:
   - HTML
