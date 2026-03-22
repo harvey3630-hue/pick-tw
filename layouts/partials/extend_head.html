@@ -138,4 +138,46 @@
 </script>
 {{- end }}
 
+{{- /* Product + ItemList + AggregateRating JSON-LD（在 frontmatter 定義 products 後自動輸出）*/ -}}
+{{- with .Params.products }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {{- range $i, $p := . }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $i 1 }},
+      "item": {
+        "@type": "Product",
+        "name": {{ $p.name | jsonify }},
+        "description": {{ $p.description | default "" | jsonify }}
+        {{- with $p.image }},
+        "image": {{ . | jsonify }}
+        {{- end }}
+        {{- with $p.rating }},
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": {{ . }},
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": {{ $p.ratingCount | default 1 }}
+        }
+        {{- end }}
+        {{- with $p.brand }},
+        "brand": {
+          "@type": "Brand",
+          "name": {{ . | jsonify }}
+        }
+        {{- end }}
+      }
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
+
 {{- end }}
