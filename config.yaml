@@ -104,17 +104,7 @@ params:
   label:
     text: Pick-TW
   profileMode:
-    buttons:
-    - name: 🔥 熱門推薦碼
-      url: /posts/2026-03-15-referral-codes-all/
-    - name: 🛒 最新開箱
-      url: /posts/
-    enabled: true
-    imageHeight: 120
-    imageUrl: /images/hero.jpg
-    imageWidth: 120
-    subtitle: 幫你省去比較時間，精選台灣最值得入手的科技工具、居家家電、金融理財好物，每篇都是實測推薦。
-    title: Pick-TW 🇹🇼 精選好物推薦
+    enabled: false
   socialIcons:
   - name: rss
     url: /index.xml
