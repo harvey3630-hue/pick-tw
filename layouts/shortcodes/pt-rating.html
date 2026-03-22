@@ -1,0 +1,42 @@
+{{/*
+  pt-rating shortcode — 評分卡片（進度條 + 數字）
+  用法：
+  {{< pt-rating
+    name="樂天銀行"
+    overall="4.5"
+    items="利率:5|APP:4|客服:4|安全性:5|方便性:4"
+  >}}
+
+  參數：
+  - name: 產品名稱
+  - overall: 總分（1-5）
+  - items: 評分項目，格式 "標籤:分數|標籤:分數"
+*/}}
+{{ $name    := .Get "name"    | default "產品" }}
+{{ $overall := .Get "overall" | default "4.0" }}
+{{ $rawItems := .Get "items"  | default "" }}
+{{ $items   := split $rawItems "|" }}
+
+<div class="pt-rating-card">
+  <div class="pt-rating-header">
+    <div class="pt-rating-overall">{{ $overall }}</div>
+    <div class="pt-rating-name">{{ $name }}</div>
+  </div>
+  <div class="pt-rating-items">
+    {{- range $items }}
+    {{- $parts := split . ":" }}
+    {{- if ge (len $parts) 2 }}
+    {{ $label := index $parts 0 }}
+    {{ $score := index $parts 1 }}
+    {{ $pct := mul (div (float $score) 5.0) 100 }}
+    <div class="pt-rating-item">
+      <span class="pt-rating-label">{{ $label }}</span>
+      <div class="pt-rating-bar-wrap">
+        <div class="pt-rating-bar" style="width:{{ $pct }}%"></div>
+      </div>
+      <span class="pt-rating-score">{{ $score }}</span>
+    </div>
+    {{- end }}
+    {{- end }}
+  </div>
+</div>

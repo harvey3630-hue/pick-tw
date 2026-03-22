@@ -125,5 +125,14 @@ taxonomies:
   category: categories
   series: series
   tag: tags
+related:
+  includeNewer: true
+  threshold: 50
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 80
 theme: PaperMod
 title: Pick-TW｜台灣精選好物推薦
