@@ -6,18 +6,18 @@
      crossorigin="anonymous"></script>
 {{- end }}
 
-{{- /* ===== Google Analytics GA4（上線時取消註解）===== */ -}}
-{{- /*
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+{{- /* ===== Google Analytics GA4 ===== */ -}}
+{{- with site.Params.ga4_id }}
+{{- if eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
+  gtag('config', '{{ . }}');
 </script>
-{{ end }}
-*/ -}}
+{{- end }}
+{{- end }}
 
 {{- /* ===== Open Graph 額外標籤 ===== */ -}}
 <meta property="og:locale" content="zh_TW" />

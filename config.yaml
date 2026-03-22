@@ -56,6 +56,7 @@ params:
   ShowToc: true
   TocOpen: false
   adsense_publisher_id: ca-pub-5747723475518686
+  ga4_id: G-XXXXXXXXXX
   announceBar:
     badge: 限時優惠
     enabled: true
