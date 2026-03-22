@@ -58,6 +58,7 @@ params:
   TocOpen: false
   adsense_publisher_id: ca-pub-5747723475518686
   ga4_id: G-MFM38NPEGE
+  newsletter_action: "https://buttondown.com/api/emails/embed-subscribe/harvey36309"
   announceBar:
     badge: 限時優惠
     enabled: true
@@ -110,7 +111,7 @@ params:
       url: /posts/
     enabled: true
     imageHeight: 120
-    imageUrl: /images/hero.png
+    imageUrl: /images/hero.jpg
     imageWidth: 120
     subtitle: 幫你省去比較時間，精選台灣最值得入手的科技工具、居家家電、金融理財好物，每篇都是實測推薦。
     title: Pick-TW 🇹🇼 精選好物推薦
