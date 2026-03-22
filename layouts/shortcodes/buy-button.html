@@ -1,16 +1,27 @@
 {{/* 購買/申辦按鈕 Shortcode
    用法：
-   實體商品：{{< buy-button momo="https://..." shopee="https://..." label="商品名稱" >}}
+   實體商品：{{< buy-button momo="https://..." shopee="https://..." label="商品名稱" price="NT$2,990" >}}
    金融產品：{{< buy-button official="https://..." label="銀行名稱" >}}
+
+   參數：
+   - label: 商品/銀行名稱
+   - price: 參考價格（可選，如 "NT$2,990"）
+   - momo/shopee/pchome/official: 各平台連結
 */}}
 {{ $label    := .Get "label"    | default "" }}
+{{ $price    := .Get "price"    | default "" }}
 {{ $momo     := .Get "momo"     | default "" }}
 {{ $shopee   := .Get "shopee"   | default "" }}
 {{ $pchome   := .Get "pchome"   | default "" }}
 {{ $official := .Get "official" | default "" }}
 
 <div class="pt-buy-btns">
-  {{- if $label }}<span class="pt-buy-label">{{ $label }}</span>{{- end }}
+  {{- if or $label $price }}
+  <div class="pt-buy-header">
+    {{- if $label }}<span class="pt-buy-label">{{ $label }}</span>{{- end }}
+    {{- if $price }}<span class="pt-buy-price">{{ $price }}</span>{{- end }}
+  </div>
+  {{- end }}
   <div class="pt-buy-btn-row">
     {{- if $momo }}
     <a href="{{ $momo }}" target="_blank" rel="nofollow noopener" class="pt-buy-btn pt-buy-momo">

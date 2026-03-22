@@ -1636,3 +1636,236 @@ body[class*="dark"] .pt-rating-bar-wrap {
 body[class*="dark"] .pt-rating-score {
   color: #90caf9;
 }
+
+/* ================================================
+   17. 場景化選擇指南表格 (pt-picker)
+   ================================================ */
+.pt-picker-wrap {
+  margin: 24px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pt-picker-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  border-radius: var(--pt-radius-sm);
+  overflow: hidden;
+  border: 1px solid #d0e4f0;
+}
+
+body[class*="dark"] .pt-picker-table {
+  border-color: #2a4a6a;
+}
+
+.pt-picker-table thead {
+  background: var(--pt-primary);
+  color: #fff;
+}
+
+.pt-picker-table th {
+  padding: 12px 16px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.pt-picker-table td {
+  padding: 10px 16px;
+  border-top: 1px solid #e8eef3;
+  line-height: 1.5;
+}
+
+body[class*="dark"] .pt-picker-table td {
+  border-top-color: #333;
+}
+
+.pt-picker-table tbody tr:hover {
+  background: #f0f7ff;
+}
+
+body[class*="dark"] .pt-picker-table tbody tr:hover {
+  background: rgba(1, 72, 118, 0.15);
+}
+
+.pt-picker-highlight {
+  font-weight: 700;
+  color: var(--pt-primary);
+}
+
+body[class*="dark"] .pt-picker-highlight {
+  color: #90caf9;
+}
+
+/* ================================================
+   18. 網友口碑引用卡片 (pt-review)
+   ================================================ */
+.pt-review-card {
+  border-left: 4px solid var(--pt-primary);
+  background: #f8f9fa;
+  border-radius: 0 var(--pt-radius-sm) var(--pt-radius-sm) 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+  position: relative;
+}
+
+body[class*="dark"] .pt-review-card {
+  background: #1d1e20;
+  border-left-color: #4a90d9;
+}
+
+.pt-review-quote {
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
+}
+
+body[class*="dark"] .pt-review-quote {
+  color: #ddd;
+}
+
+.pt-review-quote::before {
+  content: "\201C";
+  font-size: 2rem;
+  color: var(--pt-primary);
+  opacity: 0.3;
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-right: 4px;
+}
+
+.pt-review-meta {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pt-review-source {
+  background: var(--pt-primary);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+body[class*="dark"] .pt-review-source {
+  background: #4a90d9;
+}
+
+/* ================================================
+   19. buy-button 價格與 header
+   ================================================ */
+.pt-buy-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.pt-buy-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pt-red);
+}
+
+body[class*="dark"] .pt-buy-price {
+  color: #ef5350;
+}
+
+/* ================================================
+   20. 文章內嵌廣告位
+   ================================================ */
+.pt-ad-inline {
+  margin: 24px 0;
+  text-align: center;
+  min-height: 100px;
+}
+
+/* ================================================
+   21. Email 訂閱區塊
+   ================================================ */
+.pt-newsletter {
+  margin: 40px 0 20px;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, #014876 0%, #0275b5 100%);
+  border-radius: var(--pt-radius-md);
+  text-align: center;
+  color: #fff;
+}
+
+.pt-newsletter-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.pt-newsletter-desc {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0 0 18px;
+}
+
+.pt-newsletter-form {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.pt-newsletter-input {
+  flex: 1;
+  padding: 10px 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: var(--pt-radius-sm);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.pt-newsletter-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.pt-newsletter-input:focus {
+  border-color: var(--pt-accent);
+  background: rgba(255,255,255,0.2);
+}
+
+.pt-newsletter-btn {
+  padding: 10px 24px;
+  background: var(--pt-accent);
+  color: var(--pt-primary);
+  border: none;
+  border-radius: var(--pt-radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s;
+}
+
+.pt-newsletter-btn:hover {
+  background: #ffe066;
+  transform: translateY(-1px);
+}
+
+.pt-newsletter-note {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin: 12px 0 0;
+}
+
+@media (max-width: 768px) {
+  .pt-newsletter-form {
+    flex-direction: column;
+  }
+}

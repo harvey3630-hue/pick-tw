@@ -1,0 +1,14 @@
+{{- /* newsletter.html — Email 訂閱區塊 */ -}}
+{{- with site.Params.newsletter_action }}
+<div class="pt-newsletter">
+  <div class="pt-newsletter-inner">
+    <h3 class="pt-newsletter-title">訂閱 Pick-TW 電子報</h3>
+    <p class="pt-newsletter-desc">每週精選最新好物推薦、限時優惠直送信箱，不錯過任何省錢機會！</p>
+    <form class="pt-newsletter-form" action="{{ . }}" method="post" target="_blank">
+      <input type="email" name="email" placeholder="輸入你的 Email" required class="pt-newsletter-input">
+      <button type="submit" class="pt-newsletter-btn">免費訂閱</button>
+    </form>
+    <p class="pt-newsletter-note">我們尊重你的隱私，隨時可以取消訂閱。</p>
+  </div>
+</div>
+{{- end }}

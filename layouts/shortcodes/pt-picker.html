@@ -1,0 +1,40 @@
+{{/*
+  pt-picker shortcode — 場景化選擇指南表格
+  用法：
+  {{< pt-picker
+    headers="你的需求|推薦選擇|原因"
+    rows="追求高利率|樂天銀行|活存利率最高;常用LINE Pay|LINE Bank|LINE生態系整合好"
+  >}}
+
+  參數：
+  - headers: 表頭欄位，用 | 分隔
+  - rows: 資料列，每列用 ; 分隔，每欄用 | 分隔
+*/}}
+{{ $rawHeaders := .Get "headers" | default "" }}
+{{ $rawRows := .Get "rows" | default "" }}
+{{ $headers := split $rawHeaders "|" }}
+{{ $rows := split $rawRows ";" }}
+
+<div class="pt-picker-wrap">
+  <table class="pt-picker-table">
+    <thead>
+      <tr>
+        {{- range $headers }}
+        <th>{{ . }}</th>
+        {{- end }}
+      </tr>
+    </thead>
+    <tbody>
+      {{- range $rows }}
+      {{- $cols := split . "|" }}
+      {{- if gt (len $cols) 0 }}
+      <tr>
+        {{- range $j, $col := $cols }}
+        <td{{ if eq $j 1 }} class="pt-picker-highlight"{{ end }}>{{ $col | markdownify }}</td>
+        {{- end }}
+      </tr>
+      {{- end }}
+      {{- end }}
+    </tbody>
+  </table>
+</div>
