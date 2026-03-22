@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <linearGradient id="np-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A6B3C"/>
+      <stop offset="100%" style="stop-color:#2ECC71"/>
+    </linearGradient>
+    <clipPath id="np-clip">
+      <rect width="800" height="200" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="200" rx="14" fill="url(#np-bg)"/>
+  <circle cx="650" cy="100" r="160" fill="rgba(255,255,255,0.05)" clip-path="url(#np-clip)"/>
+  <circle cx="740" cy="180" r="100" fill="rgba(255,255,255,0.04)" clip-path="url(#np-clip)"/>
+  <rect x="0" y="0" width="6" height="200" rx="3" fill="#A8F0C0"/>
+
+  <!-- Logo -->
+  <circle cx="56" cy="54" r="28" fill="rgba(255,255,255,0.15)"/>
+  <text x="56" y="63" font-family="Arial Black, sans-serif" font-size="18" font-weight="900" fill="white" text-anchor="middle">PASS</text>
+  <text x="100" y="44" font-family="Arial Black, sans-serif" font-size="26" font-weight="900" fill="white">NordPass</text>
+  <text x="100" y="64" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.65)">nordpass.com · 密碼管理器推薦</text>
+
+  <line x1="28" y1="84" x2="520" y2="84" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+  <!-- 主視覺 -->
+  <text x="28" y="112" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.75)">密碼管理器推廣計畫</text>
+  <text x="28" y="152" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="white">同 NordVPN 傭金</text>
+
+  <!-- 說明區塊 -->
+  <rect x="28" y="162" width="420" height="28" rx="8" fill="rgba(0,0,0,0.2)"/>
+  <text x="40" y="172" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.75)">Nord Security 旗下 · 零知識加密 · 跨裝置同步</text>
+  <text x="40" y="184" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">一鍵自動填入 · 安全分享密碼 · 資料外洩提醒</text>
+
+  <!-- 標籤 Badge -->
+  <rect x="568" y="148" width="200" height="40" rx="10" fill="rgba(168,240,192,0.75)"/>
+  <text x="668" y="164" font-family="Arial, sans-serif" font-size="10" fill="rgba(0,0,0,0.7)" text-anchor="middle" font-weight="600">安全推薦</text>
+  <text x="668" y="182" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="#1A3A2A" text-anchor="middle">NordPass | 密碼安全管理</text>
+
+  <!-- 背景裝飾文字 -->
+  <text x="640" y="140" font-family="Arial Black, sans-serif" font-size="80" font-weight="900" fill="rgba(255,255,255,0.04)" text-anchor="middle">NORD</text>
+  <text x="772" y="194" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.35)" text-anchor="end">go.nordpass.io · aff_id=143283</text>
+</svg>
