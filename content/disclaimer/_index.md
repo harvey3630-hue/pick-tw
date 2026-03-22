@@ -39,7 +39,7 @@ Pick-TW 的推薦文章基於以下方法：
 
 ## 內容正確性
 
-本站盡力確保資訊準確，但商品價格、規格、優惠條件等可能隨時變動。若您發現任何錯誤或過時資訊，歡迎來信告知：[harvey3630@gmail.com](mailto:harvey3630@gmail.com)
+本站盡力確保資訊準確，但商品價格、規格、優惠條件等可能隨時變動。若您發現任何錯誤或過時資訊，歡迎來信告知：[contact@pick-tw.com](mailto:contact@pick-tw.com)
 
 ---
 

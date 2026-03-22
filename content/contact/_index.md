@@ -8,7 +8,7 @@ type: "page"
 
 歡迎透過以下 Email 與我們聯繫：
 
-**📧 [harvey3630@gmail.com](mailto:harvey3630@gmail.com)**
+**📧 [contact@pick-tw.com](mailto:contact@pick-tw.com)**
 
 ---
 
