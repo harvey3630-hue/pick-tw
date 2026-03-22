@@ -1,8 +1,8 @@
 {{/*
-  pt-steps shortcode — 開戶步驟清單
+  pt-steps shortcode — 開戶步驟清單 + HowTo Schema
   用法（Inner 為 JSON 陣列）：
 
-  {{< pt-steps >}}
+  {{< pt-steps title="如何開設 LINE Bank 帳戶" >}}
   [
     {"title":"下載 App","desc":"至 App Store 或 Google Play 搜尋「LINE Bank」並安裝。"},
     {"title":"點選開戶","desc":"開啟 App 後選擇「立即開戶」，依指示完成身分驗證。"},
@@ -10,8 +10,12 @@
     {"title":"完成驗證","desc":"上傳身分證正反面，通常 5 分鐘內完成開戶。"}
   ]
   {{< /pt-steps >}}
+
+  參數：
+  - title: (可選) HowTo 名稱，用於 Schema，預設為頁面標題
 */}}
 {{ $steps := .Inner | transform.Unmarshal }}
+{{ $howtoTitle := .Get "title" | default .Page.Title }}
 <ol class="pt-steps">
   {{ range $steps }}
   <li>
@@ -22,3 +26,22 @@
   </li>
   {{ end }}
 </ol>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ $howtoTitle | jsonify }},
+  "step": [
+    {{- range $i, $s := $steps }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "HowToStep",
+      "position": {{ add $i 1 }},
+      "name": {{ $s.title | jsonify }},
+      "text": {{ $s.desc | plainify | jsonify }}
+    }
+    {{- end }}
+  ]
+}
+</script>
