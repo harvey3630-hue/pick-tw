@@ -1,17 +1,21 @@
-{{- /* 作者資訊框：在每篇文章底部顯示 */ -}}
+{{- /* 作者資訊框：支援多作者，在文章 frontmatter 加 author_id 指定 */ -}}
 {{- if .IsPage }}
+{{- $authorId := .Params.author_id | default "picktw" }}
+{{- $author := index site.Data.authors $authorId }}
+{{- if not $author }}
+  {{- $author = index site.Data.authors "picktw" }}
+{{- end }}
+{{- with $author }}
 <div class="pt-author-box">
-  <img src="/images/avatar.jpg" alt="Pick-TW 編輯團隊" class="pt-author-avatar" />
+  <img src="{{ .avatar | default "/images/avatar.jpg" }}" alt="{{ .name }}" class="pt-author-avatar" />
   <div class="pt-author-info">
-    <strong class="pt-author-name">Pick-TW 編輯團隊</strong>
-    <p class="pt-author-bio">
-      專注於台灣消費市場的商品研究，深度比較 3C 科技、居家家電、金融理財產品，
-      每篇推薦都基於客觀數據與用戶評論整理而成。
-    </p>
+    <strong class="pt-author-name">{{ .name }}</strong>
+    <p class="pt-author-bio">{{ .bio }}</p>
     <p class="pt-author-disclosure">
       📢 本文可能包含聯盟行銷連結，詳見
       <a href="/disclaimer/">免責聲明</a>。
     </p>
   </div>
 </div>
+{{- end }}
 {{- end }}
