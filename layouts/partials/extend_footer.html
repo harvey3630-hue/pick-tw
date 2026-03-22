@@ -41,6 +41,39 @@ function ptCopyCode(code, btnId) {
   });
 })();
 
+/* ===== 互動式比較表：排序 ===== */
+document.querySelectorAll('.pt-compare-sortable').forEach(function (th) {
+  th.addEventListener('click', function () {
+    var table = th.closest('table');
+    var tbody = table.querySelector('tbody');
+    var rows = Array.from(tbody.querySelectorAll('tr'));
+    var col = parseInt(th.dataset.col, 10);
+    var asc = th.dataset.sort !== 'asc';
+    th.dataset.sort = asc ? 'asc' : 'desc';
+    rows.sort(function (a, b) {
+      var av = a.cells[col].textContent.trim();
+      var bv = b.cells[col].textContent.trim();
+      var an = parseFloat(av.replace(/[^0-9.\-]/g, ''));
+      var bn = parseFloat(bv.replace(/[^0-9.\-]/g, ''));
+      if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+      return asc ? av.localeCompare(bv, 'zh-TW') : bv.localeCompare(av, 'zh-TW');
+    });
+    rows.forEach(function (r) { tbody.appendChild(r); });
+  });
+});
+
+/* ===== 互動式比較表：篩選 ===== */
+document.querySelectorAll('.pt-compare-filter').forEach(function (input) {
+  input.addEventListener('input', function () {
+    var wrap = document.getElementById(input.dataset.table);
+    if (!wrap) return;
+    var q = input.value.toLowerCase();
+    wrap.querySelectorAll('tbody tr').forEach(function (row) {
+      row.classList.toggle('pt-hidden', q && row.textContent.toLowerCase().indexOf(q) === -1);
+    });
+  });
+});
+
 /* ===== 推薦碼欄位點擊複製 ===== */
 document.querySelectorAll('.pt-code').forEach(function (el) {
   el.addEventListener('click', function () {

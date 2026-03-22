@@ -1,0 +1,25 @@
+read_time:
+  one: "閱讀時間 1 分鐘"
+  other: "閱讀時間 {{ .Count }} 分鐘"
+
+words:
+  one: "1 字"
+  other: "{{ .Count }} 字"
+
+toc:
+  other: "目錄"
+
+share_on:
+  other: "分享到"
+
+prev_page:
+  other: "上一篇"
+
+next_page:
+  other: "下一篇"
+
+search_placeholder:
+  other: "搜尋..."
+
+no_results:
+  other: "找不到結果"

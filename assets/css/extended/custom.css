@@ -1869,3 +1869,242 @@ body[class*="dark"] .pt-buy-price {
     flex-direction: column;
   }
 }
+
+/* ================================================
+   22. 互動式比較表格 (pt-compare)
+   ================================================ */
+.pt-compare-wrap {
+  margin: 24px 0;
+}
+
+.pt-compare-filter {
+  width: 100%;
+  max-width: 320px;
+  padding: 8px 14px;
+  border: 1.5px solid #d0e4f0;
+  border-radius: var(--pt-radius-sm);
+  font-size: 0.88rem;
+  margin-bottom: 12px;
+  outline: none;
+  background: #fff;
+}
+
+body[class*="dark"] .pt-compare-filter {
+  background: #1d1e20;
+  border-color: #2a4a6a;
+  color: #eee;
+}
+
+.pt-compare-filter:focus {
+  border-color: var(--pt-primary);
+}
+
+.pt-compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pt-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  border: 1px solid #d0e4f0;
+  border-radius: var(--pt-radius-sm);
+  overflow: hidden;
+}
+
+body[class*="dark"] .pt-compare-table {
+  border-color: #2a4a6a;
+}
+
+.pt-compare-table thead {
+  background: var(--pt-primary);
+  color: #fff;
+}
+
+.pt-compare-sortable {
+  padding: 10px 14px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.pt-compare-sortable:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.pt-sort-icon::after {
+  content: " \2195";
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+
+.pt-compare-table td {
+  padding: 10px 14px;
+  border-top: 1px solid #e8eef3;
+}
+
+body[class*="dark"] .pt-compare-table td {
+  border-top-color: #333;
+}
+
+.pt-compare-table tbody tr:hover {
+  background: #f0f7ff;
+}
+
+body[class*="dark"] .pt-compare-table tbody tr:hover {
+  background: rgba(1,72,118,0.15);
+}
+
+.pt-compare-name {
+  font-weight: 700;
+  color: var(--pt-primary);
+}
+
+body[class*="dark"] .pt-compare-name {
+  color: #90caf9;
+}
+
+.pt-compare-table tbody tr.pt-hidden {
+  display: none;
+}
+
+/* ================================================
+   23. 排行榜模板 (ranking.html)
+   ================================================ */
+.pt-ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.pt-ranking-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1.5px solid #e0e7ee;
+  border-radius: var(--pt-radius-md);
+  background: #fff;
+  transition: all 0.25s;
+}
+
+body[class*="dark"] .pt-ranking-item {
+  background: #1d1e20;
+  border-color: #2a4a6a;
+}
+
+.pt-ranking-item:hover {
+  box-shadow: var(--pt-shadow-md);
+  transform: translateY(-2px);
+}
+
+.pt-ranking-top3 {
+  border-width: 2px;
+}
+
+.pt-ranking-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  background: #e0e7ee;
+  color: #555;
+}
+
+body[class*="dark"] .pt-ranking-badge {
+  background: #333;
+  color: #aaa;
+}
+
+.pt-rank-gold {
+  background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(255, 165, 0, 0.4);
+}
+
+.pt-rank-silver {
+  background: linear-gradient(135deg, #C0C0C0, #A8A8A8) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(192, 192, 192, 0.4);
+}
+
+.pt-rank-bronze {
+  background: linear-gradient(135deg, #CD7F32, #B8860B) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(205, 127, 50, 0.4);
+}
+
+.pt-ranking-content {
+  flex: 1;
+}
+
+.pt-ranking-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pt-ranking-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pt-editor-choice {
+  background: var(--pt-accent);
+  color: var(--pt-primary);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.pt-ranking-score-badge {
+  background: var(--pt-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+body[class*="dark"] .pt-ranking-score-badge {
+  background: #4a90d9;
+}
+
+.pt-ranking-summary {
+  font-size: 0.88rem;
+  color: #666;
+  margin: 6px 0 10px;
+  line-height: 1.6;
+}
+
+body[class*="dark"] .pt-ranking-summary {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .pt-ranking-item {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .pt-ranking-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}

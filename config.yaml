@@ -1,6 +1,7 @@
 baseURL: https://pick-tw.com
 canonifyURLs: false
 defaultContentLanguage: zh-tw
+defaultContentLanguageInSubdir: false
 enableRobotsTXT: true
 hasCJKLanguage: true
 languageCode: zh-TW
