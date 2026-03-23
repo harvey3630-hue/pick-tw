@@ -1,4 +1,5 @@
 baseURL: https://pick-tw.com
+buildFuture: true
 canonifyURLs: false
 defaultContentLanguage: zh-tw
 defaultContentLanguageInSubdir: false
