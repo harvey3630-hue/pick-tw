@@ -4,7 +4,7 @@ description: "完整比較台灣數位銀行與純網銀，包含樂天銀行、
 date: 2026-03-22
 lastmod: 2026-03-22
 categories: ["金融理財"]
-tags: ["數位帳戶", "純網銀", "數位銀行", "樂天銀行", "LINE Bank", "台新Richart", "開戶推薦"]
+tags: ["數位帳戶", "數位銀行", "樂天銀行", "LINE Bank", "Richart", "推薦碼"]
 cover:
   image: ""
   alt: "2026 台灣數位帳戶推薦總覽"

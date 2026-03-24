@@ -4,7 +4,7 @@ date: 2026-03-14
 lastmod: 2026-03-16
 description: "精選 2026 最新台灣純網銀推薦碼，樂天銀行推薦碼 M2PVML 雙方各拿 NT$300、台新 Richart 推薦碼 ELB6T 新戶 NT$100、LINE Bank 開戶優惠，開戶流程一次搞定。"
 categories: ["金融理財"]
-tags: ["推薦碼", "純網銀", "數位帳戶", "LINE Bank", "樂天銀行", "台新Richart", "開戶優惠"]
+tags: ["推薦碼", "數位帳戶", "LINE Bank", "樂天銀行", "Richart"]
 cover:
   image: "/images/posts/line-bank-compare.jpg"
   alt: "2026 台灣數位銀行推薦碼總整理"

@@ -84,13 +84,14 @@ params:
   fuseOpts:
     distance: 1000
     isCaseSensitive: false
+    ignoreLocation: true
     keys:
     - title
     - permalink
     - summary
     - content
     location: 0
-    minMatchCharLength: 2
+    minMatchCharLength: 1
     shouldSort: true
     threshold: 0.4
   keywords:
