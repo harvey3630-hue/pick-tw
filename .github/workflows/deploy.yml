@@ -44,4 +44,5 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           cname: pick-tw.com
+          force_orphan: true
           commit_message: "deploy: auto build from main [${{ github.sha }}]"
