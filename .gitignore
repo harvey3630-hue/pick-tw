@@ -1,0 +1,31 @@
+# Hugo build output - should NOT be committed to main branch
+# GitHub Actions builds fresh and deploys to gh-pages branch
+public/
+
+# Hugo resources cache
+resources/_gen/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Local env files
+.env
+.env.local
+
+# Node modules (if ever used)
+node_modules/
+
+# Log files
+*.log
