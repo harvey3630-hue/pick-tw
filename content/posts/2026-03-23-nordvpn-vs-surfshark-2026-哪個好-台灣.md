@@ -5,7 +5,7 @@ description: "正在找最適合台灣的 VPN 服務嗎？NordVPN 和 Surfshark 
 tags: ["NordVPN", "Surfshark", "VPN", "網路安全", "串流影音", "翻牆", "數位生活", "數位工具"]
 categories: ["科技工具"]
 cover:
-  image: "/images/nordvpn-vs-surfshark-cover.jpg"
+  image: "/images/posts/default-cover.jpg"
 ---
 
 {{< pt-summary title="📋 本文重點速覽" >}}

@@ -134,7 +134,7 @@ weight: 1
 
 {{< bank-card
   bank="OK忠訓國際"
-  img="/images/referral/ok-credit.svg"
+  img="/images/referral/okbank-debt.jpg"
   emoji="💳"
   bonus="透過專屬連結申辦整合負債或房屋貸款，享優先審核服務。整合信用卡負債、信貸，月繳金額可大幅降低。"
   link="https://www.okcredit.com.tw/"
@@ -153,7 +153,7 @@ weight: 1
 
 {{< bank-card
   bank="念念印刷"
-  img="/images/referral/shimauma-print.svg"
+  img="/images/referral/nennein.jpg"
   emoji="📸"
   code="RWsNdfMbtj"
   bonus="首次使用推薦碼 **RWsNdfMbtj**，享新戶優惠折扣。手機照片一鍵沖印，A6 明信片、正方形相片最快隔日到貨。"

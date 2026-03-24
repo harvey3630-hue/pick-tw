@@ -6,7 +6,7 @@ lastmod: 2026-03-22
 categories: ["金融理財"]
 tags: ["數位帳戶", "數位銀行", "樂天銀行", "LINE Bank", "Richart", "推薦碼"]
 cover:
-  image: ""
+  image: "/images/posts/default-cover.jpg"
   alt: "2026 台灣數位帳戶推薦總覽"
 ShowToc: true
 TocOpen: true
