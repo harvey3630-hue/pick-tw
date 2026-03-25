@@ -1,5 +1,10 @@
 {{- /* extend_head.html — Pick-TW 自訂 head 注入 */ -}}
 
+{{- /* ===== Security Meta Tags ===== */ -}}
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 {{- /* ===== Google AdSense（在 config.yaml 填入 adsense_publisher_id 後自動啟用）===== */ -}}
 {{- with site.Params.adsense_publisher_id }}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}"
