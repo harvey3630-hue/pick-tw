@@ -29,3 +29,11 @@ node_modules/
 
 # Log files
 *.log
+
+# Sensitive files
+full_rebuild.py
+n8n/database.sqlite.bak_*
+n8n/database.sqlite
+*.bak
+API.txt
+google-credentials.json
