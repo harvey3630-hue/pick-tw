@@ -684,7 +684,7 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #ccc;  /* 開發時可見邊框，上線後移除 */
+  border: none;
   border-radius: var(--pt-radius-sm);
   overflow: hidden;
 }
@@ -699,7 +699,7 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #ccc;
+  border: none;
   border-radius: var(--pt-radius-sm);
   overflow: hidden;
 }
