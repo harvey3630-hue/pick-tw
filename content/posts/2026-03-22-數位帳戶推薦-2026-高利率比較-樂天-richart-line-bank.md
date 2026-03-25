@@ -1,11 +1,11 @@
 ---
 title: "2026 數位帳戶推薦終極攻略：高利率比較、開戶優惠，樂天、Richart、LINE Bank 誰是你的最佳選擇？"
-date: 2026-06-15T10:00:00+08:00
+date: 2026-03-22
 description: "2026年了，還在讓錢睡在活存？這篇深度攻略帶你比較樂天、Richart、LINE Bank三大數位帳戶，掌握最新高利率、開戶優惠與推薦碼，讓你輕鬆理財，聰明省錢，每年多賺好幾千！"
 tags: ["數位帳戶", "高利活存", "樂天銀行", "Richart", "LINE Bank", "理財", "推薦碼", "省錢"]
 categories: ["數位金融", "金融理財"]
 cover:
-  image: "/images/posts/default-cover.jpg"
+  image: "/images/posts/theme-line_bank.jpg"
 ---
 
 {{< pt-summary title="📋 本文重點速覽" >}}
