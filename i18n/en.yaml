@@ -1,0 +1,25 @@
+read_time:
+  one: "1 min read"
+  other: "{{ .Count }} min read"
+
+words:
+  one: "1 word"
+  other: "{{ .Count }} words"
+
+toc:
+  other: "Table of Contents"
+
+share_on:
+  other: "Share on"
+
+prev_page:
+  other: "Previous"
+
+next_page:
+  other: "Next"
+
+search_placeholder:
+  other: "Search..."
+
+no_results:
+  other: "No results found"

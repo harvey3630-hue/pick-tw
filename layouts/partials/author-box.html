@@ -1,0 +1,21 @@
+{{- /* 作者資訊框：支援多作者，在文章 frontmatter 加 author_id 指定 */ -}}
+{{- if .IsPage }}
+{{- $authorId := .Params.author_id | default "picktw" }}
+{{- $author := index site.Data.authors $authorId }}
+{{- if not $author }}
+  {{- $author = index site.Data.authors "picktw" }}
+{{- end }}
+{{- with $author }}
+<div class="pt-author-box">
+  <img src="{{ .avatar | default "/images/avatar.jpg" }}" alt="{{ .name }}" class="pt-author-avatar" />
+  <div class="pt-author-info">
+    <strong class="pt-author-name">{{ .name }}</strong>
+    <p class="pt-author-bio">{{ .bio }}</p>
+    <p class="pt-author-disclosure">
+      📢 本文可能包含聯盟行銷連結，詳見
+      <a href="/disclaimer/">免責聲明</a>。
+    </p>
+  </div>
+</div>
+{{- end }}
+{{- end }}

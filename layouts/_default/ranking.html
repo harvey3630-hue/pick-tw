@@ -1,0 +1,77 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">{{ .Description }}</div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- /* ===== 排行榜區塊 ===== */ -}}
+  {{- with .Params.rankings }}
+  <div class="pt-ranking-list">
+    {{- range $i, $item := . }}
+    {{ $rank := add $i 1 }}
+    <div class="pt-ranking-item{{ if le $rank 3 }} pt-ranking-top3{{ end }}">
+      <div class="pt-ranking-badge{{ if eq $rank 1 }} pt-rank-gold{{ else if eq $rank 2 }} pt-rank-silver{{ else if eq $rank 3 }} pt-rank-bronze{{ end }}">
+        {{ $rank }}
+      </div>
+      <div class="pt-ranking-content">
+        <div class="pt-ranking-header">
+          <h3 class="pt-ranking-name">
+            {{ $item.name }}
+            {{- if $item.editorChoice }}
+            <span class="pt-editor-choice">編輯精選</span>
+            {{- end }}
+          </h3>
+          {{- with $item.rating }}
+          <span class="pt-ranking-score-badge">{{ . }}/5</span>
+          {{- end }}
+        </div>
+        {{- with $item.summary }}
+        <p class="pt-ranking-summary">{{ . }}</p>
+        {{- end }}
+        {{- with $item.link }}
+        <a href="{{ . }}" class="pt-btn pt-btn-primary" style="font-size:0.85rem;padding:8px 18px;">查看詳情 →</a>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+  </footer>
+</article>
+
+{{- end }}

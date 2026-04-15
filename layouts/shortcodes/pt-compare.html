@@ -1,0 +1,49 @@
+{{/*
+  pt-compare shortcode — 互動式比較表格（可排序、可篩選）
+  用法：
+  {{< pt-compare
+    headers="名稱|活存利率|跨轉免費|APP評分|推薦"
+    rows="樂天銀行|2.6%|6次|4.5|⭐⭐⭐⭐⭐;LINE Bank|2.2%|88次|4.3|⭐⭐⭐⭐;台新Richart|2.0%|5次|4.4|⭐⭐⭐⭐"
+    filter="true"
+  >}}
+
+  參數：
+  - headers: 表頭，用 | 分隔
+  - rows: 資料列，列用 ; 分隔，欄用 | 分隔
+  - filter: "true" 啟用搜尋篩選（可選）
+*/}}
+{{ $rawHeaders := .Get "headers" | default "" }}
+{{ $rawRows := .Get "rows" | default "" }}
+{{ $filter := .Get "filter" | default "false" }}
+{{ $headers := split $rawHeaders "|" }}
+{{ $rows := split $rawRows ";" }}
+{{ $uid := printf "ptcmp-%s" (md5 $rawHeaders | truncate 8 "") }}
+
+<div class="pt-compare-wrap" id="{{ $uid }}">
+  {{- if eq $filter "true" }}
+  <input type="text" class="pt-compare-filter" placeholder="搜尋..." data-table="{{ $uid }}">
+  {{- end }}
+  <div class="pt-compare-scroll">
+    <table class="pt-compare-table">
+      <thead>
+        <tr>
+          {{- range $i, $h := $headers }}
+          <th data-col="{{ $i }}" class="pt-compare-sortable">{{ $h }} <span class="pt-sort-icon"></span></th>
+          {{- end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{- range $rows }}
+        {{- $cols := split . "|" }}
+        {{- if gt (len $cols) 0 }}
+        <tr>
+          {{- range $j, $col := $cols }}
+          <td{{ if eq $j 0 }} class="pt-compare-name"{{ end }}>{{ $col }}</td>
+          {{- end }}
+        </tr>
+        {{- end }}
+        {{- end }}
+      </tbody>
+    </table>
+  </div>
+</div>

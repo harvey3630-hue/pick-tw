@@ -1,0 +1,2127 @@
+/* ===== Pick-TW 自訂樣式 ===== */
+/* 基於台灣理財部落格研究：rich01.com、cardu.com.tw、moneymate.space、
+   beurlife.com、freespiritmi.com、earning.tw、cmoney.tw、moneydj.com 等 20+ 站 */
+
+/* ================================================
+   1. 全站 CSS 變數
+   ================================================ */
+:root {
+  --pt-primary:    #014876;   /* 市場先生主藍 */
+  --pt-accent:     #FFCC00;   /* 市場先生黃色 Accent */
+  --pt-green:      #28a745;   /* 正向確認色 */
+  --pt-red:        #dc3545;   /* 警示 / 熱門色 */
+  --pt-orange:     #f08300;   /* FinTech 橘 */
+  --pt-purple:     #764ba2;   /* 原 Pick-TW 紫 */
+  --pt-blue-grad:  linear-gradient(135deg, #014876 0%, #0275b5 100%);
+  --pt-purple-grad:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --pt-code-bg:    #f0f7ff;   /* 推薦碼背景 */
+  --pt-info-bg:    #fff8e1;   /* 資訊框背景 */
+  --pt-info-border:#f2c078;   /* 資訊框邊框 */
+  --pt-warn-bg:    #fff3cd;
+  --pt-warn-border:#ffc107;
+  --pt-tip-bg:     #e8f5e9;
+  --pt-tip-border: #4caf50;
+  --pt-radius-sm:  8px;
+  --pt-radius-md:  12px;
+  --pt-radius-lg:  20px;
+  --pt-shadow-sm:  0 2px 8px rgba(0,0,0,0.08);
+  --pt-shadow-md:  0 4px 20px rgba(0,0,0,0.12);
+  --pt-shadow-lg:  0 8px 32px rgba(0,0,0,0.15);
+}
+
+/* ================================================
+   2. 全域公告列（Announcement Bar）
+   仿 cardu.com.tw 熱門公告、augustime.com Easy Notification Bar
+   ================================================ */
+.pt-announce-bar {
+  width: 100%;
+  background: var(--pt-primary);
+  color: #fff;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.pt-announce-bar a {
+  color: var(--pt-accent) !important;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.pt-announce-bar .pt-announce-badge {
+  background: var(--pt-accent);
+  color: var(--pt-primary);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.pt-announce-bar .pt-announce-close {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 0.7;
+  font-size: 1.1rem;
+  padding: 0 4px;
+  background: none;
+  border: none;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.pt-announce-bar .pt-announce-close:hover { opacity: 1; }
+
+/* 橘色公告（限時優惠） */
+.pt-announce-bar.urgent {
+  background: linear-gradient(90deg, #e63946 0%, #c1121f 100%);
+  animation: pt-pulse-bg 3s ease-in-out infinite;
+}
+
+@keyframes pt-pulse-bg {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.92; }
+}
+
+/* ================================================
+   3. 導航列（永遠置頂）
+   ================================================ */
+
+/* 導航列 sticky，公告列已佔 top:0，nav 接在正下方 */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9998;
+  background: var(--theme);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  backdrop-filter: blur(8px);
+}
+
+/* dark mode */
+.dark .header {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.logo a {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--pt-primary) !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.logo a:hover {
+  color: var(--pt-purple) !important;
+}
+
+/* dark mode */
+.dark .logo a { color: #90caf9 !important; }
+.dark .logo a:hover { color: #fff !important; }
+
+/* ================================================
+   4. Profile 首頁
+   ================================================ */
+.profile {
+  padding: 40px 20px 30px;
+  text-align: center;
+}
+
+.profile_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile img {
+  border-radius: 50%;
+  border: 4px solid var(--pt-primary);
+  box-shadow: 0 4px 20px rgba(1, 72, 118, 0.25);
+  transition: transform 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.profile img:hover { transform: scale(1.05); }
+
+.profile h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--pt-primary);
+  margin: 0 0 8px;
+}
+
+.profile span {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--secondary);
+  max-width: 620px;
+  display: block;
+}
+
+.profile .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.profile .button {
+  background: var(--pt-blue-grad);
+  color: #fff !important;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(1, 72, 118, 0.35);
+  text-decoration: none !important;
+}
+
+.profile .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(1, 72, 118, 0.5);
+  color: #fff !important;
+}
+
+.profile .button .button-inner { color: #fff !important; }
+
+/* ================================================
+   5. 文章卡片
+   仿 rich01.com / moneymate.space 卡片設計
+   ================================================ */
+.post-entry {
+  border-radius: var(--pt-radius-md);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.post-entry:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--pt-shadow-md);
+  border-color: var(--pt-primary);
+}
+
+.entry-header h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+/* ================================================
+   6. 表格（比較表）
+   仿 rich01.com 數位帳戶比較、cardu.com.tw 卡片比較表
+   ================================================ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 24px 0;
+  font-size: 0.93rem;
+  border-radius: var(--pt-radius-sm);
+  overflow: hidden;
+  box-shadow: var(--pt-shadow-sm);
+}
+
+th {
+  background: var(--pt-blue-grad);
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+tr:nth-child(even) td { background-color: var(--entry); }
+tr:hover td { background-color: rgba(1, 72, 118, 0.05); }
+
+/* 表格推薦碼欄位 */
+td .code-inline {
+  font-family: 'Courier New', monospace;
+  background: var(--pt-code-bg);
+  color: var(--pt-primary);
+  border: 1px solid #b3d1f0;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ================================================
+   7. blockquote
+   ================================================ */
+blockquote {
+  border-left: 4px solid var(--pt-primary);
+  background: rgba(1, 72, 118, 0.04);
+  border-radius: 0 var(--pt-radius-sm) var(--pt-radius-sm) 0;
+  padding: 12px 20px;
+  margin: 20px 0;
+}
+
+/* ================================================
+   8. 標籤 badge
+   ================================================ */
+.post-tags a, .post-categories a {
+  background: rgba(1, 72, 118, 0.08);
+  color: var(--pt-primary) !important;
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.post-tags a:hover, .post-categories a:hover {
+  background: var(--pt-primary);
+  color: #fff !important;
+}
+
+/* ================================================
+   9. 文章標題
+   ================================================ */
+.post-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* ================================================
+   10. 推薦碼展示盒（Referral Code Box）
+   核心功能 — 仿 moneymate.space / freespiritmi.com 推薦碼展示
+   ================================================ */
+
+/* --- 10a. 基礎推薦碼盒 --- */
+.pt-referral-box {
+  border: 2px solid var(--pt-primary);
+  border-radius: var(--pt-radius-md);
+  padding: 20px 24px;
+  margin: 24px 0;
+  background: var(--pt-code-bg);
+  position: relative;
+  box-shadow: var(--pt-shadow-sm);
+}
+
+.pt-referral-box .pt-referral-label {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--pt-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pt-referral-box .pt-referral-bank {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--pt-primary);
+  margin: 4px 0 12px;
+}
+
+.pt-referral-box .pt-referral-code-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pt-referral-box .pt-code {
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--pt-primary);
+  letter-spacing: 3px;
+  background: #fff;
+  border: none;
+  border-radius: var(--pt-radius-sm);
+  padding: 8px 20px;
+  user-select: all;
+  cursor: pointer;
+}
+
+.pt-referral-box .pt-bonus {
+  font-size: 0.88rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.pt-referral-box .pt-bonus strong { color: var(--pt-green); }
+
+/* --- 10b. 複製推薦碼按鈕（搭配 JS） --- */
+.pt-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--pt-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--pt-radius-lg);
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.pt-copy-btn:hover {
+  background: #025d99;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(1, 72, 118, 0.4);
+}
+
+.pt-copy-btn.copied {
+  background: var(--pt-green);
+}
+
+.pt-copy-btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* --- 10c. 多銀行推薦碼卡片列表 --- */
+.pt-referral-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.pt-referral-card {
+  border: 1.5px solid #d0e4f0;
+  border-radius: var(--pt-radius-md);
+  padding: 16px;
+  background: #fff;
+  box-shadow: var(--pt-shadow-sm);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dark .pt-referral-card {
+  background: var(--entry);
+  border-color: #2a4a6a;
+}
+
+.pt-referral-card:hover {
+  border-color: var(--pt-primary);
+  box-shadow: var(--pt-shadow-md);
+  transform: translateY(-2px);
+}
+
+.pt-referral-card .pt-rc-bank {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--pt-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pt-referral-card .pt-rc-bank .pt-bank-emoji {
+  font-size: 1.3rem;
+}
+
+.pt-referral-card .pt-rc-code {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--pt-primary);
+  background: var(--pt-code-bg);
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.pt-referral-card .pt-rc-bonus {
+  font-size: 0.83rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.pt-referral-card .pt-rc-bonus .highlight { color: var(--pt-green); font-weight: 700; }
+
+/* ================================================
+   11. CTA 按鈕系列
+   仿 rich01.com、moneymate.space、cardu.com.tw 各式按鈕
+   ================================================ */
+
+/* --- 11a. 主要 CTA（申請 / 開戶按鈕）--- */
+.pt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  border-radius: var(--pt-radius-lg);
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.pt-btn-primary {
+  background: var(--pt-blue-grad);
+  color: #fff !important;
+  padding: 12px 28px;
+  font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(1, 72, 118, 0.35);
+}
+
+.pt-btn-primary:hover {
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(1, 72, 118, 0.5);
+}
+
+/* --- 11b. 次要按鈕（了解更多）--- */
+.pt-btn-secondary {
+  background: transparent;
+  color: var(--pt-primary) !important;
+  border: 2px solid var(--pt-primary);
+  padding: 10px 24px;
+  font-size: 0.95rem;
+}
+
+.pt-btn-secondary:hover {
+  background: var(--pt-primary);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+/* --- 11c. 成功 / 確認按鈕 --- */
+.pt-btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: #fff !important;
+  padding: 12px 28px;
+  font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(40, 167, 69, 0.35);
+}
+
+.pt-btn-success:hover {
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(40, 167, 69, 0.5);
+}
+
+/* --- 11d. 警示 / 限時按鈕 --- */
+.pt-btn-urgent {
+  background: linear-gradient(135deg, #dc3545 0%, #e63946 100%);
+  color: #fff !important;
+  padding: 12px 28px;
+  font-size: 1rem;
+  animation: pt-btn-pulse 2s ease-in-out infinite;
+}
+
+.pt-btn-urgent:hover {
+  color: #fff !important;
+  transform: translateY(-2px);
+  animation: none;
+  box-shadow: 0 6px 24px rgba(220, 53, 69, 0.5);
+}
+
+@keyframes pt-btn-pulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(220, 53, 69, 0.35); }
+  50%       { box-shadow: 0 6px 24px rgba(220, 53, 69, 0.6); }
+}
+
+/* --- 11e. 大型 CTA 區塊（文章末段）--- */
+.pt-cta-block {
+  background: var(--pt-blue-grad);
+  border-radius: var(--pt-radius-md);
+  padding: 28px 24px;
+  text-align: center;
+  margin: 32px 0;
+  color: #fff;
+}
+
+.pt-cta-block h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.pt-cta-block p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0 0 18px;
+}
+
+.pt-cta-block .pt-btn {
+  background: var(--pt-accent);
+  color: var(--pt-primary) !important;
+  padding: 12px 32px;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.pt-cta-block .pt-btn:hover {
+  background: #ffe066;
+  color: var(--pt-primary) !important;
+  transform: translateY(-2px);
+}
+
+/* ================================================
+   12. 資訊框系列
+   仿 rich01.com apb-style-box、moneymate.space .ap_intro
+   ================================================ */
+
+/* 通用底層 */
+.pt-box {
+  border-radius: var(--pt-radius-sm);
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-left: 5px solid;
+  line-height: 1.7;
+  font-size: 0.93rem;
+}
+
+.pt-box p:last-child { margin-bottom: 0; }
+
+/* 資訊（藍色） */
+.pt-box-info {
+  background: #e8f4fd;
+  border-color: var(--pt-primary);
+  color: #1a3a50;
+}
+
+.dark .pt-box-info {
+  background: rgba(1, 72, 118, 0.15);
+  color: #90caf9;
+}
+
+/* 提示（黃色） — 仿 moneymate.space FAEDCA */
+.pt-box-tip {
+  background: var(--pt-info-bg);
+  border-color: var(--pt-info-border);
+  color: #5d4a00;
+}
+
+.dark .pt-box-tip {
+  background: rgba(242, 192, 120, 0.12);
+  color: #ffe082;
+}
+
+/* 警告（橘色） */
+.pt-box-warn {
+  background: var(--pt-warn-bg);
+  border-color: var(--pt-warn-border);
+  color: #664d00;
+}
+
+/* 成功（綠色） */
+.pt-box-success {
+  background: #e8f5e9;
+  border-color: var(--pt-green);
+  color: #1b5e20;
+}
+
+.dark .pt-box-success {
+  background: rgba(40, 167, 69, 0.12);
+  color: #a5d6a7;
+}
+
+/* 危險（紅色） */
+.pt-box-danger {
+  background: #fde8e8;
+  border-color: var(--pt-red);
+  color: #5c1010;
+}
+
+/* 盒子標題 */
+.pt-box-title {
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ================================================
+   13. 廣告位置框架
+   仿 rich01.com / moneydj.com 廣告佈局
+   ================================================ */
+
+/* 頂部橫幅廣告 (728×90 leaderboard) */
+.pt-ad-top {
+  width: 100%;
+  max-width: 728px;
+  margin: 0 auto 20px;
+  text-align: center;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--pt-radius-sm);
+  overflow: hidden;
+}
+
+/* 文章內容廣告 (300×250 rectangle) */
+.pt-ad-inline {
+  width: 100%;
+  max-width: 336px;
+  margin: 24px auto;
+  text-align: center;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--pt-radius-sm);
+  overflow: hidden;
+}
+
+/* 浮動廣告（文章右側，桌機版） */
+.pt-ad-float {
+  float: right;
+  width: 300px;
+  margin: 0 0 20px 24px;
+  min-height: 250px;
+  clear: right;
+}
+
+/* 文章末段廣告 */
+.pt-ad-footer {
+  width: 100%;
+  max-width: 728px;
+  margin: 32px auto 0;
+  text-align: center;
+  min-height: 90px;
+}
+
+@media (max-width: 768px) {
+  .pt-ad-float {
+    float: none;
+    width: 100%;
+    max-width: 336px;
+    margin: 20px auto;
+  }
+}
+
+/* 廣告標籤 */
+.pt-ad-label {
+  font-size: 0.7rem;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ================================================
+   14. 側欄（Sidebar）
+   PaperMod 本身無側欄，透過 extend_footer 或 rawhtml shortcode 實作
+   以下為側欄元件樣式
+   ================================================ */
+
+.pt-sidebar-widget {
+  border: 1.5px solid var(--border);
+  border-radius: var(--pt-radius-md);
+  padding: 16px;
+  margin-bottom: 20px;
+  background: var(--entry);
+}
+
+.pt-sidebar-widget h4 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--pt-primary);
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pt-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pt-sidebar-widget ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pt-sidebar-widget ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+
+.pt-sidebar-widget ul li:last-child { border-bottom: none; }
+
+.pt-sidebar-widget ul li a {
+  color: var(--content);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.pt-sidebar-widget ul li a:hover { color: var(--pt-primary); }
+
+/* 熱門推薦碼側欄 */
+.pt-sidebar-referral-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pt-sidebar-referral-list .pt-src-code {
+  font-family: monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--pt-primary);
+  background: var(--pt-code-bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   15. 比較卡片（Hero Comparison）
+   仿 cardu.com.tw 信用卡比較 / moneymate.space 銀行比較
+   ================================================ */
+
+.pt-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.pt-compare-card {
+  border: 2px solid var(--border);
+  border-radius: var(--pt-radius-md);
+  padding: 20px 16px;
+  text-align: center;
+  background: var(--entry);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.pt-compare-card:hover {
+  border-color: var(--pt-primary);
+  box-shadow: var(--pt-shadow-md);
+  transform: translateY(-3px);
+}
+
+.pt-compare-card.recommended {
+  border-color: var(--pt-accent);
+  position: relative;
+}
+
+.pt-compare-card.recommended::before {
+  content: '★ 推薦';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--pt-accent);
+  color: var(--pt-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.pt-compare-card .pt-cc-name {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--pt-primary);
+}
+
+.pt-compare-card .pt-cc-highlight {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--pt-red);
+}
+
+.pt-compare-card .pt-cc-desc {
+  font-size: 0.82rem;
+  color: var(--secondary);
+  line-height: 1.5;
+}
+
+/* ================================================
+   16. 步驟指南（Step Guide）
+   仿 rich01.com 開戶教學步驟
+   ================================================ */
+
+.pt-steps {
+  counter-reset: pt-step-counter;
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pt-steps li {
+  counter-increment: pt-step-counter;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--pt-radius-md);
+  background: var(--entry);
+  transition: box-shadow 0.2s;
+}
+
+.pt-steps li:hover { box-shadow: var(--pt-shadow-sm); }
+
+.pt-steps li::before {
+  content: counter(pt-step-counter);
+  background: var(--pt-primary);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pt-steps li .pt-step-content {
+  flex: 1;
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+.pt-steps li .pt-step-title {
+  font-weight: 700;
+  color: var(--pt-primary);
+  margin-bottom: 4px;
+}
+
+/* ================================================
+   17. 評分星星
+   ================================================ */
+
+.pt-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.1rem;
+}
+
+.pt-rating .stars { color: var(--pt-accent); }
+.pt-rating .score { font-weight: 700; font-size: 0.9rem; color: var(--secondary); }
+
+/* ================================================
+   18. 優惠到期標籤
+   ================================================ */
+
+.pt-expiry {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fde8e8;
+  color: var(--pt-red);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.dark .pt-expiry {
+  background: rgba(220, 53, 69, 0.15);
+  color: #ff8a80;
+}
+
+/* ================================================
+   19. 重點摘要盒（文章頂部 TL;DR）
+   ================================================ */
+
+.pt-summary-box {
+  background: var(--pt-code-bg);
+  border: 2px solid var(--pt-primary);
+  border-radius: var(--pt-radius-md);
+  padding: 20px 24px;
+  margin: 20px 0 28px;
+}
+
+.pt-summary-box .pt-summary-title {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--pt-primary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pt-summary-box ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.93rem;
+  line-height: 1.8;
+}
+
+.pt-summary-box ul li strong { color: var(--pt-primary); }
+
+/* ================================================
+   20. RWD
+   ================================================ */
+@media (max-width: 768px) {
+  .profile h1 { font-size: 1.5rem; }
+  .profile .button { padding: 8px 18px; font-size: 0.9rem; }
+
+  .pt-referral-box .pt-code { font-size: 1.2rem; letter-spacing: 2px; }
+  .pt-referral-grid { grid-template-columns: 1fr; }
+  .pt-compare-grid  { grid-template-columns: 1fr; }
+
+  .pt-cta-block { padding: 20px 16px; }
+  .pt-cta-block h3 { font-size: 1.1rem; }
+
+  .pt-announce-bar { font-size: 0.82rem; }
+
+  table { font-size: 0.82rem; }
+  th, td { padding: 8px 10px; }
+
+  .pt-ad-top { min-height: 60px; }
+}
+
+/* dark mode 微調 */
+.dark .pt-referral-box { background: #0a1f30; border-color: #2a7ab8; }
+.dark .pt-referral-box .pt-code { background: #112233; border-color: #2a7ab8; color: #90caf9; }
+.dark .pt-cta-block { background: linear-gradient(135deg, #025d99 0%, #014876 100%); }
+
+/* dark mode 對比度修復 */
+.dark .pt-summary-box { background: rgba(1, 72, 118, 0.2); border-color: #2a7ab8; color: #e0e0e0; }
+.dark .pt-summary-box h3, .dark .pt-summary-box strong { color: #90caf9; }
+.dark .pt-summary-box ul li { color: #e0e0e0; }
+.dark .pt-box-warn { background: rgba(240, 131, 0, 0.15); border-color: #f08300; color: #ffb74d; }
+.dark .pt-box-danger { background: rgba(220, 53, 69, 0.15); border-color: #dc3545; color: #ff8a80; }
+.dark .pt-box-tip { background: rgba(242, 192, 120, 0.18); border-color: #f2c078; color: #fff9c4; }
+.dark td .code-inline, .dark .code-inline { background: #112233; color: #90caf9; border-color: #2a7ab8; }
+.dark .post-tags a, .dark .post-categories a { background: rgba(144, 202, 249, 0.15); color: #90caf9 !important; }
+.dark .post-tags a:hover, .dark .post-categories a:hover { background: #90caf9; color: #1a1a2e !important; }
+.dark .pt-referral-card .pt-rc-code { background: #112233; color: #90caf9; }
+.dark .pt-comparison-table th { background: #1a2a3a; color: #e0e0e0; }
+.dark .pt-comparison-table td { background: #1e1e2e; color: #d0d0d0; }
+.dark .pt-comparison-table tr:nth-child(even) td { background: #252535; }
+.dark .pt-faq-item summary { color: #e0e0e0; }
+.dark .pt-faq-item p { color: #c0c0c0; }
+
+/* ================================================
+   21. 作者資訊框
+   ================================================ */
+.pt-author-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--pt-radius-md);
+  padding: 20px;
+  margin: 32px 0 16px;
+  background: var(--entry);
+}
+
+.pt-author-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid var(--pt-primary);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.pt-author-info { flex: 1; }
+
+.pt-author-name {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--pt-primary);
+  margin-bottom: 6px;
+}
+
+.pt-author-bio {
+  font-size: 0.88rem;
+  color: var(--secondary);
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+.pt-author-disclosure {
+  font-size: 0.8rem;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.pt-author-disclosure a {
+  color: var(--pt-primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .pt-author-box { flex-direction: column; align-items: center; text-align: center; }
+}
+
+/* ================================================
+   22. 購買按鈕（buy-button shortcode）
+   ================================================ */
+.pt-buy-btns {
+  border: 1.5px solid var(--border);
+  border-radius: var(--pt-radius-md);
+  padding: 16px 20px;
+  margin: 20px 0;
+  background: var(--entry);
+}
+
+/* 大型官方申辦按鈕（金融產品用） */
+.pt-buy-official-lg {
+  background: var(--pt-blue-grad) !important;
+  color: #fff !important;
+  padding: 14px 32px !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  border-radius: var(--pt-radius-lg) !important;
+  box-shadow: 0 4px 20px rgba(1,72,118,0.4) !important;
+  width: 100%;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+.pt-buy-official-lg:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 28px rgba(1,72,118,0.55) !important;
+}
+
+.pt-buy-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--pt-primary);
+  margin-bottom: 10px;
+}
+
+.pt-buy-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pt-buy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: var(--pt-radius-lg);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.pt-buy-momo {
+  background: #e84393;
+  color: #fff !important;
+}
+.pt-buy-momo:hover { background: #d0337e; transform: translateY(-1px); color: #fff !important; }
+
+.pt-buy-shopee {
+  background: #f25c05;
+  color: #fff !important;
+}
+.pt-buy-shopee:hover { background: #d94e04; transform: translateY(-1px); color: #fff !important; }
+
+.pt-buy-pchome {
+  background: #003b72;
+  color: #fff !important;
+}
+.pt-buy-pchome:hover { background: #002a55; transform: translateY(-1px); color: #fff !important; }
+
+.pt-buy-official {
+  background: var(--pt-green);
+  color: #fff !important;
+}
+.pt-buy-official:hover { background: #1d8a3a; transform: translateY(-1px); color: #fff !important; }
+
+.pt-buy-note {
+  font-size: 0.75rem;
+  color: var(--secondary);
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .pt-buy-btn-row { flex-direction: column; }
+  .pt-buy-btn { justify-content: center; }
+}
+
+/* ================================================
+   22. 分類篩選按鈕（/posts/ 頁面）
+   ================================================ */
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 24px;
+}
+
+.cat-btn {
+  padding: 8px 18px;
+  border: 2px solid var(--pt-primary);
+  border-radius: 24px;
+  background: transparent;
+  color: var(--pt-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.cat-btn:hover,
+.cat-btn.active {
+  background: var(--pt-primary);
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cat-btn { border-color: var(--pt-accent); color: var(--pt-accent); }
+  .cat-btn:hover, .cat-btn.active { background: var(--pt-accent); color: #000; }
+}
+
+/* ================================================
+   23. 銀行卡片推廣按鈕（bank-card shortcode）
+   ================================================ */
+.pt-bank-card {
+  border-radius: var(--pt-radius-md);
+  padding: 24px 24px 20px;
+  margin: 24px 0;
+  position: relative;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.18);
+  overflow: hidden;
+  color: #fff;
+}
+
+.pt-bank-card::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 140px; height: 140px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+
+.pt-bank-card::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; left: -30px;
+  width: 180px; height: 180px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+
+.pt-bank-card-tag {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+}
+
+.pt-bank-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pt-bank-card-emoji {
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+}
+
+.pt-bank-card-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.pt-bank-card-bonus {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 18px;
+  line-height: 1.65;
+}
+
+.pt-bank-card-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.pt-bank-card-code-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 10px;
+  padding: 8px 14px;
+  backdrop-filter: blur(4px);
+}
+
+.pt-bank-card-code-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pt-bank-card-code {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  user-select: all;
+}
+
+.pt-bank-card-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pt-bank-card-copy:hover,
+.pt-bank-card-copy.copied {
+  background: rgba(255,255,255,0.35);
+}
+
+.pt-bank-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.95);
+  color: #014876 !important;
+  border-radius: var(--pt-radius-lg);
+  padding: 12px 26px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none !important;
+  transition: all 0.25s;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.pt-bank-card-btn:hover {
+  background: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  color: #014876 !important;
+}
+
+@media (max-width: 600px) {
+  .pt-bank-card-footer { flex-direction: column; align-items: stretch; }
+  .pt-bank-card-btn { margin-left: 0; justify-content: center; }
+  .pt-bank-card-code-wrap { justify-content: space-between; }
+}
+
+/* ================================================
+   14. 相關文章推薦區塊
+   ================================================ */
+.pt-related-posts {
+  margin: 40px 0 20px;
+  padding: 24px 0 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+body[class*="dark"] .pt-related-posts {
+  border-top-color: #333;
+}
+
+.pt-related-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: var(--pt-primary);
+}
+
+body[class*="dark"] .pt-related-title {
+  color: #90caf9;
+}
+
+.pt-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.pt-related-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--pt-radius-sm);
+  overflow: hidden;
+  background: #f8f9fa;
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.25s ease;
+  box-shadow: var(--pt-shadow-sm);
+}
+
+body[class*="dark"] .pt-related-card {
+  background: #1d1e20;
+}
+
+.pt-related-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--pt-shadow-md);
+}
+
+.pt-related-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.pt-related-img-placeholder {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #e0e7ee 0%, #f0f4f8 100%);
+}
+
+body[class*="dark"] .pt-related-img-placeholder {
+  background: linear-gradient(135deg, #2a2d32 0%, #1d1e20 100%);
+}
+
+.pt-related-card-title {
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .pt-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .pt-related-img, .pt-related-img-placeholder {
+    height: 90px;
+  }
+}
+
+/* ================================================
+   15. 優缺點比較區塊 (pt-proscons)
+   ================================================ */
+.pt-proscons-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.pt-pros, .pt-cons {
+  border-radius: var(--pt-radius-sm);
+  padding: 16px;
+}
+
+.pt-pros {
+  background: #e8f5e9;
+  border: 1px solid var(--pt-green);
+}
+
+body[class*="dark"] .pt-pros {
+  background: rgba(40, 167, 69, 0.1);
+  border-color: rgba(40, 167, 69, 0.4);
+}
+
+.pt-cons {
+  background: #fde8e8;
+  border: 1px solid var(--pt-red);
+}
+
+body[class*="dark"] .pt-cons {
+  background: rgba(220, 53, 69, 0.1);
+  border-color: rgba(220, 53, 69, 0.4);
+}
+
+.pt-proscons-heading {
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pt-pros .pt-proscons-heading { color: var(--pt-green); }
+.pt-cons .pt-proscons-heading { color: var(--pt-red); }
+
+body[class*="dark"] .pt-pros .pt-proscons-heading { color: #66bb6a; }
+body[class*="dark"] .pt-cons .pt-proscons-heading { color: #ef5350; }
+
+.pt-proscons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pt-proscons-list li {
+  padding: 4px 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.pt-proscons-list li::before {
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+.pt-pros .pt-proscons-list li::before {
+  content: "\2713";
+  color: var(--pt-green);
+}
+
+.pt-cons .pt-proscons-list li::before {
+  content: "\2717";
+  color: var(--pt-red);
+}
+
+@media (max-width: 768px) {
+  .pt-proscons-box {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* ================================================
+   16. 評分卡片 (pt-rating)
+   ================================================ */
+.pt-rating-card {
+  border: 1.5px solid #d0e4f0;
+  border-radius: var(--pt-radius-md);
+  padding: 20px;
+  margin: 24px 0;
+  background: #fff;
+  box-shadow: var(--pt-shadow-sm);
+}
+
+body[class*="dark"] .pt-rating-card {
+  background: #1d1e20;
+  border-color: #2a4a6a;
+}
+
+.pt-rating-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.pt-rating-overall {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--pt-blue-grad);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.pt-rating-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--pt-primary);
+}
+
+body[class*="dark"] .pt-rating-name {
+  color: #90caf9;
+}
+
+.pt-rating-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pt-rating-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.pt-rating-label {
+  width: 70px;
+  flex-shrink: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+.pt-rating-bar-wrap {
+  flex: 1;
+  height: 10px;
+  background: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+body[class*="dark"] .pt-rating-bar-wrap {
+  background: #333;
+}
+
+.pt-rating-bar {
+  height: 100%;
+  border-radius: 5px;
+  background: var(--pt-blue-grad);
+  transition: width 0.6s ease;
+}
+
+.pt-rating-score {
+  width: 30px;
+  text-align: right;
+  font-weight: 700;
+  color: var(--pt-primary);
+}
+
+body[class*="dark"] .pt-rating-score {
+  color: #90caf9;
+}
+
+/* ================================================
+   17. 場景化選擇指南表格 (pt-picker)
+   ================================================ */
+.pt-picker-wrap {
+  margin: 24px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pt-picker-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  border-radius: var(--pt-radius-sm);
+  overflow: hidden;
+  border: 1px solid #d0e4f0;
+}
+
+body[class*="dark"] .pt-picker-table {
+  border-color: #2a4a6a;
+}
+
+.pt-picker-table thead {
+  background: var(--pt-primary);
+  color: #fff;
+}
+
+.pt-picker-table th {
+  padding: 12px 16px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.pt-picker-table td {
+  padding: 10px 16px;
+  border-top: 1px solid #e8eef3;
+  line-height: 1.5;
+}
+
+body[class*="dark"] .pt-picker-table td {
+  border-top-color: #333;
+}
+
+.pt-picker-table tbody tr:hover {
+  background: #f0f7ff;
+}
+
+body[class*="dark"] .pt-picker-table tbody tr:hover {
+  background: rgba(1, 72, 118, 0.15);
+}
+
+.pt-picker-highlight {
+  font-weight: 700;
+  color: var(--pt-primary);
+}
+
+body[class*="dark"] .pt-picker-highlight {
+  color: #90caf9;
+}
+
+/* ================================================
+   18. 網友口碑引用卡片 (pt-review)
+   ================================================ */
+.pt-review-card {
+  border-left: 4px solid var(--pt-primary);
+  background: #f8f9fa;
+  border-radius: 0 var(--pt-radius-sm) var(--pt-radius-sm) 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+  position: relative;
+}
+
+body[class*="dark"] .pt-review-card {
+  background: #1d1e20;
+  border-left-color: #4a90d9;
+}
+
+.pt-review-quote {
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
+}
+
+body[class*="dark"] .pt-review-quote {
+  color: #ddd;
+}
+
+.pt-review-quote::before {
+  content: "\201C";
+  font-size: 2rem;
+  color: var(--pt-primary);
+  opacity: 0.3;
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-right: 4px;
+}
+
+.pt-review-meta {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pt-review-source {
+  background: var(--pt-primary);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+body[class*="dark"] .pt-review-source {
+  background: #4a90d9;
+}
+
+/* ================================================
+   19. buy-button 價格與 header
+   ================================================ */
+.pt-buy-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.pt-buy-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pt-red);
+}
+
+body[class*="dark"] .pt-buy-price {
+  color: #ef5350;
+}
+
+/* ================================================
+   20. 文章內嵌廣告位
+   ================================================ */
+.pt-ad-inline {
+  margin: 24px 0;
+  text-align: center;
+  min-height: 100px;
+}
+
+/* ================================================
+   21. Email 訂閱區塊
+   ================================================ */
+.pt-newsletter {
+  margin: 40px 0 20px;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, #014876 0%, #0275b5 100%);
+  border-radius: var(--pt-radius-md);
+  text-align: center;
+  color: #fff;
+}
+
+.pt-newsletter-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.pt-newsletter-desc {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0 0 18px;
+}
+
+.pt-newsletter-form {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.pt-newsletter-input {
+  flex: 1;
+  padding: 10px 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: var(--pt-radius-sm);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.pt-newsletter-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.pt-newsletter-input:focus {
+  border-color: var(--pt-accent);
+  background: rgba(255,255,255,0.2);
+}
+
+.pt-newsletter-btn {
+  padding: 10px 24px;
+  background: var(--pt-accent);
+  color: var(--pt-primary);
+  border: none;
+  border-radius: var(--pt-radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s;
+}
+
+.pt-newsletter-btn:hover {
+  background: #ffe066;
+  transform: translateY(-1px);
+}
+
+.pt-newsletter-note {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin: 12px 0 0;
+}
+
+@media (max-width: 768px) {
+  .pt-newsletter-form {
+    flex-direction: column;
+  }
+}
+
+/* ================================================
+   22. 互動式比較表格 (pt-compare)
+   ================================================ */
+.pt-compare-wrap {
+  margin: 24px 0;
+}
+
+.pt-compare-filter {
+  width: 100%;
+  max-width: 320px;
+  padding: 8px 14px;
+  border: 1.5px solid #d0e4f0;
+  border-radius: var(--pt-radius-sm);
+  font-size: 0.88rem;
+  margin-bottom: 12px;
+  outline: none;
+  background: #fff;
+}
+
+body[class*="dark"] .pt-compare-filter {
+  background: #1d1e20;
+  border-color: #2a4a6a;
+  color: #eee;
+}
+
+.pt-compare-filter:focus {
+  border-color: var(--pt-primary);
+}
+
+.pt-compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pt-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  border: 1px solid #d0e4f0;
+  border-radius: var(--pt-radius-sm);
+  overflow: hidden;
+}
+
+body[class*="dark"] .pt-compare-table {
+  border-color: #2a4a6a;
+}
+
+.pt-compare-table thead {
+  background: var(--pt-primary);
+  color: #fff;
+}
+
+.pt-compare-sortable {
+  padding: 10px 14px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.pt-compare-sortable:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.pt-sort-icon::after {
+  content: " \2195";
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+
+.pt-compare-table td {
+  padding: 10px 14px;
+  border-top: 1px solid #e8eef3;
+}
+
+body[class*="dark"] .pt-compare-table td {
+  border-top-color: #333;
+}
+
+.pt-compare-table tbody tr:hover {
+  background: #f0f7ff;
+}
+
+body[class*="dark"] .pt-compare-table tbody tr:hover {
+  background: rgba(1,72,118,0.15);
+}
+
+.pt-compare-name {
+  font-weight: 700;
+  color: var(--pt-primary);
+}
+
+body[class*="dark"] .pt-compare-name {
+  color: #90caf9;
+}
+
+.pt-compare-table tbody tr.pt-hidden {
+  display: none;
+}
+
+/* ================================================
+   23. 排行榜模板 (ranking.html)
+   ================================================ */
+.pt-ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.pt-ranking-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1.5px solid #e0e7ee;
+  border-radius: var(--pt-radius-md);
+  background: #fff;
+  transition: all 0.25s;
+}
+
+body[class*="dark"] .pt-ranking-item {
+  background: #1d1e20;
+  border-color: #2a4a6a;
+}
+
+.pt-ranking-item:hover {
+  box-shadow: var(--pt-shadow-md);
+  transform: translateY(-2px);
+}
+
+.pt-ranking-top3 {
+  border-width: 2px;
+}
+
+.pt-ranking-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  background: #e0e7ee;
+  color: #555;
+}
+
+body[class*="dark"] .pt-ranking-badge {
+  background: #333;
+  color: #aaa;
+}
+
+.pt-rank-gold {
+  background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(255, 165, 0, 0.4);
+}
+
+.pt-rank-silver {
+  background: linear-gradient(135deg, #C0C0C0, #A8A8A8) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(192, 192, 192, 0.4);
+}
+
+.pt-rank-bronze {
+  background: linear-gradient(135deg, #CD7F32, #B8860B) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(205, 127, 50, 0.4);
+}
+
+.pt-ranking-content {
+  flex: 1;
+}
+
+.pt-ranking-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pt-ranking-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pt-editor-choice {
+  background: var(--pt-accent);
+  color: var(--pt-primary);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.pt-ranking-score-badge {
+  background: var(--pt-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+body[class*="dark"] .pt-ranking-score-badge {
+  background: #4a90d9;
+}
+
+.pt-ranking-summary {
+  font-size: 0.88rem;
+  color: #666;
+  margin: 6px 0 10px;
+  line-height: 1.6;
+}
+
+body[class*="dark"] .pt-ranking-summary {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .pt-ranking-item {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .pt-ranking-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}

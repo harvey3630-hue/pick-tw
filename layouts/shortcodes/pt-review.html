@@ -1,0 +1,28 @@
+{{/*
+  pt-review shortcode — 網友口碑引用卡片
+  用法：
+  {{< pt-review
+    quote="用了半年真的很滿意，利率比傳統銀行高很多"
+    source="PTT"
+    author="匿名網友"
+    date="2026-02"
+  >}}
+
+  參數：
+  - quote: 引用文字（必填）
+  - source: 來源平台，如 PTT、Dcard、Mobile01（必填）
+  - author: 作者名稱（可選，預設「匿名網友」）
+  - date: 日期（可選）
+*/}}
+{{ $quote  := .Get "quote"  | default "" }}
+{{ $source := .Get "source" | default "網路" }}
+{{ $author := .Get "author" | default "匿名網友" }}
+{{ $date   := .Get "date"   | default "" }}
+
+<div class="pt-review-card">
+  <div class="pt-review-quote">{{ $quote | markdownify }}</div>
+  <div class="pt-review-meta">
+    <span class="pt-review-source">{{ $source }}</span>
+    <span>{{ $author }}{{ with $date }} · {{ . }}{{ end }}</span>
+  </div>
+</div>

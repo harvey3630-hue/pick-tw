@@ -1,0 +1,19 @@
+{{- /* related-posts.html — 相關文章推薦區塊 */ -}}
+{{- $related := .Site.RegularPages.Related . | first 4 }}
+{{- if $related }}
+<div class="pt-related-posts">
+  <h3 class="pt-related-title">相關文章推薦</h3>
+  <div class="pt-related-grid">
+    {{- range $related }}
+    <a href="{{ .RelPermalink }}" class="pt-related-card">
+      {{- with .Params.cover.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" class="pt-related-img" loading="lazy">
+      {{- else }}
+      <div class="pt-related-img-placeholder"></div>
+      {{- end }}
+      <span class="pt-related-card-title">{{ .Title }}</span>
+    </a>
+    {{- end }}
+  </div>
+</div>
+{{- end }}

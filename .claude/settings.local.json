@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo version:*)",
+      "Bash(winget --version 2>&1 || choco --version 2>&1 || scoop --version 2>&1)",
+      "Bash(winget install:*)",
+      "Bash(HUGO=\"/c/Users/harve/AppData/Local/Microsoft/WinGet/Packages/Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe/hugo.exe\" && \"$HUGO\" version)",
+      "Bash(HUGO=\"/c/Users/harve/AppData/Local/Microsoft/WinGet/Packages/Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe/hugo.exe\" && cd \"D:/N8N全自動工作流/Pick-tw\" && \"$HUGO\" new site . --force 2>&1)",
+      "Bash(HUGO=\"/c/Users/harve/AppData/Local/Microsoft/WinGet/Packages/Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe/hugo.exe\" && cd \"D:/N8N全自動工作流/Pick-tw\" && \"$HUGO\" server --buildDrafts 2>&1)",
+      "Bash(GH=\"/c/Program Files/GitHub CLI/gh.exe\" && \"$GH\" auth status 2>&1)",
+      "Bash(GH=\"/c/Program Files/GitHub CLI/gh.exe\" && \"$GH\" repo create pick-tw --public --description \"Pick-TW 台灣最佳商品推薦平台\" 2>&1)"
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{{- /* extend_head.html — Pick-TW 自訂 head 注入 */ -}}
+
+{{- /* ===== Security Meta Tags ===== */ -}}
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+{{- /* ===== Google AdSense（在 config.yaml 填入 adsense_publisher_id 後自動啟用）===== */ -}}
+{{- with site.Params.adsense_publisher_id }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}"
+     crossorigin="anonymous"></script>
+{{- end }}
+
+{{- /* ===== Google Analytics GA4 ===== */ -}}
+{{- with site.Params.ga4_id }}
+{{- if eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ . }}');
+</script>
+{{- end }}
+{{- end }}
+
+{{- /* ===== Facebook Pixel（在 config.yaml 填入 fb_pixel_id 後自動啟用）===== */ -}}
+{{- with site.Params.fb_pixel_id }}
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '{{ . }}');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id={{ . }}&ev=PageView&noscript=1"/></noscript>
+{{- end }}
+
+{{- /* ===== Open Graph 額外標籤 ===== */ -}}
+<meta property="og:locale" content="zh_TW" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@picktw_com" />
+
+{{- /* ===== JSON-LD 結構化資料 ===== */ -}}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pick-TW｜台灣精選好物推薦",
+  "url": "https://pick-tw.com",
+  "description": "Pick-TW 幫你省去比較時間，精選台灣最值得入手的科技工具、居家家電、金融理財好物，每篇都是實測推薦。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://pick-tw.com/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pick-TW",
+    "url": "https://pick-tw.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pick-tw.com/images/avatar.jpg"
+    }
+  }
+}
+</script>
+{{- end }}
+
+{{- if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end }},
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05+08:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05+08:00" | jsonify }},
+  "author": {
+    "@type": "Organization",
+    "name": "Pick-TW 編輯團隊",
+    "url": "https://pick-tw.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pick-TW",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pick-tw.com/images/avatar.jpg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  }
+  {{- with .Params.cover.image }},
+  "image": {
+    "@type": "ImageObject",
+    "url": {{ printf "https://pick-tw.com/%s" . | jsonify }}
+  }
+  {{- end }}
+}
+</script>
+
+{{- /* BreadcrumbList */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://pick-tw.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "所有文章",
+      "item": "https://pick-tw.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+  ]
+}
+</script>
+
+{{- /* FAQ JSON-LD（在文章 frontmatter 定義 faq 列表後自動輸出）*/ -}}
+{{- with .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $i, $faq := . }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $faq.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $faq.answer | jsonify }}
+      }
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
+
+{{- /* Product + ItemList + AggregateRating JSON-LD（在 frontmatter 定義 products 後自動輸出）*/ -}}
+{{- with .Params.products }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {{- range $i, $p := . }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $i 1 }},
+      "item": {
+        "@type": "Product",
+        "name": {{ $p.name | jsonify }},
+        "description": {{ $p.description | default "" | jsonify }}
+        {{- with $p.image }},
+        "image": {{ . | jsonify }}
+        {{- end }}
+        {{- with $p.rating }},
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": {{ . }},
+          "bestRating": 5,
+          "worstRating": 1,
+          "ratingCount": {{ $p.ratingCount | default 1 }}
+        }
+        {{- end }}
+        {{- with $p.brand }},
+        "brand": {
+          "@type": "Brand",
+          "name": {{ . | jsonify }}
+        }
+        {{- end }}
+      }
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
+
+{{- end }}

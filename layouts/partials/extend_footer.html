@@ -1,0 +1,88 @@
+{{- /* extend_footer.html — Pick-TW 全站 JS 注入 */ -}}
+{{- if .IsPage }}
+{{- partial "author-box.html" . }}
+{{- partial "related-posts.html" . }}
+{{- partial "newsletter.html" . }}
+{{- end }}
+
+<script>
+/* ===== 複製推薦碼功能 ===== */
+function ptCopyCode(code, btnId) {
+  navigator.clipboard.writeText(code).then(function () {
+    var btn = document.getElementById(btnId);
+    if (!btn) return;
+    var original = btn.innerHTML;
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 已複製！';
+    btn.classList.add('copied');
+    setTimeout(function () {
+      btn.innerHTML = original;
+      btn.classList.remove('copied');
+    }, 2000);
+  }).catch(function () {
+    /* fallback：顯示 prompt */
+    window.prompt('複製推薦碼：', code);
+  });
+}
+
+/* ===== 公告列關閉功能 ===== */
+(function () {
+  var bar = document.getElementById('pt-announce-bar');
+  if (!bar) return;
+  var closeBtn = bar.querySelector('.pt-announce-close');
+  if (!closeBtn) return;
+  var key = 'pt_announce_closed_' + (bar.dataset.version || '1');
+  if (sessionStorage.getItem(key)) {
+    bar.style.display = 'none';
+    return;
+  }
+  closeBtn.addEventListener('click', function () {
+    bar.style.display = 'none';
+    sessionStorage.setItem(key, '1');
+  });
+})();
+
+/* ===== 互動式比較表：排序 ===== */
+document.querySelectorAll('.pt-compare-sortable').forEach(function (th) {
+  th.addEventListener('click', function () {
+    var table = th.closest('table');
+    var tbody = table.querySelector('tbody');
+    var rows = Array.from(tbody.querySelectorAll('tr'));
+    var col = parseInt(th.dataset.col, 10);
+    var asc = th.dataset.sort !== 'asc';
+    th.dataset.sort = asc ? 'asc' : 'desc';
+    rows.sort(function (a, b) {
+      var av = a.cells[col].textContent.trim();
+      var bv = b.cells[col].textContent.trim();
+      var an = parseFloat(av.replace(/[^0-9.\-]/g, ''));
+      var bn = parseFloat(bv.replace(/[^0-9.\-]/g, ''));
+      if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+      return asc ? av.localeCompare(bv, 'zh-TW') : bv.localeCompare(av, 'zh-TW');
+    });
+    rows.forEach(function (r) { tbody.appendChild(r); });
+  });
+});
+
+/* ===== 互動式比較表：篩選 ===== */
+document.querySelectorAll('.pt-compare-filter').forEach(function (input) {
+  input.addEventListener('input', function () {
+    var wrap = document.getElementById(input.dataset.table);
+    if (!wrap) return;
+    var q = input.value.toLowerCase();
+    wrap.querySelectorAll('tbody tr').forEach(function (row) {
+      row.classList.toggle('pt-hidden', q && row.textContent.toLowerCase().indexOf(q) === -1);
+    });
+  });
+});
+
+/* ===== 推薦碼欄位點擊複製 ===== */
+document.querySelectorAll('.pt-code').forEach(function (el) {
+  el.addEventListener('click', function () {
+    var text = el.textContent.trim();
+    navigator.clipboard.writeText(text).then(function () {
+      var orig = el.style.background;
+      el.style.background = '#d4edda';
+      setTimeout(function () { el.style.background = orig; }, 1200);
+    });
+  });
+});
+</script>

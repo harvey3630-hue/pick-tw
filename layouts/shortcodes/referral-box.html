@@ -1,0 +1,43 @@
+{{/*
+  referral-box shortcode
+  用法：
+  {{< referral-box bank="LINE Bank" code="ABCD1234" bonus="開戶送 100 點，首刷再加碼 500 點" link="https://..." >}}
+
+  參數：
+    bank  : 銀行/服務名稱（必填）
+    code  : 推薦碼（必填）
+    bonus : 優惠說明（選填）
+    link  : 申請連結（選填）
+    label : 標籤文字，預設「推薦碼」
+    emoji : 銀行 emoji（選填）
+*/}}
+{{ $bank  := .Get "bank"  | default "推薦碼" }}
+{{ $code  := .Get "code"  | default "" }}
+{{ $bonus := .Get "bonus" | default "" }}
+{{ $link  := .Get "link"  | default "" }}
+{{ $label := .Get "label" | default "推薦碼" }}
+{{ $emoji := .Get "emoji" | default "🏦" }}
+{{ $uid   := $code | md5 | truncate 8 "" }}
+
+<div class="pt-referral-box" id="rb-{{ $uid }}">
+  <span class="pt-referral-label">{{ $label }}</span>
+  <div class="pt-referral-bank">{{ $emoji }} {{ $bank }}</div>
+  <div class="pt-referral-code-wrap">
+    <span class="pt-code" id="code-{{ $uid }}" title="點擊複製">{{ $code }}</span>
+    <button class="pt-copy-btn" onclick="ptCopyCode('{{ $code }}', 'btn-{{ $uid }}')" id="btn-{{ $uid }}" aria-label="複製推薦碼">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+      </svg>
+      複製
+    </button>
+    {{ if $link }}
+    <a class="pt-btn pt-btn-primary" href="{{ $link }}" target="_blank" rel="noopener sponsored" style="padding:8px 18px;font-size:0.88rem;">
+      立即申請 →
+    </a>
+    {{ end }}
+  </div>
+  {{ if $bonus }}
+  <div class="pt-bonus">🎁 {{ $bonus | markdownify }}</div>
+  {{ end }}
+</div>

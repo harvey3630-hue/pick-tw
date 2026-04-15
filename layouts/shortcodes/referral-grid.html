@@ -1,0 +1,34 @@
+{{/*
+  referral-grid shortcode — 多銀行推薦碼卡片網格
+  用法（Inner content 為 JSON 陣列）：
+
+  {{< referral-grid >}}
+  [
+    {"bank":"LINE Bank","emoji":"💚","code":"ABCD1234","bonus":"開戶送 100 點","link":"https://..."},
+    {"bank":"街口支付","emoji":"🟠","code":"XYZ789","bonus":"首刷回饋 5%","link":"https://..."}
+  ]
+  {{< /referral-grid >}}
+*/}}
+{{ $items := .Inner | transform.Unmarshal }}
+<div class="pt-referral-grid">
+  {{ range $items }}
+  {{ $uid := .code | md5 | truncate 8 "" }}
+  <div class="pt-referral-card">
+    <div class="pt-rc-bank">
+      <span class="pt-bank-emoji">{{ .emoji | default "🏦" }}</span>
+      {{ .bank }}
+    </div>
+    <div class="pt-rc-code" id="code-{{ $uid }}" title="點擊複製推薦碼">{{ .code }}</div>
+    {{ if .bonus }}<div class="pt-rc-bonus">🎁 <span class="highlight">{{ .bonus }}</span></div>{{ end }}
+    <div style="display:flex;gap:8px;margin-top:4px;flex-wrap:wrap;">
+      <button class="pt-copy-btn" onclick="ptCopyCode('{{ .code }}','btn-{{ $uid }}')" id="btn-{{ $uid }}" style="font-size:0.8rem;padding:6px 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
+        複製
+      </button>
+      {{ if .link }}
+      <a class="pt-btn pt-btn-secondary" href="{{ .link }}" target="_blank" rel="noopener sponsored" style="font-size:0.8rem;padding:6px 14px;border-radius:20px;">申請 →</a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>

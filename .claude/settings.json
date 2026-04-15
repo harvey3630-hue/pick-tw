@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Read(D:\\N8N全自動工作流\\**)",
+      "Write(D:\\N8N全自動工作流\\**)",
+      "Bash(cd D:\\N8N全自動工作流\\* *)",
+      "Bash(docker *)",
+      "Bash(curl http://localhost:5678/*)",
+      "Bash(curl https://n8n.pick-tw.com/*)"
+    ],
+    "deny": []
+  }
+}
