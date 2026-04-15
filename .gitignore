@@ -27,6 +27,10 @@ __pycache__/
 # Node modules (if ever used)
 node_modules/
 
+# Wrangler / Cloudflare Workers
+.wrangler/
+wrangler.toml
+
 # Log files
 *.log
 

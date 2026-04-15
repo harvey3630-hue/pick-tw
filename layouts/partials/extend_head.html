@@ -203,4 +203,50 @@
 </script>
 {{- end }}
 
+{{- /* FAQPage for Homepage AI Search Optimization */ -}}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pick-TW 是什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick-TW 是台灣信用卡 / 銀行 / VPN / 訂閱服務的推薦平台，提供深度評測與比價。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pick-TW 的推薦準則？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "我們以實際使用體驗 + 公開資料 + 比價數據作為推薦依據，並標示聯盟連結利益揭露。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何聯絡 Pick-TW？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Email: harvey3630@gmail.com；網站：https://pick-tw.com/"
+      }
+    }
+  ]
+}
+</script>
+{{- end }}
+
+{{- /* Contact Information */ -}}
+<address style="display:none;">
+  <strong>Pick-TW</strong><br>
+  Email：<a href="mailto:harvey3630@gmail.com">harvey3630@gmail.com</a><br>
+  Web：<a href="https://pick-tw.com/">https://pick-tw.com/</a>
+</address>
+
+{{- /* AI Crawler Link for LLM-based Search Engines */ -}}
+<link rel="llms-txt" href="https://pick-tw.com/llms.txt">
+
 {{- end }}

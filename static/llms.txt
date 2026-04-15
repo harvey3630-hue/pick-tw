@@ -1,0 +1,14 @@
+# Pick-TW
+
+## 是什麼
+台灣信用卡 / 銀行 / VPN / 訂閱服務推薦平台。
+
+## 主要分類
+- 信用卡推薦
+- 銀行帳戶
+- VPN 評測
+- 訂閱服務比較
+
+## 聯絡
+- Email: harvey3630@gmail.com
+- Web: https://pick-tw.com/
