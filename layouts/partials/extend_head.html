@@ -204,7 +204,6 @@
 {{- end }}
 
 {{- /* FAQPage for Homepage AI Search Optimization */ -}}
-{{- if .IsHome }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -237,7 +236,6 @@
   ]
 }
 </script>
-{{- end }}
 
 {{- /* Contact Information */ -}}
 <address style="display:none;">
@@ -250,3 +248,10 @@
 <link rel="llms-txt" href="https://pick-tw.com/llms.txt">
 
 {{- end }}
+
+{{- /* Global Contact Information */ -}}
+<address style="display:none;">
+  <strong>Pick-TW</strong><br>
+  Email：<a href="mailto:harvey3630@gmail.com">harvey3630@gmail.com</a><br>
+  Web：<a href="https://pick-tw.com/">https://pick-tw.com/</a>
+</address>
