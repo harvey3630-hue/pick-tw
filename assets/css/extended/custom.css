@@ -734,7 +734,7 @@ blockquote {
 /* 廣告標籤 */
 .pt-ad-label {
   font-size: 0.7rem;
-  color: #aaa;
+  color: #999;
   text-align: center;
   margin-bottom: 2px;
   letter-spacing: 1px;
@@ -1740,14 +1740,14 @@ body[class*="dark"] .pt-review-card {
 }
 
 body[class*="dark"] .pt-review-quote {
-  color: #ddd;
+  color: #e8e8e8;
 }
 
 .pt-review-quote::before {
   content: "\201C";
   font-size: 2rem;
   color: var(--pt-primary);
-  opacity: 0.3;
+  opacity: 0.15;
   line-height: 0;
   vertical-align: -0.4em;
   margin-right: 4px;
@@ -1756,7 +1756,7 @@ body[class*="dark"] .pt-review-quote {
 .pt-review-meta {
   margin-top: 10px;
   font-size: 0.8rem;
-  color: #888;
+  color: #666;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1877,7 +1877,7 @@ body[class*="dark"] .pt-buy-price {
 
 .pt-newsletter-note {
   font-size: 0.75rem;
-  opacity: 0.6;
+  opacity: 0.85;
   margin: 12px 0 0;
 }
 
@@ -1954,7 +1954,7 @@ body[class*="dark"] .pt-compare-table {
 
 .pt-sort-icon::after {
   content: " \2195";
-  opacity: 0.5;
+  opacity: 0.75;
   font-size: 0.75rem;
 }
 
@@ -2039,7 +2039,7 @@ body[class*="dark"] .pt-ranking-item {
 
 body[class*="dark"] .pt-ranking-badge {
   background: #333;
-  color: #aaa;
+  color: #ccc;
 }
 
 .pt-rank-gold {
@@ -2111,7 +2111,7 @@ body[class*="dark"] .pt-ranking-score-badge {
 }
 
 body[class*="dark"] .pt-ranking-summary {
-  color: #aaa;
+  color: #bbb;
 }
 
 @media (max-width: 768px) {
