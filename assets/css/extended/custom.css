@@ -2125,3 +2125,84 @@ body[class*="dark"] .pt-ranking-summary {
     font-size: 0.9rem;
   }
 }
+
+/* ================================================
+   DARK MODE — pt-primary 文字顏色補全修復
+   修復深色底+深色字問題（#014876 在 dark bg 對比僅 1.4:1）
+   全部改為 #90caf9（對比 9.5:1，WCAG AAA）
+   2026-04-22 PM v2 修復
+   ================================================ */
+
+/* 推薦碼盒 */
+.dark .pt-referral-box .pt-referral-bank { color: #90caf9; }
+.dark .pt-referral-box .pt-referral-label { background: #2a7ab8; }
+
+/* 推薦碼卡片 */
+.dark .pt-referral-card .pt-rc-bank { color: #90caf9; }
+.dark .pt-referral-card .pt-rc-bonus { color: #c0c0c0; }
+
+/* 重點摘要盒 */
+.dark .pt-summary-box .pt-summary-title { color: #90caf9; }
+
+/* 側欄標題 */
+.dark .pt-sidebar-widget h4 { color: #90caf9; border-color: #2a7ab8; }
+
+/* 比較卡片 */
+.dark .pt-compare-card .pt-cc-name { color: #90caf9; }
+.dark .pt-compare-card .pt-cc-desc { color: #c0c0c0; }
+
+/* 步驟指南 */
+.dark .pt-steps li .pt-step-title { color: #90caf9; }
+.dark .pt-steps li { border-color: #2a4a6a; background: var(--entry); }
+
+/* 排行榜 */
+.dark .pt-ranking-name { color: #e8e8e8; }
+
+/* 評分卡片 */
+.dark .pt-rating-name { color: #90caf9; }
+.dark .pt-rating-score { color: #90caf9; }
+
+/* 購買按鈕盒 */
+.dark .pt-buy-label { color: #90caf9; }
+.dark .pt-buy-btns { background: var(--entry); border-color: #2a4a6a; }
+
+/* 相關文章 */
+.dark .pt-related-title { color: #90caf9; }
+
+/* 優缺點 */
+.dark .pt-pros .pt-proscons-heading { color: #66bb6a; }
+.dark .pt-cons .pt-proscons-heading { color: #ef5350; }
+
+/* 作者資訊 */
+.dark .pt-author-name { color: #90caf9; }
+.dark .pt-author-bio { color: #c0c0c0; }
+
+/* 分類篩選按鈕 */
+.dark .cat-btn { border-color: #4a90d9; color: #90caf9; }
+.dark .cat-btn:hover,
+.dark .cat-btn.active { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+
+/* 表格標題行 */
+.dark th { background: linear-gradient(135deg, #1a3a5c 0%, #0d2540 100%); }
+
+/* 表格 tr hover（淺底+深字 → dark override） */
+.dark tr:hover td { background-color: rgba(144, 202, 249, 0.06); }
+
+/* 文章卡片標題 */
+.dark .entry-header h2 a { color: #e8e8e8; }
+.dark .entry-header h2 a:hover { color: #90caf9; }
+
+/* 比較表文字 */
+.dark .pt-picker-highlight { color: #90caf9; }
+
+/* 自動主題切換下 pt-primary 全域 fallback（extra safety） */
+[data-theme="dark"] .pt-related-title,
+[data-theme="dark"] .pt-summary-box .pt-summary-title,
+[data-theme="dark"] .pt-sidebar-widget h4,
+[data-theme="dark"] .pt-referral-box .pt-referral-bank,
+[data-theme="dark"] .pt-referral-card .pt-rc-bank,
+[data-theme="dark"] .pt-steps li .pt-step-title,
+[data-theme="dark"] .pt-rating-name,
+[data-theme="dark"] .pt-buy-label,
+[data-theme="dark"] .pt-compare-card .pt-cc-name,
+[data-theme="dark"] .pt-author-name { color: #90caf9; }

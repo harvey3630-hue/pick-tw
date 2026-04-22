@@ -168,7 +168,7 @@ aliases: ["/posts/2026-03-30-掃地機器人-比較-2024/"]
 | **自動集塵**        | 有 (10週免倒)           | 有 (75天免倒)          | 有 (60天免倒)      | 無 (需手動倒垃圾)     |
 | **特色功能**        | 邊緣清潔、語音助理、內建視訊通話、寵物友好 | 方形機身、超薄設計、App語音助理、AI語音助手 | AI辨識、地圖管理、App多功能設定 | 高CP值、米家App整合、電解水殺菌 |
 | **建議售價 (NTD)**  | 約 NT$45,000 - NT$55,000 (依官網或電商公告為準) | 約 NT$35,000 - NT$45,000 (依官網或電商公告為準) | 約 NT$25,000 - NT$35,000 (依官網或電商公告為準) | 約 NT$10,000 - NT$15,000 (依官網或電商公告為準) |
-| **申辦連結**        | [前往查看](https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2102000000) | [前往查看](https://24h.pchome.com.tw/region/DSAA) | [前往查看](https://shopee.tw/search?keyword=%E6%8E%83%E5%B0%8B%E6%A9%9F%E5%99%A8%E4%BA%BA) | [前往查看](https://buy.mi.com/tw/) |
+| **申辦連結**        | [前往查看](https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2102000000&cid=apn&pid=201512243419) | [前往查看](https://24h.pchome.com.tw/region/DSAA) | [前往查看](https://shopee.tw/search?keyword=%E6%8E%83%E5%B0%8B%E6%A9%9F%E5%99%A8%E4%BA%BA) | [前往查看](https://buy.mi.com/tw/) |
 
 *以上資料截至 2024-07-28，價格與功能可能隨時調整，請以各品牌官網或電商平台最新公告為準。*
 

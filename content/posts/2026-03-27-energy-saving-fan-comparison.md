@@ -120,11 +120,11 @@ DC直流風扇的最大優勢之一就是風量段數多，從微風到強風都
 
 | 型號/品牌 | 主要特色 | 耗電瓦數 (最低/最高) | 噪音值 (最低) | 價格區間 (NT$) | 智能功能 | 購買連結 |
 | :-------- | :------- | :-------------------- | :------------ | :-------------- | :------- | :------- |
-| 小米米家直流變頻電風扇2 Pro | 智慧聯網、溫度感測、超長續航 | 1.6W / 24W（依官網公告為準） | 28dB | 1,800-2,500 | APP、語音控制 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=小米直流變頻電風扇) |
-| 禾聯 Heran HDF-14DC710 | 7片扇葉、12段風速、ECO智能溫控 | 2W / 25W（依官網公告為準） | 25dB | 1,500-2,000 | 遙控器、ECO模式 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=禾聯DC電風扇) |
-| 艾美特 Airmate DCF1401R | 9片扇葉、24段風速、自然風模式 | 1.8W / 22W（依官網公告為準） | 23dB | 2,000-2,800 | 遙控器、定時 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=艾美特DC電風扇) |
-| 國際牌 Panasonic F-L14FMD | 靜音、DC變頻馬達、兒童安全鎖 | 1.5W / 20W（依官網公告為準） | 20dB | 3,000-4,000 | 遙控器、定時 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=國際牌DC電風扇) |
-| 山水 SANSUI SF-D120 | 小巧輕便、USB供電、露營適用 | 1W / 10W（依官網公告為準） | 30dB | 800-1,200 | 無 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=DC直流電風扇) |
+| 小米米家直流變頻電風扇2 Pro | 智慧聯網、溫度感測、超長續航 | 1.6W / 24W（依官網公告為準） | 28dB | 1,800-2,500 | APP、語音控制 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=小米直流變頻電風扇&cid=apn&pid=201512243419) |
+| 禾聯 Heran HDF-14DC710 | 7片扇葉、12段風速、ECO智能溫控 | 2W / 25W（依官網公告為準） | 25dB | 1,500-2,000 | 遙控器、ECO模式 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=禾聯DC電風扇&cid=apn&pid=201512243419) |
+| 艾美特 Airmate DCF1401R | 9片扇葉、24段風速、自然風模式 | 1.8W / 22W（依官網公告為準） | 23dB | 2,000-2,800 | 遙控器、定時 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=艾美特DC電風扇&cid=apn&pid=201512243419) |
+| 國際牌 Panasonic F-L14FMD | 靜音、DC變頻馬達、兒童安全鎖 | 1.5W / 20W（依官網公告為準） | 20dB | 3,000-4,000 | 遙控器、定時 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=國際牌DC電風扇&cid=apn&pid=201512243419) |
+| 山水 SANSUI SF-D120 | 小巧輕便、USB供電、露營適用 | 1W / 10W（依官網公告為準） | 30dB | 800-1,200 | 無 | [前往購買](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=DC直流電風扇&cid=apn&pid=201512243419) |
 
 *註：以上數據為參考值，實際耗電量、噪音值、價格可能因通路、活動或使用情境而異，請以官網公告為準。*
 
