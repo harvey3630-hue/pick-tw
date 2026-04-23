@@ -33,7 +33,7 @@ aliases: ["/posts/2026-03-27-星宇航空聯名卡-2026-推薦-哩程回饋/"]
   "dateModified": "2026-03-27",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-27-星宇航空聯名卡-2026-推薦-哩程回饋/"
+    "@id": "https://pick-tw.com/posts/2026-03-27-starlux-credit-card-2026-miles-rewards/"
   }
 }
 </script>

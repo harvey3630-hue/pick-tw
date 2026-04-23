@@ -36,7 +36,7 @@ cover:
   "dateModified": "2026-04-04",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-04-04-ai-pc-筆電-推薦-2024/"
+    "@id": "https://pick-tw.com/posts/2026-04-04-ai-pc-laptop-recommendation-2024/"
   }
 }
 </script>

@@ -33,7 +33,7 @@ aliases: ["/posts/2026-03-25-vpn-推薦-2026-台灣/"]
   "dateModified": "2026-03-25",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-25-vpn-推薦-2026-台灣/"
+    "@id": "https://pick-tw.com/posts/2026-03-25-vpn-taiwan-recommendation-2026/"
   }
 }
 </script>

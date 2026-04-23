@@ -33,7 +33,7 @@ aliases: ["/posts/2026-03-22-台新richart開戶教學-2026-新戶優惠懶人�
   "dateModified": "2026-03-22",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-22-台新richart開戶教學-2026-新戶優惠懶人包/"
+    "@id": "https://pick-tw.com/posts/2026-03-22-richart-account-opening-tutorial-2026-new-user-promo/"
   }
 }
 </script>
@@ -217,5 +217,5 @@ Richart 在 PTT、Dcard 等論壇上一直擁有很高的討論度，許多網�
 ## 📚 延伸閱讀
 
 - [2026 台灣數位銀行推薦碼總整理｜樂天、LINE Bank、台新 Richart 完整攻略](https://pick-tw.com/posts/2026-03-15-referral-codes-all/)
-- [2026數位銀行推薦：活存利率、開戶優惠深度比較，小資族必看攻略！](https://pick-tw.com/posts/2026-03-27-數位銀行推薦-2026-活存利率-優惠比較/)
-- [純網銀安全嗎？存錢利率真的比較高嗎？台灣上班族數位理財全攻略](https://pick-tw.com/posts/2026-03-23-純網銀安全嗎-存錢利率真的比較高嗎/)
+- [2026數位銀行推薦：活存利率、開戶優惠深度比較，小資族必看攻略！](https://pick-tw.com/posts/2026-03-27-digital-bank-2026-savings-interest-rates-comparison/)
+- [純網銀安全嗎？存錢利率真的比較高嗎？台灣上班族數位理財全攻略](https://pick-tw.com/posts/2026-03-23-pure-online-bank-safe-high-interest/)

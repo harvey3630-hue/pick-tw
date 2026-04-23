@@ -33,7 +33,7 @@ aliases: ["/posts/2026-03-23-信用卡卡債太多怎麼辦-整合負債懶人�
   "dateModified": "2026-03-23",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-23-信用卡卡債太多怎麼辦-整合負債懶人包/"
+    "@id": "https://pick-tw.com/posts/2026-03-23-credit-card-debt-consolidation-guide/"
   }
 }
 </script>
@@ -234,6 +234,6 @@ Richart 作為數位銀行的先驅，其信貸產品也一直受到年輕族群
 
 ## 📚 延伸閱讀
 
-- [2026 整合負債是什麼？流程、利率、銀行推薦全攻略！擺脫高利，重啟財務自由](https://pick-tw.com/posts/2026-03-23-整合負債是什麼-2026-流程-利率-推薦/)
-- [房貸轉貸划算嗎？2026最新利率比較與流程教學，省錢大作戰！](https://pick-tw.com/posts/2026-03-23-房貸轉貸划算嗎-2026-利率比較-流程教學/)
-- [2026數位銀行推薦：活存利率、開戶優惠深度比較，小資族必看攻略！](https://pick-tw.com/posts/2026-03-27-數位銀行推薦-2026-活存利率-優惠比較/)
+- [2026 整合負債是什麼？流程、利率、銀行推薦全攻略！擺脫高利，重啟財務自由](https://pick-tw.com/posts/2026-03-23-debt-consolidation-2026-process-rate-recommend/)
+- [房貸轉貸划算嗎？2026最新利率比較與流程教學，省錢大作戰！](https://pick-tw.com/posts/2026-03-23-mortgage-refinance-cost-2026-rate-process/)
+- [2026數位銀行推薦：活存利率、開戶優惠深度比較，小資族必看攻略！](https://pick-tw.com/posts/2026-03-27-digital-bank-2026-savings-interest-rates-comparison/)

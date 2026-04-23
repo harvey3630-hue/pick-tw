@@ -34,7 +34,7 @@ aliases: ["/posts/2026-03-30-掃地機器人-比較-2024/"]
   "dateModified": "2026-03-30",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-30-掃地機器人-比較-2024/"
+    "@id": "https://pick-tw.com/posts/2026-03-30-robot-vacuum-comparison-2024/"
   }
 }
 </script>

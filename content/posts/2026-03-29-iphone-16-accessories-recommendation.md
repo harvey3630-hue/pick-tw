@@ -33,7 +33,7 @@ aliases: ["/posts/2026-03-29-iphone-16-手機配件推薦/"]
   "dateModified": "2026-03-29",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-29-iphone-16-手機配件推薦/"
+    "@id": "https://pick-tw.com/posts/2026-03-29-iphone-16-accessories-recommendation/"
   }
 }
 </script>

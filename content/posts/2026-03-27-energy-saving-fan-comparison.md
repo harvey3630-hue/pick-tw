@@ -33,7 +33,7 @@ aliases: ["/posts/2026-03-27-省電電風扇比較/"]
   "dateModified": "2026-03-27",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-27-省電電風扇比較/"
+    "@id": "https://pick-tw.com/posts/2026-03-27-energy-saving-fan-comparison/"
   }
 }
 </script>
@@ -234,6 +234,6 @@ A：你可以查看產品規格上的「最低噪音值」標示，單位是分�
 
 ## 📚 延伸閱讀
 
-- [冷氣推薦 2026 節能補助 PTT 比較：省電、省錢一次搞定，小資族必看！](https://pick-tw.com/posts/2026-03-27-冷氣推薦-2026-節能補助-ptt-比較/)
-- [2026 智慧家電推薦：PTT網友熱議、小資族必備的智能生活指南！](https://pick-tw.com/posts/2026-03-25-智慧家電-推薦-2026-ptt/)
-- [2024 省電除濕機推薦：告別潮濕悶熱，小資族必看的節能好物清單！](https://pick-tw.com/posts/2026-04-01-省電除濕機-推薦-2024/)
+- [冷氣推薦 2026 節能補助 PTT 比較：省電、省錢一次搞定，小資族必看！](https://pick-tw.com/posts/2026-03-27-air-conditioner-2026-energy-saving-subsidy-ptt/)
+- [2026 智慧家電推薦：PTT網友熱議、小資族必備的智能生活指南！](https://pick-tw.com/posts/2026-03-25-smart-home-appliances-2026-ptt-recommend/)
+- [2024 省電除濕機推薦：告別潮濕悶熱，小資族必看的節能好物清單！](https://pick-tw.com/posts/2026-04-01-energy-saving-dehumidifier-2024-recommendation/)

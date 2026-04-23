@@ -33,7 +33,7 @@ aliases: ["/posts/2026-03-25-智慧家電-推薦-2026-ptt/"]
   "dateModified": "2026-03-25",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-25-智慧家電-推薦-2026-ptt/"
+    "@id": "https://pick-tw.com/posts/2026-03-25-smart-home-appliances-2026-ptt-recommend/"
   }
 }
 </script>

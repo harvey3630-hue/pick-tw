@@ -36,7 +36,7 @@ cover:
   "dateModified": "2026-03-27",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-27-數位銀行推薦-2026-活存利率-優惠比較/"
+    "@id": "https://pick-tw.com/posts/2026-03-27-digital-bank-2026-savings-interest-rates-comparison/"
   }
 }
 </script>

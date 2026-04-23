@@ -218,6 +218,6 @@ weight: 1
 
 ## 📚 延伸閱讀
 
-- [LINE Bank 口袋帳戶是什麼？高利活存、優缺點、開戶教學全攻略](https://pick-tw.com/posts/2026-03-22-line-bank口袋帳戶是什麼-利率-優缺點/)
-- [台新Richart開戶教學 2026 新戶優惠懶人包：數位帳戶高利活存、簽帳卡回饋一次搞懂](https://pick-tw.com/posts/2026-03-22-台新richart開戶教學-2026-新戶優惠懶人包/)
-- [2026 無上限攻略：樂天銀行活存利率這樣賺，讓你的錢越滾越大！](https://pick-tw.com/posts/2026-03-22-樂天銀行活存利率-2026-無上限攻略/)
+- [LINE Bank 口袋帳戶是什麼？高利活存、優缺點、開戶教學全攻略](https://pick-tw.com/posts/2026-03-22-line-bank-pocket-account-interest-pros-cons/)
+- [台新Richart開戶教學 2026 新戶優惠懶人包：數位帳戶高利活存、簽帳卡回饋一次搞懂](https://pick-tw.com/posts/2026-03-22-richart-account-opening-tutorial-2026-new-user-promo/)
+- [2026 無上限攻略：樂天銀行活存利率這樣賺，讓你的錢越滾越大！](https://pick-tw.com/posts/2026-03-22-rakuten-bank-savings-rate-2026-unlimited-guide/)

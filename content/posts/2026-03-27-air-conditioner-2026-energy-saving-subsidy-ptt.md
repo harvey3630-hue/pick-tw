@@ -33,7 +33,7 @@ aliases: ["/posts/2026-03-27-冷氣推薦-2026-節能補助-ptt-比較/"]
   "dateModified": "2026-03-27",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pick-tw.com/posts/2026-03-27-冷氣推薦-2026-節能補助-ptt-比較/"
+    "@id": "https://pick-tw.com/posts/2026-03-27-air-conditioner-2026-energy-saving-subsidy-ptt/"
   }
 }
 </script>
