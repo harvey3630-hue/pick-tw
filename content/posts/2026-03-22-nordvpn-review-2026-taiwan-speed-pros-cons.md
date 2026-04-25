@@ -167,7 +167,7 @@ NordVPN 採用軍用級的 AES-256 加密技術，並實行嚴格的「無日誌
 ### NordVPN
 > 全球 5,800+ 伺服器、軍規 AES-256 加密；30 天無條件退款。
 
-[👉 立即前往 NordVPN](https://nordvpn.com/zh-tw/)
+[👉 立即前往 NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=143283&url_id=22500)
 
 ---
 

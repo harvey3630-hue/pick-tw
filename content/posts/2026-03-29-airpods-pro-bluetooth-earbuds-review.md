@@ -157,18 +157,7 @@ AirPods Pro 2 的價格確實不低，對於精打細算的台灣上班族來說
 
 ## 哪裡買？
 
-👉 [MOMO 查看 AirPods Pro 最新價格](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=AirPods%20Pro&cid=apn&pid=201512243419)
-
-
-💡 **延伸推薦：開戶就能賺**
-
-看完比較還沒決定？不如先開一個高利活存帳戶，把錢放著就能賺利息：
-
-- 🏦 **樂天銀行**：輸入推薦碼 `M2PVML`，雙方各得 **NT$300**｜[立即申辦](https://www.rakuten-bank.com.tw/)
-- 🏦 **台新 Richart**：輸入推薦碼 `ELB6T`，新戶得 **NT$100**｜[立即申辦](https://richart.tw/)
-- 🏦 **LINE Bank**：透過連結開戶享額外獎勵｜[立即申辦](https://linebank.page.link/referral)
-
-
+👉 [MOMO 查看 AirPods Pro 最新價格](https://s.momoshop.com.tw/s/fd5rP5sN)
 ## 常見問題 FAQ
 
 **Q：AirPods Pro 2 與 AirPods Pro 1 最大的差異是什麼？**

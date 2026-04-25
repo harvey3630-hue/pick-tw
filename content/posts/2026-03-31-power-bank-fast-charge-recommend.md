@@ -235,7 +235,7 @@ AUKEY 是知名的充電品牌，這款 PB-Y43 提供了 20000mAh 的大容量�
 
 ## 哪裡買？
 
-👉 [MOMO 查看行動電源快充最新價格](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90%20%E5%BF%AB%E5%85%85&cid=apn&pid=201512243419)
+👉 [MOMO 查看行動電源快充最新價格](https://s.momoshop.com.tw/s/02uoZlnD)
 
 希望這篇文章能幫你找到最適合的隨身發電廠，從此出門在外，再也不用緊盯著右上角那逐漸變紅的電池圖示了！
 

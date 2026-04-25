@@ -211,18 +211,6 @@ aliases: ["/posts/2026-03-31-ai掃地機器人-推薦-比較/"]
 通常旗艦機型在促銷期間加上信用卡回饋，整體可以省下 3,000 到 5,000 元不等。
 
 如果你還沒有一張好用的網購神卡，建議先看看這篇：信用卡回饋比較，提前把卡片辦好。
-
-
-
-💡 **延伸推薦：開戶就能賺**
-
-看完比較還沒決定？不如先開一個高利活存帳戶，把錢放著就能賺利息：
-
-- 🏦 **樂天銀行**：輸入推薦碼 `M2PVML`，雙方各得 **NT$300**｜[立即申辦](https://www.rakuten-bank.com.tw/)
-- 🏦 **台新 Richart**：輸入推薦碼 `ELB6T`，新戶得 **NT$100**｜[立即申辦](https://richart.tw/)
-- 🏦 **LINE Bank**：透過連結開戶享額外獎勵｜[立即申辦](https://linebank.page.link/referral)
-
-
 ## 掃地機器人常見問題 (FAQ)
 
 **Q：家裡有養寵物，適合用掃地機器人嗎？**
@@ -255,7 +243,7 @@ aliases: ["/posts/2026-03-31-ai掃地機器人-推薦-比較/"]
 
 ## 哪裡買？
 
-👉 [MOMO 查看 AI 掃地機器人最新價格](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=AI%E6%8E%83%E5%9C%B0%E6%A9%9F%E5%99%A8%E4%BA%BA&cid=apn&pid=201512243419)
+👉 [MOMO 查看 AI 掃地機器人最新價格](https://s.momoshop.com.tw/s/BbyNlagu)
 
 趕快挑選一台適合你的機型，從今天開始徹底解放雙手吧！
 

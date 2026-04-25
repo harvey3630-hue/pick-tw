@@ -169,18 +169,6 @@ LINE Bank將金融服務融入LINE生態圈，提供便利的轉帳、分帳功�
 *   **生活繳費提醒：** AI助理能整合你的生活帳單，並在繳費期限前提醒你透過LINE Bank進行繳費，避免逾期罰款。
 
 [**立即申辦LINE Bank，享受便利的行動銀行服務！**](https://www.linebank.com.tw/R/mgm-portal?campaignId=3&uid=bfSAZz)
-
-
-
-💡 **延伸推薦：開戶就能賺**
-
-看完比較還沒決定？不如先開一個高利活存帳戶，把錢放著就能賺利息：
-
-- 🏦 **樂天銀行**：輸入推薦碼 `M2PVML`，雙方各得 **NT$300**｜[立即申辦](https://www.rakuten-bank.com.tw/)
-- 🏦 **台新 Richart**：輸入推薦碼 `ELB6T`，新戶得 **NT$100**｜[立即申辦](https://richart.tw/)
-- 🏦 **LINE Bank**：透過連結開戶享額外獎勵｜[立即申辦](https://linebank.page.link/referral)
-
-
 ## 常見問題 FAQ
 
 **Q：2026年的AI助理會很貴嗎？**

@@ -184,18 +184,6 @@ iPhone 16 的硬體固然強大，但真正讓它脫穎而出的，是與 iOS �
 {{< pt-review quote="「Richart 真的很好用，介面很直覺，每次領薪水都把錢轉進去賺高利活存，感覺離我的 iPhone 16 越來越近了！」" source="PTT 網友" >}}
 
 想要更深入了解如何透過數位銀行省錢？別錯過這篇 [高利活存數位帳戶比較](/posts/digital-account-comparison/)，讓你輕鬆選擇最適合自己的理財工具。此外，搭配一張高回饋的信用卡，在購買 iPhone 16 時也能賺取更多刷卡金或點數，參考 [信用卡挑選指南](/posts/credit-card-guide/)，讓你的每一筆消費都變成回饋！
-
-
-
-💡 **延伸推薦：開戶就能賺**
-
-看完比較還沒決定？不如先開一個高利活存帳戶，把錢放著就能賺利息：
-
-- 🏦 **樂天銀行**：輸入推薦碼 `M2PVML`，雙方各得 **NT$300**｜[立即申辦](https://www.rakuten-bank.com.tw/)
-- 🏦 **台新 Richart**：輸入推薦碼 `ELB6T`，新戶得 **NT$100**｜[立即申辦](https://richart.tw/)
-- 🏦 **LINE Bank**：透過連結開戶享額外獎勵｜[立即申辦](https://linebank.page.link/referral)
-
-
 ## 常見問題 FAQ
 
 **Q：iPhone 16 什麼時候會上市？**
@@ -215,7 +203,7 @@ iPhone 16 的硬體固然強大，但真正讓它脫穎而出的，是與 iOS �
 
 ## 哪裡買？
 
-👉 [MOMO 查看最新 iPhone 16 價格](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=iPhone%2016&cid=apn&pid=201512243419)
+👉 [MOMO 查看最新 iPhone 16 價格](https://s.momoshop.com.tw/s/8UjmZ2z8)
 
 現在就開始規劃你的 iPhone 16 購機基金吧！透過以下推薦連結申辦數位帳戶，不僅能享有專屬優惠，還能讓你的錢包越來越厚實，離你的夢幻新機更近一步！
 

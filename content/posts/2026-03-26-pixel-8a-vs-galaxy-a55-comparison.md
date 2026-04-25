@@ -163,19 +163,8 @@ Galaxy A55通常配備較大容量的電池，這使其在續航方面一直表�
 
 ## 哪裡買？
 
-👉 [MOMO 查看 Pixel 8a 最新價格](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=Pixel%208a&cid=apn&pid=201512243419)
-👉 [MOMO 查看 Galaxy A55 最新價格](https://www.momoshop.com.tw/search/searchShop.jsp?keyword=Galaxy%20A55&cid=apn&pid=201512243419)
-
-
-💡 **延伸推薦：開戶就能賺**
-
-看完比較還沒決定？不如先開一個高利活存帳戶，把錢放著就能賺利息：
-
-- 🏦 **樂天銀行**：輸入推薦碼 `M2PVML`，雙方各得 **NT$300**｜[立即申辦](https://www.rakuten-bank.com.tw/)
-- 🏦 **台新 Richart**：輸入推薦碼 `ELB6T`，新戶得 **NT$100**｜[立即申辦](https://richart.tw/)
-- 🏦 **LINE Bank**：透過連結開戶享額外獎勵｜[立即申辦](https://linebank.page.link/referral)
-
-
+👉 [MOMO 查看 Pixel 8a 最新價格](https://s.momoshop.com.tw/s/xNIYdssb)
+👉 [MOMO 查看 Galaxy A55 最新價格](https://s.momoshop.com.tw/s/KhOvIRsq)
 ## 七、常見問題 FAQ
 
 **Q：Pixel 8a 和 Galaxy A55 在2026年還值得買嗎？**

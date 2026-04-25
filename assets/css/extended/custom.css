@@ -1488,8 +1488,9 @@ body[class*="dark"] .pt-related-img-placeholder {
 }
 
 body[class*="dark"] .pt-pros {
-  background: rgba(40, 167, 69, 0.1);
-  border-color: rgba(40, 167, 69, 0.4);
+  background: rgba(40, 167, 69, 0.2);
+  border-color: rgba(40, 167, 69, 0.5);
+  color: #e8e8e8;
 }
 
 .pt-cons {
@@ -1498,8 +1499,9 @@ body[class*="dark"] .pt-pros {
 }
 
 body[class*="dark"] .pt-cons {
-  background: rgba(220, 53, 69, 0.1);
-  border-color: rgba(220, 53, 69, 0.4);
+  background: rgba(220, 53, 69, 0.2);
+  border-color: rgba(220, 53, 69, 0.5);
+  color: #e8e8e8;
 }
 
 .pt-proscons-heading {
@@ -1530,6 +1532,10 @@ body[class*="dark"] .pt-cons .pt-proscons-heading { color: #ef5350; }
   display: flex;
   align-items: flex-start;
   gap: 6px;
+}
+
+body[class*="dark"] .pt-proscons-list li {
+  color: #e8e8e8;
 }
 
 .pt-proscons-list li::before {

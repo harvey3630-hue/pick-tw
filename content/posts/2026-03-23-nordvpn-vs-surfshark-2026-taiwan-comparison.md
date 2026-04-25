@@ -112,9 +112,9 @@ Surfshark 近年來快速崛起，以其超高性價比和無限設備連線數�
 
 | 特點/方案 | NordVPN (標準方案) | Surfshark (Starter 方案) | 備註 | 申辦連結 |
 | :-------- | :------------------ | :---------------------- | :--- | :------- |
-| **月繳方案** | 約每月 NT$350-450 | 約每月 NT$250-350 | 短期方案價格較高，不建議長期使用 | [前往 NordVPN 官網](https://go.nordvpn.com/aff_c?c_id=20819&af_id=141883) |
+| **月繳方案** | 約每月 NT$350-450 | 約每月 NT$250-350 | 短期方案價格較高，不建議長期使用 | [前往 NordVPN 官網](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=143283&url_id=22500) |
 | **一年方案** | 約每月 NT$150-200 | 約每月 NT$100-150 | 一次性繳費，平均月費較便宜 | [前往 Surfshark 官網](https://get.surfshark.net/aff_c?c_id=64&af_id=10332) |
-| **兩年方案** | 約每月 NT$100-150 | 約每月 NT$70-100 (最優惠) | 長期方案最划算，通常會贈送額外月份 | [前往 NordVPN 官網](https://go.nordvpn.com/aff_c?c_id=20819&af_id=141883) |
+| **兩年方案** | 約每月 NT$100-150 | 約每月 NT$70-100 (最優惠) | 長期方案最划算，通常會贈送額外月份 | [前往 NordVPN 官網](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=143283&url_id=22500) |
 | **同時連線數** | 6 台設備 | 無限設備 | Surfshark 在這點上無敵手 | [前往 Surfshark 官網](https://get.surfshark.net/aff_c?c_id=64&af_id=10332) |
 | **伺服器數量** | 6000+ 台 | 3200+ 台 | 遍及全球 60+ 國家 vs 100+ 國家 | |
 | **退款保證** | 30 天無條件退款 | 30 天無條件退款 | 兩者皆提供，可安心試用 | |
@@ -190,7 +190,7 @@ Surfshark 近年來快速崛起，以其超高性價比和無限設備連線數�
 *   **如果你願意為更好的效能和更深入的隱私保護支付較高的費用：** NordVPN 的價格雖然較高，但其提供的服務絕對物超所值。
 
 **立即體驗 NordVPN 的極速與安全：**
-[前往 NordVPN 官網](https://go.nordvpn.com/aff_c?c_id=20819&af_id=141883)
+[前往 NordVPN 官網](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=143283&url_id=22500)
 
 ### 選擇 Surfshark 的你：
 
