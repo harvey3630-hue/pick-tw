@@ -1,4 +1,4 @@
 # Podcast CDN proxy — redirect to CF Worker subdomain
-/podcast-cdn/*  https://podcast-cdn.pick-tw.com/:splat  200
+/podcast-cdn/*  https://podcast-cdn.pick-tw.com/:splat  301
 
 # Existing redirects can be added below
