@@ -204,7 +204,7 @@ cover:
 
 ## 哪裡買？
 
-👉 [MOMO 查看省電除濕機最新價格](https://s.momoshop.com.tw/s/iNlwNKwG)
+👉 [MOMO 查看省電除濕機最新價格](https://s.momoshop.com.tw/s/fBkr9hIK)
 
 現在就行動起來，為你的家添購一台省電除濕機，告別濕黏不適，享受乾爽、舒適又健康的居家生活吧！這不僅是對家人的愛，也是一種聰明的理財方式呢！
 
